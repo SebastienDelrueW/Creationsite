@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(122, 145, 159);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border: 0 solid 
+transparent;
+    border-right-width: 0px;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+border-right-width: 200px;
+border-left-width: 200px;
+border-bottom: 400px solid
+rgb(159, 6, 6);
+}
+
