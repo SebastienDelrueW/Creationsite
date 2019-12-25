@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+
+
+
+<!--[if lt IE 7]><html class="ie6 no-js " lang="fr-FR"><![endif]-->
+<!--[if IE 7]><html class="ie7 no-js " lang="fr-FR"><![endif]-->
+<!--[if IE 8]><html class="ie8 no-js " lang="fr-FR"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js " lang="fr-FR"><!--<![endif]-->
+
+
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"671cca5e0f","applicationID":"23303312","transactionName":"NQMBZkJRXEAEAhJQCgxJLmRzH3pcCAQlVgsWFAxeXFVAHCwPAlwd","queueTime":0,"applicationTime":53,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQUHVlNSARACV1JSBAIGVA==",licenseKey:"671cca5e0f",applicationID:"23303312"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(24),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(25),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){L++,C=g.hash,this[u]=y.now()}function o(){L--,g.hash!==C&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable){var x=t(10),b=t(11),E=t(8),O=t(6),R=t(13),P=t(7),N=t(14),T=t(9),M=t("ee"),S=M.get("tracer");t(16),y.features.spa=!0;var C,L=0;M.on(u,r),M.on(p,r),M.on(d,o),M.on(l,o),M.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),R.buffer(["setTimeout"+c,"clearTimeout"+s,u]),N.buffer([u,"new-xhr","send-xhr"+s]),P.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),T.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(N,"send-xhr"+s),a(M,"xhr-resolved"),a(M,"xhr-done"),a(P,m+s),a(P,m+"-done"),a(T,"new-jsonp"),a(T,"jsonp-end"),a(T,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,L>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(8),"addEventListener"in window&&t(6);var x=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),o.on(v,function(t,e){var n=t[0];n instanceof x&&i("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+l,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(25),a=t(24);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t("wrap-function")(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t("wrap-function"),a=t("ee").get("promise"),s=i(a),c=t(24),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,x),x.prototype=l.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){if(!i(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,s=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,n,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var e=!1,n=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,n=!!r.enabled),n)if(t.sameOrigin)e=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return n&&e}var a=t(22),s=t(17);e.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],16:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(p[r],this.listener,!1);e.aborted||(n.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):a(this,t),n.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return v(r)}function i(t,e){var n=f(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=f(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function a(t,e){t.params.status=e.status;var n=o(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(17),u=t(15).generateTracePayload,d=t("ee"),p=["load","error","abort","timeout"],l=p.length,h=t("id"),m=t(20),v=t(19),w=window.XMLHttpRequest;s.features.xhr=!0,t(14),t(7),d.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){a(e,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=u(this.parsedOrigin);n&&n.header&&(e.setRequestHeader("newrelic",n.header),this.dt=n)}),d.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=v(r);i&&(n.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{d.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<l;a++)e.addEventListener(p[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),d.on("xhr-load-added",function(t,e){var n=""+h(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,e){var n=""+h(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],e)}),d.on("removeEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],e)}),d.on("fn-start",function(t,e,n){e instanceof w&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,e){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,e],e)}),d.on("fetch-before-start",function(t){var e,n=t[1]||{};"string"==typeof t[0]?e=t[0]:t[0]&&t[0].url&&(e=t[0].url),e&&(this.parsedOrigin=f(e),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=u(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in n)i[a]=n[a];i.headers=new Headers(n.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],17:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],18:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(24),s=t(25),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],19:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],20:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?a("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&a("timing",["fcp",Math.floor(t.startTime)])})}function o(t){if(t instanceof c&&!u){var e,n=Math.round(t.timeStamp);e=n>1e12?Date.now()-n:s.now()-n,u=!0,a("timing",["fi",n,{type:t.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var i,a=t("handle"),s=t("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){i=new PerformanceObserver(r);try{i.observe({entryTypes:["paint"]})}catch(f){}}if("addEventListener"in document){var u=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(t){document.addEventListener(t,o,!1)})}}},{}],22:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(e=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}e.exports={generateUuid:r,generateCatId:o}},{}],23:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function l(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(24),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+b.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(24),u=t("ee"),d=t(23),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1158.min.js"},x=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(18),t(21),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(26)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(25),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,16,5,3,4]);</script>
+    <title>
+    Starbucks Coffee Company
+</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    
+<meta content="Depuis 1971, cela a toujours été et cela restera toujours une question de qualité. Nous défendons avec cœur des sources d'approvisionnement éthiques offrant les meilleurs grains de café Arabica, et les torréfions avec le plus grand soin. Notre passion pour le café n'a d'égal que notre plaisir à la partager." name="description" />
+
+<meta content="Starbucks, Starbucks Coffee Company, Starbucks Coffee France, Starbucks Corporation, Starbuck, SBUX, Seattle, Pike Place, café, grains de café, café en grains, café instantané, Caffe, Caffe Latte, Latte, Mocha, Macchiato, Espresso, Expresso, Espreso, chocolat, thés, café glacé, café filtre, café filtre, page d'accueil, frappuccino,  Accueil, programme de fidélisation, programme de fidélité, récompenses. S'enregistrer, Inscription, application Starbucks , Café, boissons, Alimentation, carte, menu, trouver un magasin, Points de vente, salons de café, Responsabilité, salon, Starbucks mobile Applications, Starbucks boissons, Starbucks alimentaire, Starbucks Programme de récompenses" name="keywords" />
+<meta content="Starbucks Coffee Company" property="og:title" />
+<meta content="company" property="og:type" />
+<meta content="https://www.starbucks.fr/" property="og:url" />
+<meta content="https://www.starbucks.fr/static/images/global/logo.png" property="og:image" />
+<meta content="Starbucks Coffee Company" property="og:site_name" />
+<meta content="Depuis 1971, cela a toujours été et cela restera toujours une question de qualité. Nous défendons avec cœur des sources d'approvisionnement éthiques offrant les meilleurs grains de café Arabica, et les torréfions avec le plus grand soin. Notre passion pour le café n'a d'égal que notre plaisir à la partager." property="og:description" />
+<meta content="338375791266" property="fb:app_id" />
+
+    <meta name="google-site-verification" content="3Fdaokcq6G1sAIV0WQdmA41V95P1u54VCZB4okmHdnI" />
+<meta name="msvalidate.01" content="1D2A423C9E7C5DAD0E53A99337302AE1" />
+       
+
+    
+    
+    
+
+	<link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico" />
+	<link rel="apple-touch-icon" href="/static/images/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/images/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/images/touch-icon-iphone4.png" />
+    <link rel="stylesheet" href="/static/resource/global_css/-554735318_fr-FR" media="screen, print"/>
+
+
+    <link href='//fonts.googleapis.com/css?family=Lato:400,700|Crete+Round:400,400italic' rel='stylesheet' type='text/css' />
+
+    
+    
+
+		<!--[if IE 6]><link rel="stylesheet" href="/static/css/fix/ie6.css" media="screen, print" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/static/css/fix/ie7.css" media="screen, print" /><![endif]-->
+		<!--[if IE 8]><link rel="stylesheet" href="/static/css/fix/ie8.css" media="screen, print" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="/static/css/fix/ie9-or-lt.css" media="screen, print" /><![endif]-->
+    
+    <link rel="stylesheet" href="./css/style_garden1.css" media="screen, print"/>
+    
+    
+
+<style>
+        
+        .hero_container {
+            background-color: rgb(12,103,70);
+        }
+        
+    .hero_image {
+        background-image: url("//globalassets.starbucks.com/assets/384ecf280c7f41768fda1450901180be.jpg");
+    }
+    @media screen and (min-width: 541px) {
+        .hero_image {
+            background-image: url("//globalassets.starbucks.com/assets/80fcd87c55f24715ae2d97bd0a91ee73.jpg");
+        } 
+    }
+            
+        .hero_container,
+        .hero_container a:link,
+        .hero_container a:visited,
+        .hero_container a:hover,
+        .hero_container a:focus,
+        .hero_container a:active {
+            color: #ffffff;
+        }   
+             
+            
+        .hero_overlay .button_cta.secondary a:hover,
+        .hero_overlay .button_cta.secondary a:active,
+        .hero_overlay .button_cta.secondary a:focus {
+            background: rgba(255,255,255,.15);
+        }
+        .hero_overlay .hero_copy a:hover,
+        .hero_overlay .hero_copy a:focus,
+        .hero_overlay .hero_copy a:active {
+            background: rgba(255,255,255,.1);
+        }
+        
+    .hero_overlay.match_img_bg {
+        background: #0c6746; 
+		background-color: rgba(12,103,70, .7);
+	}
+
+</style>
+<!--[if lte IE 8]>
+	<style>
+        .hero_image {
+            background-image: url("//globalassets.starbucks.com/assets/80fcd87c55f24715ae2d97bd0a91ee73.jpg");
+        } 
+    </style>
+<![endif]-->
+
+        <style>
+            .hero_image:after {
+                
+	            background: -moz-linear-gradient(top,  rgba(12,103,70,0) 0%, rgba(12,103,70,1) 100%); 
+	            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(12,103,70,0)), color-stop(100%,rgba(12,103,70,1))); 
+	            background: -webkit-linear-gradient(top,  rgba(12,103,70,0) 0%,rgba(12,103,70,1) 100%); 
+	            background: -o-linear-gradient(top,  rgba(12,103,70,0) 0%,rgba(12,103,70,1) 100%); 
+	            background: -ms-linear-gradient(top,  rgba(12,103,70,0) 0%,rgba(12,103,70,1) 100%); 
+	            background: linear-gradient(to bottom,  rgba(12,103,70,0) 0%,rgba(12,103,70,1) 100%); 
+            }
+            @media screen and (min-width: 541px) {
+                
+	            .hero_image:after {
+		            background: none;
+		            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	            }
+            }
+            @media screen and (min-width: 2400px) {
+	            .hero_image:before {
+		            background: -moz-linear-gradient(left,  rgba(12,103,70,1) 0%, rgba(12,103,70,0) 100%); 
+		            background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(12,103,70,1)), color-stop(100%,rgba(12,103,70,0))); 
+		            background: -webkit-linear-gradient(left,  rgba(12,103,70,1) 0%,rgba(12,103,70,0) 100%); 
+		            background: -o-linear-gradient(left,  rgba(12,103,70,1) 0%,rgba(12,103,70,0) 100%); 
+		            background: -ms-linear-gradient(left,  rgba(12,103,70,1) 0%,rgba(12,103,70,0) 100%); 
+		            background: linear-gradient(to right,  rgba(12,103,70,1) 0%,rgba(12,103,70,0) 100%); 
+                }
+                .hero_image:after {
+		            background: -moz-linear-gradient(left,  rgba(12,103,70,0) 0%, rgba(12,103,70,1) 100%); 
+		            background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(12,103,70,0)), color-stop(100%,rgba(12,103,70,1))); 
+		            background: -webkit-linear-gradient(left,  rgba(12,103,70,0) 0%,rgba(12,103,70,1) 100%); 
+		            background: -o-linear-gradient(left,  rgba(12,103,70,0) 0%,rgba(12,103,70,1) 100%); 
+		            background: -ms-linear-gradient(left,  rgba(12,103,70,0) 0%,rgba(12,103,70,1) 100%); 
+		            background: linear-gradient(to right,  rgba(12,103,70,0) 0%,rgba(12,103,70,1) 100%); 
+	            }
+            }
+        </style>
+
+
+
+
+<!-- PartialRequest:{"controller":"Master","action":"JsHead"} -->
+
+
+
+<script src="/static/js/library/modernizr.custom.js"></script>
+<!--[if lte IE 8]><script src="/static/js/library/respond.min.js"></script><![endif]-->
+
+
+
+
+
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        //Following: GA
+        'gaAccount': 'UA-18087273-1',
+        'gaSetDomainName': '.starbucks.fr',
+        'gaIgnoredRef': 'starbucks.fr',
+
+        //Following:user and session details, when applicable (afterlogin)
+        'userLoyalty': 'NotMember',
+        'sessionId': 'dc3jeax',
+        'visitorId': 'anonymous',
+        'hasPaymentMethod': 'False',
+
+        //Following:required
+        'visitorLoginState': 'False',
+        'locale': 'fr-FR',
+        'region': 'FR',
+        'platform': 'Starbucks Global Web',
+        'event': 'datalayer-initialized'
+    })
+</script>
+
+	<script src="//cdn.optimizely.com/js/6558036.js"></script>
+<!-- /PartialRequest:{"controller":"Master","action":"JsHead"} -->
+    
+    
+
+  <script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false"}]);</script>
+  <script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+  <script>!function(e){var a="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,a="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="HHB3F-A7T87-EXZWT-MGPRQ-KZYBS",function(){function n(a){e.BOOMR_onload=a&&a.timeStamp||(new Date).getTime()}if(!e.BOOMR||!e.BOOMR.version&&!e.BOOMR.snippetExecuted){e.BOOMR=e.BOOMR||{},e.BOOMR.snippetExecuted=!0;var i,o,r,_=document.createElement("iframe");if(e[t])e[t]("load",n,!1);else if(e.attachEvent)e.attachEvent("onload",n);_.src="javascript:void(0)",_.title="",_.role="presentation",(_.frameElement||_).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(_,r);try{o=_.contentWindow.document}catch(O){i=document.domain,_.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=_.contentWindow.document}o.open()._l=function(){var e=this.createElement("script");if(i)this.domain=i;e.id="boomr-if-as",e.src=a+"HHB3F-A7T87-EXZWT-MGPRQ-KZYBS",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(e)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var a=""=="true"?1:0,t="",n="kltmwc3ikukbkxqc6nza-f-6459c97e3-clientnsv4-s.akamaihd.net",i={"ak.v":25,"ak.cp":"609049","ak.ai":parseInt("372024",10),"ak.ol":"0","ak.cr":29,"ak.ipv":4,"ak.proto":"h2","ak.rid":"21c447ca","ak.r":24533,"ak.a2":a,"ak.m":"a","ak.n":"essl","ak.bpcip":"82.230.203.0","ak.cport":51958,"ak.gh":"88.221.115.55","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1577251698"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(a){var t="http.initiator";if(a&&(!a[t]||"spa_hard"===a[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body 
+id="page_home"
+>
+    
+	<noscript>
+		<iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQ2H5B" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+				new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+			'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-NQ2H5B');
+	</script>
+
+
+    
+
+    
+    
+
+<!--[if lte IE 8]>
+	<div class="container">
+		<div class="fields">
+			<div class="region size1of1">
+				<div class="validation_summary warning validation_large"><h2>Vous souhaitez peut-être mettre à jour votre navigateur.</h2><p>Il semble que vous utilisez une ancienne version de votre navigateur. Le site de Starbucks fonctionnera mieux si vous <a href="http://windows.microsoft.com/fr-fr/internet-explorer/download-ie">mettez à jour votre navigateur</a> ou si vous utilisez un autre navigateur.</p></div>
+			</div>
+		</div>
+	</div>
+<![endif]-->
+    
+    
+    
+    
+
+
+<div class="header_bar no_cta">
+</div>
+    <div class="header_container">
+        <div class="container">
+            <div class="grid">
+                <div class="column size12of12">
+                    <div id="header" class="">
+                        <ul class="skip">
+                                <li><a href="#nav">aller &#224; la Navigation principale</a></li>
+                                    <li><a href="#content">aller &#224; la Navigation principale</a></li>
+                                <li><a href="#footer">aller au Pied de page</a></li>
+                        </ul>
+
+                        
+
+	<a id="logo" href="/" rel="home"><span class="hidden_visually">Starbucks Coffee Company</span></a>
+
+
+<!-- PartialRequest:{"controller":"Master","action":"Utilities"} -->
+    
+    <div id="utilities">
+        <ul class="utility_list">
+            
+            <li class="utility_link store_locator">
+                    <a href="/trouver-un-salon"><span aria-hidden="true" data-icon="&#x272a"></span><span class="hidden_visually med_render_visually">Trouver un salon</span></a>
+                </li>
+        
+                    <li class="utility_link signin"><a href="/account/signin" id="signIn">Se connecter</a></li>
+                    <li class="utility_link joinnow"><a href="/account/create" id="registrationForm">Rejoindre maintenant</a></li>
+             
+        </ul>
+    </div><!--#utilities-->
+    
+<!-- /PartialRequest:{"controller":"Master","action":"Utilities"} -->
+	<div id="nav" class="content_box_sizing">
+		<div class="nav_control">
+			<a href="#nav"><span class="hamburger"></span><span class="hidden_visually">Navigation</span></a>
+		</div>
+		<div class="nav_menu">
+			<ul>
+
+	<li id="nav_café"><div class="null_left">
+
+	</div><a class="tab" href="/café"><strong>Café</strong></a><div class="null_right">
+
+	</div></li>
+	<li id="nav_liste_de_menu"><div class="null_left">
+
+	</div><a class="tab" href="/liste-de-menu"><strong>Menu</strong></a><div class="null_right">
+
+	</div></li>
+	<li id="nav_responsabilité"><div class="null_left">
+
+	</div><a class="tab" href="/responsabilité"><strong>Responsabilité</strong></a><div class="null_right">
+
+	</div></li>
+	<li id="nav_card"><div class="null_left">
+
+	</div><a class="tab" href="/card"><strong>Carte</strong></a><div class="null_right">
+
+	</div></li>
+	<li id="nav_about_us"><div class="null_left">
+
+	</div><a class="tab" href="/about-us"><strong>À propos</strong></a><div class="null_right">
+
+	</div></li>
+</ul>
+		</div>
+	</div>
+                    </div><!--end #header-->
+                </div><!--end .column-->
+            </div><!-- end .grid -->
+        </div><!-- end .container -->
+
+    </div><!-- end .header_container -->
+    
+    
+	<div id="menus">
+		<ol class="container">
+			
+<li class="fields" id="menu_café"><div class="region size4of5 menu_content">
+	<ol class="blocks blocks-four-up">
+		<li><p><a href="/café/nos-cafés">Nos cafés</a></p><ol>
+			<li>Cafés en grains</li><li><a href="/café/cafés-en-grains">Notre gamme</a></li><li><a href="/café/favoris-de-la-saison">Les favoris de saison</a></li><li><a href="http://www.starbuckscapsules.fr">Capsules Espresso Starbucks®</a></li><li><a href="/café/nos-cafés">Voir tous les cafés</a></li>
+		</ol></li><li><p><a href="/café/trouvez-votre-café-idéal">Trouvez votre café idéal</a></p></li><li><p>Nos espressos</p><ol>
+			<li><a href="/promo/espresso">Notre gamme</a></li>
+		</ol></li><li><p><a href="/café/comment-préparer-café">Comment préparer un bon café</a></p><ol>
+			<li><a href="/café/comment-préparer-café/cafetière-à-piston">Cafetière à piston</a></li><li><a href="/café/comment-préparer-café/versage">Versage</a></li><li><a href="/café/comment-préparer-café/versage-glacé">Versage glacé</a></li><li><a href="/café/comment-préparer-café/machine-à-café">Machine à café</a></li>
+		</ol></li><li><p><a href="/café/achat-éthique">Achat éthique</a></p><ol>
+			<li><a href="/café/achat-éthique/qualité-du-café">Qualité du café</a></li>
+		</ol></li><li><p>En savoir plus</p><ol>
+			<li><a href="https://starbucksrtd.com/fr/">Starbucks Ready to Drink</a></li><li><a href="/café/en-savoir-plus/culture-du-café">La culture du café</a></li><li><a href="/café/en-savoir-plus/achat-du-café">L’achat du café</a></li><li><a href="/café/en-savoir-plus/régions-productrices">Les régions productrices</a></li><li><a href="/café/en-savoir-plus/traitement">Les méthodes de traitement</a></li><li><a href="/café/en-savoir-plus/torréfaction">La torréfaction</a></li><li><a href="/café/en-savoir-plus/préparation">La préparation</a></li><li><a href="/café/en-savoir-plus/dégustation">La dégustation</a></li>
+		</ol></li>
+	</ol>
+	<p class="menu_suggestion_title">À la recherche de boissons?</p><ul class="menu_suggestion_links">
+		<li><a href="/liste-de-menu/liste-boissons/#chocolat">Boissons</a></li>
+	</ul>
+</div>
+</li>
+
+<li class="fields" id="menu_liste_de_menu"><div class="region size4of5 menu_content">
+	<ol class="blocks blocks-four-up">
+		<li><p><a href="/liste-de-menu/liste-boissons">Boissons</a></p><ol>
+			<li><a href="/liste-de-menu/liste-boissons/starbucks-refresha">Starbucks Refresha™</a></li><li><a href="/liste-de-menu/liste-boissons/#espresso">Boissons à base d’espresso</a></li><li><a href="/liste-de-menu/liste-boissons/#frappuccinos">Frappuccinos</a></li><li><a href="/liste-de-menu/liste-boissons/#chocolat">Boissons au Chocolat</a></li><li><a href="/liste-de-menu/liste-boissons/#tea">Thés Teavana™</a></li><li><a href="/promo/cold-brew">Cold Brew</a></li>
+		</ol></li><li><p><a href="/liste-de-menu/liste-nourriture">Food</a></p><ol>
+			<li><a href="/liste-de-menu/liste-nourriture/#patisserie">Pâtisserie et Viennoiserie</a></li><li><a href="/liste-de-menu/liste-nourriture/#muffins">Muffins</a></li><li><a href="/liste-de-menu/liste-nourriture/#cookies">Cookies et Donuts</a></li><li><a href="/liste-de-menu/liste-nourriture/#sandwiches">Sandwiches</a></li><li><a href="/liste-de-menu/liste-nourriture/#salades">Salades et Yaourts</a></li>
+		</ol></li><li><p>Informations</p><ol>
+			<li><a href="/liste-de-menu/informations/allergenes">Allergènes</a></li><li><a href="/liste-de-menu/informations/nutrition">Nutrition</a></li>
+		</ol></li><li><p>En Savoir Plus</p></li>
+	</ol>
+	<p class="menu_suggestion_title">À la recherche de café à déguster chez vous?</p><ul class="menu_suggestion_links">
+		<li><a href="/café/cafés-en-grains">Notre gamme de cafés en grains</a></li>
+	</ul>
+</div><div class="region size1of5 menu_promo">
+	<a href="/liste-de-menu/liste-nourriture"><p><img src="//globalassets.starbucks.com/assets/41e2257c24fd4ceaaedfbcfe2768e1de.png" alt="" /></p><p><strong></strong></p><p>Venez découvrir les nouvelles saveurs de la rentrée.</p></a>
+</div>
+</li>
+
+<li class="fields" id="menu_responsabilité"><div class="region size4of5 menu_content">
+	<ol class="blocks blocks-four-up">
+		<li><p><a href="/responsabilité/impact-social">Impact Social</a></p><ol>
+			<li><a href="/responsabilité/impact-social/notre-communauté">Notre Communauté</a></li><li><a href="/responsabilité/impact-social/nos-engagements-envers-les-jeunes">Nos Engagements envers les jeunes</a></li><li><a href="/responsabilité/impact-social/devenir-partenaire-starbucks">Devenir Partenaire Starbucks</a></li>
+		</ol></li><li><p><a href="/responsabilité/environnement">Environnement</a></p><ol>
+			<li><a href="/responsabilité/environnement/recyclage">Recyclage</a></li><li><a href="/responsabilité/environnement/des-salons-de-café-plus-écologiques">Des Salons de Café plus Écologiques</a></li><li><a href="/responsabilité/environnement/l-eau">Économiser l’eau</a></li><li><a href="/responsabilité/environnement/réduire-notre-empreinte">Réduire notre Empreinte</a></li>
+		</ol></li><li><p><a href="/responsabilité/approvisionnement-éthique">Approvisionnement Éthique</a></p><ol>
+			<li><a href="/responsabilité/approvisionnement-éthique/soutien-aux-producteurs">Soutien aux Producteurs</a></li><li><a href="/responsabilité/approvisionnement-éthique/notre-café">Notre Café</a></li><li><a href="/responsabilité/approvisionnement-éthique/notre-thé">Notre Thé</a></li>
+		</ol></li><li><p><a href="/responsabilité/santé-et-bien-être">Santé et Bien-être</a></p><ol>
+			<li><a href="/">Informations nutritionnelles</a></li>
+		</ol></li><li><p>En Savoir Plus</p><ol>
+			<li><a href="http://www.conservation.org">Conservation International</a></li><li><a href="https://www.maxhavelaarfrance.org/">Fairtrade</a></li><li><a href="http://www.ethicalteapartnership.org/">Ethical Tea Partnership</a></li>
+		</ol></li><li><p><a href="https://news.starbucks.com/emea">Salle de Presse EMEA</a></p></li>
+	</ol>
+	<p class="menu_suggestion_title">À la recherche d'informations sur Starbucks?</p><ul class="menu_suggestion_links">
+		<li><a href="/about-us">À propos de Starbucks</a></li>
+	</ul>
+</div><div class="region size1of5 menu_promo">
+	<a href="https://www.starbucks.com/coffeeforcows"><p><img src="//globalassets.starbucks.com/assets/3db25f1213494063a739c591e084e08b.jpg" alt="" /></p><p><strong>Un Café, Un Engagement</strong></p><p>Vous + Starbucks, ensemble pour aider les agriculteurs d'Afrique de l'Est. En apprendre plus.</p></a>
+</div>
+</li>
+
+<li class="fields" id="menu_card"><div class="region size4of5 menu_content">
+	<ol class="blocks blocks-four-up">
+		<li><p><a href="/card">Gérer votre carte</a></p><ol>
+			<li><a href="/Card#cardBalanceWrapper">Vérifier le solde</a></li><li><a href="/card/reload/one-time">Recharger votre carte</a></li><li><a href="/card/manage/history">Consulter les transactions</a></li>
+		</ol></li><li><p><a href="/card/rewards">My Starbucks Rewards</a></p><ol>
+			<li><a href="/account/create/register">Enregistrer votre carte</a></li><li><a href="/account">Consulter vos étoiles</a></li><li><a href="/card/rewards/gold">Conserver vos avantages de niveau Gold</a></li>
+		</ol></li><li><p>En savoir plus</p><ol>
+			<li><a href="/card/card-terms-and-conditions">Conditions générales de la carte et du programme de récompenses</a></li><li><a href="/service-clients/faq/mobile-apps-faq">FAQ Application Mobile</a></li><li><a href="/service-client/faq/msr-faqs">FAQ MSR</a></li><li><a href="/service-clients/faq/card">FAQ sur la carte</a></li><li><a href="/account">Gérer votre compte</a></li><li><a href="https://www.starbucks.com/assets/2fe08c4489454fc9bb7d82e1401dd444.pdf">Salons Participants</a></li>
+		</ol></li><li><p><a href="/salon-de-café/mobile-apps">Mobile Apps</a></p><ol>
+			<li><a href="/coffeehouse/mobile-apps/starbucks-android-app">Starbucks pour Android</a></li><li><a href="/coffeehouse/mobile-apps/mystarbucks">Starbucks pour iPhone</a></li>
+		</ol></li>
+	</ol>
+
+</div><div class="region size1of5 menu_promo">
+	<a href="/salon-de-café/mobile-apps"><p><img src="//globalassets.starbucks.com/assets/cdafc365e1a34a7d81a5ab26302e2bb5.jpg" alt="" /></p><p><strong>Application Mobile Starbucks</strong></p><p>Pr&eacute;sentation du mode de paiement le plus rapide.</p></a>
+</div>
+</li>
+
+<li class="fields" id="menu_about_us"><div class="region size4of5 menu_content">
+	<ol class="blocks blocks-four-up">
+		<li><p><a href="/about-us/notre-histoire">Notre histoire</a></p></li><li><p><a href="/salon-de-café/carte">Carte de Fidélité</a></p></li><li><p><a href="/salon-de-café/internet-sans-fil">Internet sans-fil</a></p></li><li><p><a href="/salon-de-café/marchandises">Nos Mugs, Tumblers et accessoires</a></p></li><li><p><a href="/about-us/notre-enterprise">Notre entreprise</a></p><ol>
+
+		</ol></li><li><p><a href="/about-us/notre-responsabilité">Notre responsabilité</a></p><ol>
+
+		</ol></li><li><p><a href="/about-us/offres-speciales">Offres Spéciales</a></p></li><li><p><a href="/salon-de-café/programme-maître-du-café">Programme Maitre du Cafe</a></p></li><li><p><a href="/salon-de-café/design-boutiques">Store Design</a></p></li><li><p><a href="https://starbucks.easycruit.com/">Carrières</a></p></li>
+	</ol>
+	<p class="menu_suggestion_title">Vous cherchez un salon de café Starbucks?</p><ul class="menu_suggestion_links">
+		<li><a href="/trouver-un-salon">Où nous trouver</a></li>
+	</ul>
+</div><div class="region size1of5 menu_promo">
+	<a href="https://www.starbucks.com/coffeeforcows"><p><img src="//globalassets.starbucks.com/assets/3db25f1213494063a739c591e084e08b.jpg" alt="" /></p><p><strong>Un Café, Un Engagement</strong></p><p>Vous + Starbucks, ensemble pour aider les agriculteurs d'Afrique de l'Est. En apprendre plus.</p></a>
+</div>
+</li>
+
+		</ol>
+	</div>
+
+    
+
+    
+
+
+    <div id="content" class="main_content" tabindex="0">
+        
+        
+
+
+<section class="hero_container left_middle no_text_overlay">
+    
+    <div class="hero_image">
+
+        <span class="hidden_visually"></span>
+
+    </div>
+
+    <div class="container">
+
+        <div class="fields">
+
+            <div class="region size1of1">
+
+                    <a href="https://www.starbucks.fr/liste-de-menu/liste-boissons"  class="hero_link" ></a>
+
+
+            </div><!--.region-->
+
+        </div><!--.fields-->
+            
+    </div><!--.container-->
+
+</section><!--.hero_container-->
+
+<!-- PartialRequest:{"controller":"Master","action":"MSRBar"} --><section id="msr_bar" class="rewards_bar signed_out msr2">
+    <div class="container">
+        <div class="grid">
+            <div class="column size12of12 rewards_logo">
+                <div class="wrap">
+                        <img src="/static/images/rewards/msr2_logo.png" alt="My Starbucks Rewards" />
+                </div>
+            </div>
+            <div class="column size12of12 rewards_copy">
+                <h1>Un programme de fid&#233;lit&#233; qui vous est enti&#232;rement d&#233;di&#233;</h1>
+                <p>B&#233;n&#233;ficiez d&#39;offres exclusives en enregistrant tout simplement une Carte Starbucks.</p>
+            </div>
+            <div class="column size12of12 cta_wrap">
+                    <span class="sign_up_link"><span class="button button_cta primary"><a href="/account/create">Rejoindre maintenant</a></span></span> <span class="sign_in_link"><span class="button button_cta secondary"><a href="/account/signin">Se connecter</a></span></span>
+            </div>
+        </div>
+    </div>
+</section><!-- /PartialRequest:{"controller":"Master","action":"MSRBar"} -->
+        
+
+        
+
+        
+
+
+
+    </div><!--#content-->
+    
+    
+    
+	<div id="footer" tabindex="0"  class="footer">
+
+		<!-- PartialRequest:{"controller":"Master","action":"FooterTop"} -->
+
+    <div class="footer-top">
+    <div class="container">
+        <div class="grid">
+            
+            <ul class="sb-social-icons column size12of12 
+                 med_size12of12 ">
+                
+                    <li class="facebook">
+                        <a href="http://www.facebook.com/StarbucksFrance" >
+                            <span class="hidden_visually">Facebook</span>
+                        </a>
+                    </li>
+                
+                    <li class="instagram">
+                        <a href="https://instagram.com/starbucksfrance" >
+                            <span class="hidden_visually">Instagram</span>
+                        </a>
+                    </li>
+                
+                    <li class="twitter">
+                        <a href="https://twitter.com/StarbucksFrance" >
+                            <span class="hidden_visually">Twitter</span>
+                        </a>
+                    </li>
+                
+            </ul>
+            
+            </div>
+        </div>
+    </div>
+
+<!-- /PartialRequest:{"controller":"Master","action":"FooterTop"} -->
+<div class="footer-main">
+    <div class="container">
+        <div class="grid">
+            <div class="footer_global accordion">
+                    <div class="info_block column size12of12 med_size4of12 lg_size2of12">
+
+                        <h4>
+                                <a href="/about-us">À propos</a>
+                                <label for="140" data-icon="&#x2304" tabindex="0"></label>
+                        </h4>
+<input id="140" name="footer" type="radio" aria-hidden="true" />                        <ol>
+                                <li>
+<a href="/about-us/notre-histoire">Notre histoire</a>                            </li>
+                                <li>
+<a href="/about-us/notre-enterprise">Notre entreprise</a>                            </li>
+                                <li>
+<a href="/about-us/notre-responsabilit&#233;">Notre responsabilité</a>                            </li>
+                                <li>
+<a href="/about-us/offres-speciales">Offres Spéciales</a>                            </li>
+                                <li>
+<a href="/about-us/notre-politique">Notre politique</a>                            </li>
+                                <li>
+<a href="https://starbucks.easycruit.com/">Carrières</a>                            </li>
+                        </ol>
+                    </div>
+                    <div class="info_block column size12of12 med_size4of12 lg_size2of12">
+
+                        <h4>
+                                <a href="/onward">Onward</a>
+                                <label for="157" data-icon="&#x2304" tabindex="0"></label>
+                        </h4>
+<input id="157" name="footer" type="radio" aria-hidden="true" />                        <ol>
+                                <li>
+<a href="/onward/franchised-stores">La Franchise Starbucks</a>                            </li>
+                        </ol>
+                    </div>
+                    <div class="info_block column size12of12 med_size4of12 lg_size2of12">
+
+                        <h4>
+                                <a href="http://serviceclients.starbucks.fr/">Service client</a>
+                                <label for="163" data-icon="&#x2304" tabindex="0"></label>
+                        </h4>
+<input id="163" name="footer" type="radio" aria-hidden="true" />                        <ol>
+                        </ol>
+                    </div>
+                    <div class="info_block column size12of12 med_size4of12 lg_size2of12">
+
+                        <h4>
+                                <a href="http://solutions.starbucks.fr">Pour les entreprises</a>
+                                <label for="174" data-icon="&#x2304" tabindex="0"></label>
+                        </h4>
+<input id="174" name="footer" type="radio" aria-hidden="true" />                        <ol>
+                                <li>
+<a href="http://solutions.starbucks.fr/nos-solutions/licence/">Licence</a>                            </li>
+                                <li>
+<a href="http://solutions.starbucks.fr/nos-solutions/services-alimentaires/">Services Alimentaires</a>                            </li>
+                                <li>
+<a href="http://solutions.starbucks.fr/nos-solutions/libre-service-premium/">Libre-Service Premium</a>                            </li>
+                                <li>
+<a href="http://solutions.starbucks.fr/nos-solutions/seattles-best-coffee/">Seattle’s Best Coffee</a>                            </li>
+                        </ol>
+                    </div>
+                    <div class="info_block column size12of12 med_size4of12 lg_size2of12">
+
+                        <h4>
+<span>Liens utiles</span>                        </h4>
+                        <ol>
+                                <li>
+<a href="/">Nutrition</a>                            </li>
+                                <li>
+<a href="/trouver-un-salon">Trouver un salon</a>                            </li>
+                                <li>
+<a href="https://www.starbucks.com/partners/international/login">Pour les partenaires</a>                            </li>
+                        </ol>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+		<div class="footer-bottom">
+            <div class="container">
+                <div class="grid">
+		            
+
+
+<div class="column size12of12">
+    <ul class="site_selection">
+        <li class="utility_link store_locator">
+            <a href="/trouver-un-salon">
+                <span aria-hidden="true" data-icon="&#x272a"></span>
+                <span class="hidden_visually med_render_visually">Trouver un salon</span>
+            </a>
+        </li>
+        
+            <li class="only language">français </li>
+	    
+    </ul>
+</div>
+
+                        <div class="column size12of12">
+                            <ul class="footer_sub">
+                                <li ><a href="/about-us/notre-enterprise/nos-politiques-en-ligne/conditions-d-utilisation">Conditions d’utilisations et Mentions Légales</a></li><li ><a href="/about-us/notre-enterprise/nos-politiques-en-ligne/privacy-statement">Politique de Confidentialité</a></li><li ><a href="/site-map">Plan du site</a></li>
+                            </ul>
+                        </div><!--.column-->
+                    
+                    <div class="column size12of12">
+			            <p class="footer_copyright">© 2019 Starbucks Corporation. Tous droits réservés.</p>
+                    </div><!--.column-->
+                </div><!--.grid-->
+            </div><!--.container-->
+		</div><!--.footer-bottom-->
+	</div><!--#footer-->
+
+    
+    
+    
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/static/js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="/static/resource/framework_js/193746790_fr-FR"></script>
+    
+
+<script>
+    sb.namespace("config");
+    
+
+    sb.config.ecomm = {
+        StarbucksStoreApiBaseUrl: "store-fr.starbucks.ca/s/Sites-StarbucksFR-Site/dw/shop/v14_6",
+        StarbucksStoreApiClientId: "347a0322-12dc-45b2-9a69-5be11f47c4ea",
+        StarbucksStoreHostName: "store.starbucks.fr",
+        StarbucksStoreCartPath: "on/demandware.store/Sites-StarbucksFR-Site/fr_FR/Cart-Show",
+        MarketHasOnlineStore: true,
+        EnableSharedCart: false
+    };
+    sb.config.search = {
+        EnableSearchAsYouType: true
+    };
+    sb.config.globalTextResources = {
+        closeButtonText: 'Fermer'
+    };
+
+</script>
+    
+	<script>sb.i18n.culture.fromISOString('fr-FR');</script>
+    <script src="/static/resource/global_js_store_enabled_markets/-1883104326_fr-FR"></script>
+    
+
+<script>
+    $(function () {
+        
+        $(document).on('facebookLoaded', function () {
+            // The place to run a global function once the Facebook SDK is loaded, such as getLoginStatus
+            sb.facebook.isLoaded = true;
+            sb.facebook.getLoginStatus();
+            // This would be the place to put global authStatusChange subscribers if needed, eg:
+            // FB.Event.subscribe('auth.statusChange', authStatusChangeCallback);
+
+        });
+
+        //when both jQuery and Facebook are loaded fire sdkLoaded function
+        function sdkLoaded() {
+            FB.init({
+                appId      : 338375791266,
+                xfbml      : true,
+                cookie     : true,
+                version    : 'v2.3'
+            });
+            $(document).trigger("facebookLoaded");
+        }
+
+        if (window.FB) {
+            //FB sdk, which is requested asynchronously, has already been loaded;
+            //fire the sdkLoaded method
+            sdkLoaded();
+        } else {
+            //this script loaded before FB sdk loaded;
+            //when the sdk is loaded it looks for window.fbAsyncInit;
+            //point Facebook's fbAsyncInit to our sdkLoaded method
+            window.fbAsyncInit = sdkLoaded;
+        }
+
+        // For future reference -- turn any link/button into a "logout from Facebook" by adding .fbLogout class
+        //$(document).on('click', '.fbLogout', sb.facebook.logout);
+    });
+</script>
+    
+
+
+    
+        <script src="/static/resource/homepage_js/333848480_fr-FR"></script>
+        
+	    
+    
+
+</body>
+</html>
