@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World!</title>
+</head>
+
+<body>
+
+    <script>
+
+        alert('Hello world!');
+        var number = 2;
+        alert(typeof number); // Affiche : « number »
+
+        var text = 'Mon texte';
+        alert(typeof text); // Affiche : « string »
+
+        var aBoolean = false;
+        alert(typeof aBoolean); // Affiche : « boolean »
+
+        var divisor = 3, result1, result2, result3;
+
+        result1 = (16 + 8) / 2 - 2 ; // 10
+        result2 = result1 / divisor;
+        result3 = result1 % divisor;
+
+        alert(result2); // Résultat de la division : 3,33
+        alert(result3); // Reste de la division : 1
+
+        var first, second, result;
+
+        first  = prompt('Entrez le premier chiffre :');
+        second = prompt('Entrez le second chiffre :');
+        result = first + second;
+
+        alert(result);
+
+        var condition1, condition2, result;
+
+        condition1 = 2 > 8; // false
+        condition2 = 8 > 2; // true
+
+        result = condition1 && condition2;
+        alert(result); // Affiche « false »
+
+        var drawer = parseInt(prompt('Choisissez le tiroir à ouvrir (1 à 4) :'));
+
+        switch (drawer) {
+            
+        case 1:
+            alert('Contient divers outils pour dessiner : du papier, des crayons, etc.');
+        break;
+
+        case 2:
+            alert('Contient du matériel informatique : des câbles, des composants, etc.');
+        break;
+
+        case 3:
+            alert('Ah ? Ce tiroir est fermé à clé ! Dommage !');
+        break;
+
+        case 4:
+            alert('Contient des vêtements : des chemises, des pantalons, etc.');
+        break;
+
+        default:
+            alert("Info du jour : le meuble ne contient que 4 tiroirs et, jusqu'à preuve du contraire, les tiroirs négatifs n'existent pas.");
+    }
+        
+    </script>
+
+
+
+</body>
+</html>
