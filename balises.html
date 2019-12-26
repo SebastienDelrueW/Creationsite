@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+
+<h1><em></em><strong>B</strong>alises et non valises</em></h1>
+
+<style>
+
+h1 {
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: lightslategray;
+margin: 1px blue;
+border-color: maroon 2px;
+}
+
+/* css de span */
+.ingredient {
+    color: rgb(75, 25, 25);
+}
+
+/* css de div */
+.warning {
+    border: 10px ridge #f00;
+    background-color: #ff0;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.warning img {
+    width: 50%;
+}
+
+.warning p {
+    font: small-caps bold 1.2rem sans-serif;
+    text-align: center;
+}
+
+/* css de id*/
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+#exciting {
+    background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+    border: 1px solid #696969;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px black;
+}
+
+#exciting:before {
+    content: "ℹ️";
+    margin-right: 5px;
+}
+
+
+/* css de class*/
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+.note {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.editorial {
+    background: rgb(255, 0, 0, .25);
+    padding: 10px;
+}
+
+.editorial:before {
+    content: 'Editor: ';
+}
+
+
+</style>
+
+
+
+<body>
+    
+
+    <nav>
+    <ol>
+        <ol>      
+            <li><a href="#span"><strong>span</strong></a></li><br>
+            <li><a href="#div"><strong>div</strong></a></li><br>
+            <li><a href="#id"><strong>id</strong></a></li><br>
+            <li><a href="#class"><strong>class</strong></a></li><br>
+            </ol><!--Une liste ordonnée : OL ordered list-->
+    </ol>
+    </nav>
+
+
+<p id="span"><strong>balise &lt; span &gt;</strong></p>
+
+<p><strong>A</strong>dditionner <span class="ingredient">oeufs</span>, <span class="ingredient">farine</span> et <span class="ingredient">huile</span> et mélanger avec une spatule.</p>
+
+<p>Faire chauffer <span class="ingredient">le beurre</span>, mettre du poivre et du sel.</p>
+
+
+
+<hr>
+
+<p id="div"><strong>balise &lt; div &gt;</strong></p>
+
+<div class="warning">
+    <img src="../Creationsite/img/sddl.jpg"
+         alt="La Statue change de couleur">
+    <p>Femme en colère</p>
+</div>
+
+<hr>
+
+<p id="id"><strong>balise &lt; id &gt;</strong></p>
+
+
+<p>A normal, boring paragraph. Try not to fall asleep (
+    Un paragraphe normal et ennuyeux. Essayez de ne pas vous endormir).</p>
+
+<p id="exciting">The most exciting paragraph on the page. One of a kind (Le paragraphe le plus excitant de la page. Unique en son genre)!</p>
+
+
+<hr>
+
+<p>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae et, repellat a saepe architecto quod autem, dolores quo officia minus ducimus, assumenda dolorem. Dolorum aut commodi tempore magni et.</span>
+    <span>Modi nisi accusantium, eius labore beatae consequuntur quidem sequi nesciunt, optio necessitatibus minus fuga hic atque earum, asperiores cupiditate ipsa pariatur. Molestias temporibus ullam quam necessitatibus non excepturi voluptatibus error.</span>
+    <span>Dolore, tempore iure. Impedit, blanditiis officia. Accusantium adipisci deserunt accusamus, veritatis incidunt dolorem sint dolor dolore maiores enim sunt quaerat molestias ipsum quisquam cum praesentium repudiandae labore at error est?</span>
+    <span>Saepe sapiente quaerat perferendis voluptates id, soluta vel quisquam error magni, dignissimos doloremque earum rem ratione natus dolores, deserunt ipsum quos? Error repellendus beatae et ut velit temporibus cupiditate quod?</span>
+    <span>Porro, molestiae vel. Illo, maxime! Optio aliquid quod natus beatae nihil tempora soluta voluptatum officiis error, delectus facere non cum praesentium unde pariatur illum repellendus ut ad laudantium, aut illo.</span>
+</p>
+
+
+
+
+<p id="class"><strong>balise &lt; class &gt;</strong></p>
+
+<p> Narrateur: c'est le début de la pièce. </p>
+
+<p class = "note editorial"> Le point ci-dessus semble un peu évident. Supprimer / réécrire? </p>
+
+<p> Narrateur: Je dois vous avertir maintenant que ce début est très excitant. </p>
+
+<p class = "note"> [Les lumières s’allument et le vent souffle; Caspian entre en scène à cour] </p>
+
+
+
+
+
+<p>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae et, repellat a saepe architecto quod autem, dolores quo officia minus ducimus, assumenda dolorem. Dolorum aut commodi tempore magni et.</span>
+    <span>Modi nisi accusantium, eius labore beatae consequuntur quidem sequi nesciunt, optio necessitatibus minus fuga hic atque earum, asperiores cupiditate ipsa pariatur. Molestias temporibus ullam quam necessitatibus non excepturi voluptatibus error.</span>
+    <span>Dolore, tempore iure. Impedit, blanditiis officia. Accusantium adipisci deserunt accusamus, veritatis incidunt dolorem sint dolor dolore maiores enim sunt quaerat molestias ipsum quisquam cum praesentium repudiandae labore at error est?</span>
+    <span>Saepe sapiente quaerat perferendis voluptates id, soluta vel quisquam error magni, dignissimos doloremque earum rem ratione natus dolores, deserunt ipsum quos? Error repellendus beatae et ut velit temporibus cupiditate quod?</span>
+    <span>Porro, molestiae vel. Illo, maxime! Optio aliquid quod natus beatae nihil tempora soluta voluptatum officiis error, delectus facere non cum praesentium unde pariatur illum repellendus ut ad laudantium, aut illo.</span>
+</p>
+
+
+</body>
+</html>
