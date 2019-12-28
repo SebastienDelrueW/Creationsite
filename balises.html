@@ -239,6 +239,91 @@
             margin-top: 1px;
         }
 
+        /*p {
+            color: rgb(9, 9, 51);
+            border: 2px solid rgb(58, 54, 47);
+            padding: 5px;
+        }*/
+
+        * {
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(5, 20, 36);
+
+        }
+
+
+
+        *{
+    font-family: 'Times New Roman', Times, serif;
+}
+   
+
+
+body {
+    background-color: burlywood;
+    /* largeur de la page 50% de la taille de l'écran du navigateur */
+    width: 50%;
+    /* la marge exterieur de l'élément, avec une gestion automatique des marges pour que le contenu de body soit centré dans la fenêtre */
+    margin: auto;
+}
+
+/* les styles pour le tableau */
+
+/* Border 3 valeurs : épaisseur, type de filet, couleur */
+.table2 {
+
+     /* la bordure du tableau
+    /* Boreder 3 valeurs : épaisseur, type de filet, couleur */
+    border: 5px solid #565545;
+
+    /* par défaut la bordure contient 2 traits, pour que le trait soit unique on utilise la propriété "collapse" */
+    border-collapse: collapse;
+    /* la largeur du tableau par rapport à son contenant donc ici BODY // le tableau hérite des propriétés de son contenant sauf changement ici de la couleur de fond*/
+    width: 90%
+}   
+caption {
+background-color: #E6E6FA;
+    /* border: 3px solid #483D8B; */
+    padding: 10px;
+    /* border-collapse: collapse; */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* il est possible de déclarer plusieurs éléments et de leur affecter les mêmes propriétés        les éléments sont séparés par une virgules */
+thead, tfoot {
+    background-color: rgb(154, 194, 196);
+    border: 5px solid rgb(129, 0, 0)
+}
+
+tbody {
+    /* border: 8px solid black; */
+    border: 1px solid black;
+}
+
+th {
+    /* dotter =pointillé */
+    border: 2px dotted #565545;
+    /* la marge intérieur de l'élément : padding */
+    padding: 15px;
+    width: 25%;
+}
+td {
+    border: 1px dotted #565545;
+    text-align: center;
+    padding: 5px;
+}
+/* td:first-child le 1er td pour aligner à gauche le texte dans la première cellule de chaque rangée */
+td:first-child {
+    text-align: left;
+    background-color: rgb(144, 192, 192);
+}
+   
+a {
+    color: rgb(89, 80, 80);
+    text-transform: initial;
+    font-family: 'Times New Roman', Times, serif}
+
+
 
         </style>
             
@@ -250,7 +335,7 @@
 
 
 
-    <nav>
+<nav>
     <ol>
             <!--Une liste ordonnée : OL ordered list-->
             <li><a href="#span"><strong>span</strong></a></li>
@@ -264,162 +349,164 @@
             <li><a href="#adress"><strong>adress</strong></a></li>
             <li><a href="#Déclarationuniverselledesdroitsdel'homme"><strong>Déclaration universelle des droits de l'homme</strong></a></li>
     </ol>     
+       
         <ul>
-            <ol>
             <li><a href="#Préambule"><strong>Préambule</strong></a></li>
             <li><a href="#Article10"><strong>Article 10</strong></a></li>
             <li><a href="#Article23"><strong>Article 23</strong></a></li>
-            </ol>
         </ul>  
-   
-    </nav>
+        
+        <br>
+        <hr>
+        
+ </nav>
 
 
-<p id="span"><strong>balise &lt; span &gt;</strong></p>
-<a>L'élément HTML &lt; span &gt; est un conteneur générique en ligne (inline) pour les contenus phrasés.</a>
+        <p id="span"><strong>balise &lt; span &gt;</strong></p>
+        <a>L'élément HTML &lt; span &gt; est un conteneur générique en ligne (inline) pour les contenus phrasés.</a>
 
-<p><strong>A</strong>dditionner <span class="ingredient">oeufs</span>, <span class="ingredient">farine</span> et <span class="ingredient">huile</span> et mélanger avec une spatule.</p>
+        <p><strong>A</strong>dditionner <span class="ingredient">oeufs</span>, <span class="ingredient">farine</span> et <span class="ingredient">huile</span> et mélanger avec une spatule.</p>
 
-<p>Faire chauffer <span class="ingredient">le beurre</span>, mettre du poivre et du sel.</p>
+        <p>Faire chauffer <span class="ingredient">le beurre</span>, mettre du poivre et du sel.</p>
 
-<hr>
+        <hr>
 
-<p id="div"><strong>balise &lt; div &gt;</strong></p>
-<a>L'élément HTML &lt; div &gt; (qui signifie division du document) est un conteneur générique qui permet d'organiser le contenu.</a>
+        <p id="div"><strong>balise &lt; div &gt;</strong></p>
+        <a>L'élément HTML &lt; div &gt; (qui signifie division du document) est un conteneur générique qui permet d'organiser le contenu.</a>
 
-<br>
-<br>
+        <br>
+        <br>
 
-<div class="warning">
-    <img src="../Creationsite/img/sddl.jpg"
-         alt="La Statue change de couleur">
-    <p>Femme en colère</p>
-</div>
+        <div class="warning">
+            <img src="../Creationsite/img/sddl.jpg"
+                alt="La Statue change de couleur">
+            <p>Femme en colère</p>
+        </div>
 
-<hr>
+        <hr>
 
-<p id="id"><strong>balise &lt; id &gt;</strong></p>
-<a>L'attribut universel &lt; id &gt; définit un identifiant qui doit être unique pour l'ensemble du document.</a>
+        <p id="id"><strong>balise &lt; id &gt;</strong></p>
+        <a>L'attribut universel &lt; id &gt; définit un identifiant qui doit être unique pour l'ensemble du document.</a>
 
-<p>A normal, boring paragraph. Try not to fall asleep (
-    Un paragraphe normal et ennuyeux. Essayez de ne pas vous endormir).</p>
+        <p>A normal, boring paragraph. Try not to fall asleep (
+            Un paragraphe normal et ennuyeux. Essayez de ne pas vous endormir).</p>
 
-<p id="exciting">The most exciting paragraph on the page. One of a kind (Le paragraphe le plus excitant de la page. Unique en son genre)!</p>
+        <p id="exciting">The most exciting paragraph on the page. One of a kind (Le paragraphe le plus excitant de la page. Unique en son genre)!</p>
 
-<hr>
-
-
-<p id="class"><strong>balise &lt; class &gt;</strong></p>
-<a>L'attribut universel class indique une liste de classes associées à l'élément courant.</a>
-
-<p> Narrateur: c'est le début de la pièce. </p>
-
-<p class = "note editorial"> Le point ci-dessus semble un peu évident. Supprimer / réécrire? </p>
-
-<p> Narrateur: Je dois vous avertir maintenant que ce début est très excitant. </p>
-
-<p class = "note"> [Les lumières s’allument et le vent souffle; Caspian entre en scène à cour] </p>
-
-<hr>
-
-<p id="article"><strong>balise &lt; article &gt;</strong></p>
-<a>L'élément HTML balise &lt; article &gt; représente du contenu autonome dans un document, une page, une application, ou un site.</a>
-<br><br>
-
-<article class="forecast">
-    <h2>Prévisions météorologiques de Pantin</h2>
-    <article class="day-forecast">
-        <h3>05 Mars 2019</h3>
-        <p>Pluie.</p>
-    </article>
-    <article class="day-forecast">
-        <h3>06 Mars 2019</h3>
-        <p>Pluie intermittente.</p>
-    </article>
-    <article class="day-forecast">
-        <h3>07 Mars 2019</h3>
-        <p>Fortes pluies.</p>
-    </article>
-</article>
-<br>
-
-<hr>
-
-<p id="blockquote"><strong>balise &lt; blockquote &gt;</strong></p>
-<a>L'élément HTML &lt; blockquote &gt; (qui signifie bloc de citation) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation.
-</a>
-<br><br>
-
-<blockquote cite="https://www.huxley.net/bnw/four.html">
-    <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced (Les mots peuvent être comme des rayons X, si vous les utilisez correctement, ils passeront par n'importe quoi. Vous lisez et vous êtes transpercé).</p>
-    <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
-</blockquote>
+        <hr>
 
 
-<br>
+        <p id="class"><strong>balise &lt; class &gt;</strong></p>
+        <a>L'attribut universel class indique une liste de classes associées à l'élément courant.</a>
 
-<hr>
+        <p> Narrateur: c'est le début de la pièce. </p>
 
-<p id="pre"><strong>balise &lt; pre &gt;</strong></p>
-<a>L'élément HTML &lt; pre &gt; représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.</a>
-<br><br>
+        <p class = "note editorial"> Le point ci-dessus semble un peu évident. Supprimer / réécrire? </p>
 
-<pre>
-    L          TE
-      A       A
-        C    V
-         R A
-         DOU
-         LOU
-        REUSE
-        QUE TU
-        PORTES
-      ET QUI T'
-      ORNE O CI
-       VILISÉ
-      OTE-  TU VEUX
-       LA    BIEN
-      SI      RESPI
-              RER       - Apollinaire
-  </pre>
-  
+        <p> Narrateur: Je dois vous avertir maintenant que ce début est très excitant. </p>
 
-  <br>
+        <p class = "note"> [Les lumières s’allument et le vent souffle; Caspian entre en scène à cour] </p>
 
-  <hr>
-  
-  <p id="figure"><strong>balise &lt; figure &gt;</strong></p>
-  <a>L'élément HTML &lt; figure &gt; représente une figure (un schéma), qui peut être accompagné d'une légende grâce à l'élément &lt; figcaption &gt;. Il est normalement référencé de manière unique.</a>
-  <br><br>
+        <hr>
 
-  <figure>
-    <img src="../Creationsite/img/pluie.jpg"
-         alt="Nuage">
-    <figcaption>Temps humide et grosse grisaille</figcaption>
-</figure>
-    
-<br>
+        <p id="article"><strong>balise &lt; article &gt;</strong></p>
+        <a>L'élément HTML balise &lt; article &gt; représente du contenu autonome dans un document, une page, une application, ou un site.</a>
+        <br><br>
 
-<hr>
+        <article class="forecast">
+            <h2>Prévisions météorologiques de Pantin</h2>
+            <article class="day-forecast">
+                <h3>05 Mars 2019</h3>
+                <p>Pluie.</p>
+            </article>
+            <article class="day-forecast">
+                <h3>06 Mars 2019</h3>
+                <p>Pluie intermittente.</p>
+            </article>
+            <article class="day-forecast">
+                <h3>07 Mars 2019</h3>
+                <p>Fortes pluies.</p>
+            </article>
+        </article>
+        <br>
 
-<p id="adress"><strong>balise &lt; adress &gt;</strong></p>
-<a>L'élément HTML &lt; adress &gt; indique des informations de contact pour une personne, un groupe de personnes ou une organisation.</a>
-<br><br>
+        <hr>
 
-<p>
-    Contactez l'auteur de cette page:</p>
+        <p id="blockquote"><strong>balise &lt; blockquote &gt;</strong></p>
+        <a>L'élément HTML &lt; blockquote &gt; (qui signifie bloc de citation) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation.
+        </a>
+        <br><br>
 
-<address>
-  <a href="mailto:jim@rock.com">jim@rock.com</a><br>
-  <a href="tel:+13115552368">(311) 555-2368</a>
-</address>
+        <blockquote cite="https://www.huxley.net/bnw/four.html">
+            <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced (Les mots peuvent être comme des rayons X, si vous les utilisez correctement, ils passeront par n'importe quoi. Vous lisez et vous êtes transpercé).</p>
+            <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+        </blockquote>
 
-<br>
 
-<hr>
+        <br>
+
+        <hr>
+
+        <p id="pre"><strong>balise &lt; pre &gt;</strong></p>
+        <a>L'élément HTML &lt; pre &gt;æ représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.</a>
+        <br><br>
+
+    <pre>
+            L          TE
+            A       A
+                C    V
+                R A
+                DOU
+                LOU
+                REUSE
+                QUE TU
+                PORTES
+            ET QUI T'
+            ORNE O CI
+            VILISÉ
+            OTE-  TU VEUX
+            LA    BIEN
+            SI      RESPI
+                    RER       - Apollinaire
+    </pre>
+        
+
+        <br>
+
+        <hr>
+        
+        <p id="figure"><strong>balise &lt; figure &gt;</strong></p>
+        <a>L'élément HTML &lt; figure &gt; représente une figure (un schéma), qui peut être accompagné d'une légende grâce à l'élément &lt; figcaption &gt;. Il est normalement référencé de manière unique.</a>
+        <br><br>
+
+    <figure>
+            <img src="../Creationsite/img/pluie.jpg"
+                alt="Nuage">
+            <figcaption>Temps humide et grosse grisaille</figcaption>
+    </figure>
+            
+        <br>
+
+        <hr>
+
+        <p id="adress"><strong>balise &lt; adress &gt;</strong></p>
+        <a>L'élément HTML &lt; adress &gt; indique des informations de contact pour une personne, un groupe de personnes ou une organisation.</a>
+        <br><br>
+
+        <p>
+            Contactez l'auteur de cette page:</p>
+
+        <address>
+        <a href="mailto:jim@rock.com">jim@rock.com</a><br>
+        <a href="tel:+13115552368">(311) 555-2368</a>
+        </address>
+
+        <br>
+
+        <hr>
       
-    <br>
-    <br>
+        <br>
+        <br>
 
     <main>
 
@@ -546,10 +633,10 @@
         <br>3. Quiconque travaille a droit à une rémunération équitable et satisfaisante lui assurant ainsi qu'à sa famille une existence conforme à la dignité humaine et complétée, s'il y a lieu, par tous autres moyens de protection sociale. 
         <br>4. Toute personne a le droit de fonder avec d'autres des syndicats et de s'affilier à des syndicats pour la défense de ses intérêts.<br>
 
-        <aside>
+    <aside>
             <p><img src="../Creationsite/img/les_deux_canards.jpg"
              alt="Statue"></p>
-        </aside>
+    </aside>
         
         
         <br><strong>Article 24</strong><br>
@@ -596,11 +683,13 @@
             </figure>
 
             
-        </main>
+    </main>
         
+       
+        <br>
+        <br>
+        <hr>
 
-        <br>
-        <br>
 
         <h1>Listes avec start</h1>
 
@@ -629,6 +718,76 @@
             <li>Milan</li>
             <li>Bologne</li>
         </ol>
+
+        <br>
+        <hr>
+        <br>
+        
+        <table>
+            <!--titre du tableau : CAPTION 'les cellules sont fusionnées) -->
+            <caption>Ventes de la semaine</caption>
+            <!--en tête de colonnes du tableau-->
+            <thead>
+            <tr>
+            <!-- cellules d'en tête : TH table head-->
+                <th>Jour</th>
+                <th>Smartphones</th>
+                <th>Tablettes</th>
+                <th>Ordinateurs portables</th>
+            </tr>
+            </thead>
+             <!-- le corps du tableau : TBODY-->
+             <tbody>
+            <!--tr*5>td*4 : pour faire notre tableau de 5 rangées et 4 colonnes-->
+            <!--rangée de tableau : TR, table row -->
+            <tr>
+            <!-- cellules de tableau : TD, table data-->
+                <td>Lundi</td>
+                <td>20</td>
+                <td>3</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Mardi</td>
+                <td>5</td>
+                <td>4</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Mercredi</td>
+                <td>6</td>
+                <td>3</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Jeudi</td>
+                <td>2</td>
+                <td>4</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Vendredi</td>
+                <td>2</td>
+                <td>8</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Samedi</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+             </tbody>
+            <!-- le bas ou la fin du tableau : TFOOT les normes du WC3 mettent la balise tfoot avant la balise tbody-->
+            <tfoot>
+                <tr>      
+                <td>Total</td>
+                <td>35</td>
+                <td>22</td>
+                <td>28</td>
+                </tr>
+            </tfoot>
+        </table>
 
      <br>
      <br>
