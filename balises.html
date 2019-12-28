@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
 </head>
+<body>
 
-<h1><em></em><strong>B</strong>alises et non valises</em></h1>
+<h1><strong>B</strong>alises et non valises</h1>
 
 <style>
 
@@ -41,7 +42,7 @@ border-color: maroon 2px;
     text-align: center;
 }
 
-/* css de id*/
+/* css de id */
 .output {
     font: 1rem 'Fira Sans', sans-serif;
 }
@@ -60,7 +61,7 @@ border-color: maroon 2px;
 }
 
 
-/* css de class*/
+/* css de class */
 .output {
     font: 1rem 'Fira Sans', sans-serif;
 }
@@ -79,15 +80,165 @@ border-color: maroon 2px;
     content: 'Editor: ';
 }
 
-a {
-    color: slategrey;
+c {
+    font-variant: small-caps;
+    color: rgb(152, 3, 3);
 }
 
-</style>
+
+/* css de article */
+
+.forecast {
+    margin: 0;
+    padding: .3rem;
+    background-color: #eee;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+.forecast > h1,
+.day-forecast {
+    margin: .5rem;
+    padding: .3rem;
+    font-size: 1.2rem;
+}
+
+.day-forecast {
+    background: right/contain content-box border-box no-repeat
+    url('img/pluie.jpg') white;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+    margin: .2rem;
+    font-size: 1rem;
+}
+
+/* css de blockquote */
+
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+/* css de pre */
+
+pre {
+    font-size: .7rem;
+    margin: 0;
+}
+
+/* css de figure */
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}
+
+img {
+    max-width: 220px;
+    max-height: 150px;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+/* css de adress */
+
+a[href^="mailto"]::before {
+    content: "📧 ";
+}
+
+a[href^="tel"]::before {
+    content: "📞 ";
+}
+
+/* css de section */
+
+section {
+    background-image: url();
+    color: rgb(21, 51, 75);
+    max-width: 250px;
+    border: 1px solid rgb(11, 1, 1); 
+    /*border: 2mm ridge rgb(106, 8, 37);*/
+    padding: 4px;
+} 
+
+section2 {
+    color: rgb(11, 78, 179);
+    /*border: 1px dotted rgb(46, 2, 2); */
+    /*border: 2mm ridge rgb(106, 8, 37);*/ 
+} 
+
+b {
+    font-variant: small-caps;
+    color: rgb(152, 3, 3);
+}
+
+/* css de aside */
+
+aside {
+    /*max-width: 200px;*/
+    max-width: 290px;
+    max-height: 160px;
+    width: 93%;
+    padding-left: px;
+    margin-left: .5rem;
+    margin-top: 5px;
+    float: right;
+    /*box-shadow: inset 5px 0 5px -5px #eb9a9a;*/
+    font-style: italic;
+    color: #7e2f29;
+    border-style: inset;
+    margin: 6px;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+    padding-right: 5;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+img {
+
+    margin: 2px;
+    margin-bottom: 1px;
+    margin-top: 4px;
+}
 
 
+aside > p {
+    margin: 1px;
+    margin-left: 4px;
+    margin-top: px;
 
-<body>
+}
+
+    </style>
     
 
     <nav>
@@ -97,7 +248,14 @@ a {
             <li><a href="#div"><strong>div</strong></a></li><br>
             <li><a href="#id"><strong>id</strong></a></li><br>
             <li><a href="#class"><strong>class</strong></a></li><br>
-            </ol>
+            <li><a href="#article"><strong>article</strong></a></li><br>
+            <li><a href="#blockquote"><strong>blockquote</strong></a></li><br>
+            <li><a href="#pre"><strong>pre</strong></a></li><br>
+            <li><a href="#figure"><strong>figure</strong></a></li><br>
+            <li><a href="#adress"><strong>adress</strong></a></li><br>
+            <li><a href="#Préambule"><strong>Préambule</strong></a></li><br>
+            <li><a href="#Article 10"><strong>Article 10</strong></a></li><br>
+            <li><a href="#Article 23"><strong>Article 23</strong></a></li><br>
     </ol>
     </nav>
 
@@ -147,17 +305,297 @@ a {
 
 <p class = "note"> [Les lumières s’allument et le vent souffle; Caspian entre en scène à cour] </p>
 
+<hr>
+
+<p id="article"><strong>balise &lt; article &gt;</strong></p>
+<a>L'élément HTML balise &lt; article &gt; représente du contenu autonome dans un document, une page, une application, ou un site.</a>
+<br><br>
+
+<article class="forecast">
+    <h1>Prévisions météorologiques de Pantin</h1>
+    <article class="day-forecast">
+        <h2>05 Mars 2019</h2>
+        <p>Pluie.</p>
+    </article>
+    <article class="day-forecast">
+        <h2>06 Mars 2019</h2>
+        <p>Pluie intermittente.</p>
+    </article>
+    <article class="day-forecast">
+        <h2>07 Mars 2019</h2>
+        <p>Fortes pluies.</p>
+    </article>
+</article>
+<br>
+
+<hr>
+
+<p id="blockquote"><strong>balise &lt; blockquote &gt;</strong></p>
+<a>L'élément &lt; blockquote &gt; (qui signifie bloc de citation) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation.
+</a>
+<br><br>
+
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced (Les mots peuvent être comme des rayons X, si vous les utilisez correctement, ils passeront par n'importe quoi. Vous lisez et vous êtes transpercé).</p>
+    <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+</blockquote>
 
 
+<br>
 
+<hr>
+
+<p id="pre"><strong>balise &lt; pre &gt;</strong></p>
+<a>L'élément HTML &lt; pre &gt; représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.</a>
+<br><br>
+
+<pre>
+    L          TE
+      A       A
+        C    V
+         R A
+         DOU
+         LOU
+        REUSE
+        QUE TU
+        PORTES
+      ET QUI T'
+      ORNE O CI
+       VILISÉ
+      OTE-  TU VEUX
+       LA    BIEN
+      SI      RESPI
+              RER       - Apollinaire
+  </pre>
+  
+  
+
+  <br>
+
+  <hr>
+  
+  <p id="figure"><strong>balise &lt; figure &gt;</strong></p>
+  <a>L'élément HTML &lt; figure &gt; représente une figure (un schéma), qui peut être accompagné d'une légende grâce à l'élément &lt; figcaption &gt;. Il est normalement référencé de manière unique.</a>
+  <br><br>
+
+  <figure>
+    <img src="../Creationsite/img/pluie.jpg"
+         alt="Nuage">
+    <figcaption>Temps humide et grosse grisaille</figcaption>
+</figure>
+    
+<br>
+
+<hr>
+
+<p id="adress"><strong>balise &lt; adress &gt;</strong></p>
+<a>L'élément HTML &lt; adress &gt; indique des informations de contact pour une personne, un groupe de personnes ou une organisation.</a>
+<br><br>
 
 <p>
-    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae et, repellat a saepe architecto quod autem, dolores quo officia minus ducimus, assumenda dolorem. Dolorum aut commodi tempore magni et.</span>
-    <span>Modi nisi accusantium, eius labore beatae consequuntur quidem sequi nesciunt, optio necessitatibus minus fuga hic atque earum, asperiores cupiditate ipsa pariatur. Molestias temporibus ullam quam necessitatibus non excepturi voluptatibus error.</span>
-    <span>Dolore, tempore iure. Impedit, blanditiis officia. Accusantium adipisci deserunt accusamus, veritatis incidunt dolorem sint dolor dolore maiores enim sunt quaerat molestias ipsum quisquam cum praesentium repudiandae labore at error est?</span>
-    <span>Saepe sapiente quaerat perferendis voluptates id, soluta vel quisquam error magni, dignissimos doloremque earum rem ratione natus dolores, deserunt ipsum quos? Error repellendus beatae et ut velit temporibus cupiditate quod?</span>
-    <span>Porro, molestiae vel. Illo, maxime! Optio aliquid quod natus beatae nihil tempora soluta voluptatum officiis error, delectus facere non cum praesentium unde pariatur illum repellendus ut ad laudantium, aut illo.</span>
-</p>
+    Contactez l'auteur de cette page:</p>
+
+<address>
+  <a href="mailto:jim@rock.com">jim@rock.com</a><br>
+  <a href="tel:+13115552368">(311) 555-2368</a>
+</address>
+
+<br>
+
+<hr>
+      
+    <br><br>
+<section>
+        <p id="Préambule"><strong><c>Préambule</c></strong></p>
+        <p><br>Considérant que la reconnaissance de la dignité inhérente à tous les membres de la famille humaine et de leurs droits égaux et inaliénables constitue le fondement de la liberté, de la justice et de la paix dans le monde.<br>
+        
+        <br>Considérant que la méconnaissance et le mépris des droits de l'homme ont conduit à des actes de barbarie qui révoltent la conscience de l'humanité et que l'avènement d'un monde où les êtres humains seront libres de parler et de croire, libérés de la terreur et de la misère, a été proclamé comme la plus haute aspiration de l'homme.<br>
+        
+        <br>Considérant qu'il est essentiel que les droits de l'homme soient protégés par un régime de droit pour que l'homme ne soit pas contraint, en suprême recours, à la révolte contre la tyrannie et l'oppression.<br>
+        
+        <br>Considérant qu'il est essentiel d'encourager le développement de relations amicales entre nations.<br>
+        
+        <br>Considérant que dans la Charte les peuples des Nations Unies ont proclamé à nouveau leur foi dans les droits fondamentaux de l'homme, dans la dignité et la valeur de la personne humaine, dans l'égalité des droits des hommes et des femmes, et qu'ils se sont déclarés résolus à favoriser le progrès social et à instaurer de meilleures conditions de vie dans une liberté plus grande.<br>
+        
+        <br>Considérant que les Etats Membres se sont engagés à assurer, en coopération avec l'Organisation des Nations Unies, le respect universel et effectif des droits de l'homme et des libertés fondamentales.<br>
+        
+        <br>Considérant qu'une conception commune de ces droits et libertés est de la plus haute importance pour remplir pleinement cet engagement.<br>
+        
+        <br>L'Assemblée générale proclame la présente Déclaration universelle des droits de l'homme comme l'idéal commun à atteindre par tous les peuples et toutes les nations afin que tous les individus et tous les organes de la société, ayant cette Déclaration constamment à l'esprit, s'efforcent, par l'enseignement et l'éducation, de développer le respect de ces droits et libertés et d'en assurer, par des mesures progressives d'ordre national et international, la reconnaissance et l'application universelles et effectives, tant parmi les populations des Etats Membres eux-mêmes que parmi celles des territoires placés sous leur juridiction.<br>
+        
+        <br><strong>Article premier</strong><br>
+         
+        <br>Tous les êtres humains naissent libres et égaux en dignité et en droits. Ils sont doués de raison et de conscience et doivent agir les uns envers les autres dans un esprit de fraternité.<br>
+        
+        <br><strong>Article 2</strong><br>
+         
+        <br>1. Chacun peut se prévaloir de tous les droits et de toutes les libertés proclamés dans la présente Déclaration, sans distinction aucune, notamment de race, de couleur, de sexe, de langue, de religion, d'opinion politique ou de toute autre opinion, d'origine nationale ou sociale, de fortune, de naissance ou de toute autre situation.<br>
+        <br>2. De plus, il ne sera fait aucune distinction fondée sur le statut politique, juridique ou international du pays ou du territoire dont une personne est ressortissante, que ce pays ou territoire soit indépendant, sous tutelle, non autonome ou soumis à une limitation quelconque de souveraineté.<br>
+        
+        <br><strong>Article 3</strong><br>
+         
+        <br>Tout individu a droit à la vie, à la liberté et à la sûreté de sa personne.<br>
+        
+        <br><strong>Article 4</strong><br>
+         
+        <br>Nul ne sera tenu en esclavage ni en servitude; l'esclavage et la traite des esclaves sont interdits sous toutes leurs formes.<br>
+        
+        <br><strong>Article 5</strong><br>
+         
+        Nul ne sera soumis à la torture, ni à des peines ou traitements cruels, inhumains ou dégradants.<br>
+        
+        <br><strong>Article 6</strong><br>
+         
+        Chacun a le droit à la reconnaissance en tous lieux de sa personnalité juridique.<br>
+        
+        <br><strong>Article 7</strong><br>
+         
+        Tous sont égaux devant la loi et ont droit sans distinction à une égale protection de la loi. Tous ont droit à une protection égale contre toute discrimination qui violerait la présente Déclaration et contre toute provocation à une telle discrimination.<br>
+        
+        <br><strong>Article 8</strong><br>
+         
+        Toute personne a droit à un recours effectif devant les juridictions nationales compétentes contre les actes violant les droits fondamentaux qui lui sont reconnus par la constitution ou par la loi.<br>
+        
+        <br><strong>Article 9</strong><br>
+         
+        <br>Nul ne peut être arbitrairement arrêté, détenu ou exilé.<br>
+        
+        <p id="Article 10"><strong><c>Article 10</c></strong></p>
+         
+        Toute personne a droit, en pleine égalité, à ce que sa cause soit entendue équitablement et publiquement par un tribunal indépendant et impartial, qui décidera, soit de ses droits et obligations, soit du bien-fondé de toute accusation en matière pénale dirigée contre elle.<br>
+        
+        <br><strong>Article 11</strong><br>
+         
+        <br>1. Toute personne accusée d'un acte délictueux est présumée innocente jusqu'à ce que sa culpabilité ait été légalement établie au cours d'un procès public où toutes les garanties nécessaires à sa défense lui auront été assurées.<br> 
+        <br>2. Nul ne sera condamné pour des actions ou omissions qui, au moment où elles ont été commises, ne constituaient pas un acte délictueux d'après le droit national ou international. De même, il ne sera infligé aucune peine plus forte que celle qui était applicable au moment où l'acte délictueux a été commis.<br>
+        
+        <br><strong>Article 12</strong><br>
+         
+        <br>Nul ne sera l'objet d'immixtions arbitraires dans sa vie privée, sa famille, son domicile ou sa correspondance, ni d'atteintes à son honneur et à sa réputation. Toute personne a droit à la protection de la loi contre de telles immixtions ou de telles atteintes.<br>
+        
+        <br><strong>Article 13</strong><br>
+         
+        <br>1. Toute personne a le droit de circuler librement et de choisir sa résidence à l'intérieur d'un Etat. 
+        <br>2. Toute personne a le droit de quitter tout pays, y compris le sien, et de revenir dans son pays.<br>
+        
+        <br><strong>Article 14</strong><br>
+         
+        <br>1. Devant la persécution, toute personne a le droit de chercher asile et de bénéficier de l'asile en d'autres pays. 
+        <br>2. Ce droit ne peut être invoqué dans le cas de poursuites réellement fondées sur un crime de droit commun ou sur des agissements contraires aux buts et aux principes des Nations Unies.<br>
+        
+        <br><strong>Article 15</strong><br>
+         
+        <br>1. Tout individu a droit à une nationalité. 
+        <br>2. Nul ne peut être arbitrairement privé de sa nationalité, ni du droit de changer de nationalité.<br>
+        
+        <br><strong>Article 16</strong><br>
+         
+        <br>1. A partir de l'âge nubile, l'homme et la femme, sans aucune restriction quant à la race, la nationalité ou la religion, ont le droit de se marier et de fonder une famille. Ils ont des droits égaux au regard du mariage, durant le mariage et lors de sa dissolution. 
+        <br>2. Le mariage ne peut être conclu qu'avec le libre et plein consentement des futurs époux. 
+        <br>3. La famille est l'élément naturel et fondamental de la société et a droit à la protection de la société et de l'Etat.<br>
+        
+        <br><strong>Article 17</strong><br>
+         
+        <br>1. Toute personne, aussi bien seule qu'en collectivité, a droit à la propriété.
+        <br>2. Nul ne peut être arbitrairement privé de sa propriété.<br>
+        
+        <br><strong>Article 18</strong><br>
+         
+        <br>Toute personne a droit à la liberté de pensée, de conscience et de religion ; ce droit implique la liberté de changer de religion ou de conviction ainsi que la liberté de manifester sa religion ou sa conviction seule ou en commun, tant en public qu'en privé, par l'enseignement, les pratiques, le culte et l'accomplissement des rites.<br>
+        
+        <br><strong>Article 19</strong><br>
+         
+        <br>Tout individu a droit à la liberté d'opinion et d'expression, ce qui implique le droit de ne pas être inquiété pour ses opinions et celui de chercher, de recevoir et de répandre, sans considérations de frontières, les informations et les idées par quelque moyen d'expression que ce soit.<br>
+        
+        <br><strong>Article 20</strong><br>
+         
+        <br>1. Toute personne a droit à la liberté de réunion et d'association pacifiques. 
+        <br>2. Nul ne peut être obligé de faire partie d'une association.<br>
+        
+        <br><strong>Article 21</strong><br>
+         
+        <br>1. Toute personne a le droit de prendre part à la direction des affaires publiques de son pays, soit directement, soit par l'intermédiaire de représentants librement choisis.<br> 
+        <br>2. Toute personne a droit à accéder, dans des conditions d'égalité, aux fonctions publiques de son pays.
+        <br>3. La volonté du peuple est le fondement de l'autorité des pouvoirs publics ; cette volonté doit s'exprimer par des élections honnêtes qui doivent avoir lieu périodiquement, au suffrage universel égal et au vote secret ou suivant une procédure équivalente assurant la liberté du vote.<br>
+        
+        <br><strong>Article 22</strong><br>
+         
+        <br>Toute personne, en tant que membre de la société, a droit à la sécurité sociale ; elle est fondée à obtenir la satisfaction des droits économiques, sociaux et culturels indispensables à sa dignité et au libre développement de sa personnalité, grâce à l'effort national et à la coopération internationale, compte tenu de l'organisation et des ressources de chaque pays.<br>
+        
+        <p id="Article 23"><strong><c>Article 23</c></strong></p>
+         
+        1. Toute personne a droit au travail, au libre choix de son travail, à des conditions équitables et satisfaisantes de travail et à la protection contre le chômage. 
+        <br>2. Tous ont droit, sans aucune discrimination, à un salaire égal pour un travail égal. 
+        <br>3. Quiconque travaille a droit à une rémunération équitable et satisfaisante lui assurant ainsi qu'à sa famille une existence conforme à la dignité humaine et complétée, s'il y a lieu, par tous autres moyens de protection sociale. 
+        <br>4. Toute personne a le droit de fonder avec d'autres des syndicats et de s'affilier à des syndicats pour la défense de ses intérêts.<br>
+
+        <aside>
+            <p><d><img src="../Creationsite/img/les_deux_canards.jpg"
+             alt="Statue"></d></p>
+        </aside>
+        
+        
+        <br><strong>Article 24</strong><br>
+         
+        <br>Toute personne a droit au repos et aux loisirs et notamment à une limitation raisonnable de la durée du travail et à des congés payés périodiques.<br>
+        
+        <br><strong>Article 25</strong><br>
+         
+        <br>1. Toute personne a droit à un niveau de vie suffisant pour assurer sa santé, son bien-être et ceux de sa famille, notamment pour l'alimentation, l'habillement, le logement, les soins médicaux ainsi que pour les services sociaux nécessaires ; elle a droit à la sécurité en cas de chômage, de maladie, d'invalidité, de veuvage, de vieillesse ou dans les autres cas de perte de ses moyens de subsistance par suite de circonstances indépendantes de sa volonté. 
+        <br>2. La maternité et l'enfance ont droit à une aide et à une assistance spéciales. Tous les enfants, qu'ils soient nés dans le mariage ou hors mariage, jouissent de la même protection sociale.<br>
+        
+        <br><strong>Article 26</strong><br>
+         
+        <br>1. Toute personne a droit à l'éducation. L'éducation doit être gratuite, au moins en ce qui concerne l'enseignement élémentaire et fondamental. L'enseignement élémentaire est obligatoire. L'enseignement technique et professionnel doit être généralisé ; l'accès aux études supérieures doit être ouvert en pleine égalité à tous en fonction de leur mérite. 
+        <br>2. L'éducation doit viser au plein épanouissement de la personnalité humaine et au renforcement du respect des droits de l'homme et des libertés fondamentales. Elle doit favoriser la compréhension, la tolérance et l'amitié entre toutes les nations et tous les groupes raciaux ou religieux, ainsi que le développement des activités des Nations Unies pour le maintien de la paix. 
+        <br>3. Les parents ont, par priorité, le droit de choisir le genre d'éducation à donner à leurs enfants.<br>
+        
+        <br><strong>Article 27</strong><br>
+         
+        <br>1. Toute personne a le droit de prendre part librement à la vie culturelle de la communauté, de jouir des arts et de participer au progrès scientifique et aux bienfaits qui en résultent. 
+        <br>2. Chacun a droit à la protection des intérêts moraux et matériels découlant de toute production scientifique, littéraire ou artistique dont il est l'auteur.<br>
+        
+        <br><strong>Article 28</strong><br>
+         
+        <br>Toute personne a droit à ce que règne, sur le plan social et sur le plan international, un ordre tel que les droits et libertés énoncés dans la présente Déclaration puissent y trouver plein effet.<br>
+        
+        <br><strong>Article 29</strong><br>
+         
+        <br>1. L'individu a des devoirs envers la communauté dans laquelle seule le libre et plein développement de sa personnalité est possible. 
+        <br>2. Dans l'exercice de ses droits et dans la jouissance de ses libertés, chacun n'est soumis qu'aux limitations établies par la loi exclusivement en vue d'assurer la reconnaissance et le respect des droits et libertés d'autrui et afin de satisfaire aux justes exigences de la morale, de l'ordre public et du bien-être général dans une société démocratique. 
+        <br>3. Ces droits et libertés ne pourront, en aucun cas, s'exercer contrairement aux buts et aux principes des Nations Unies.<br>
+
+
+       
+        
+<section2>
+    <br>
+
+    <br><strong><b>Article 30</b></strong><br>
+         
+    <br>Aucune disposition de la présente Déclaration ne peut être interprétée comme impliquant pour un État, un groupement ou un individu un droit quelconque de se livrer à une activité ou d'accomplir un acte visant à la destruction des droits et libertés qui y sont énoncés.
+
+    <br><br><br>
+
+    <figure>
+        <img src="../Creationsite/img/sddl.jpg"
+             alt="Statue">
+        <figcaption>Femme statue</figcaption>
+    </figure>
+
+
+</section2>
+
+
+
+
+
+</section>
+        <br><br><br>
+
+
+
+
 
 
 </body>
