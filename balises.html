@@ -176,7 +176,7 @@
             content: "📞 ";
         }
         
-        /* css de section */
+        /* css de section main */
 
        
         main {
@@ -339,6 +339,30 @@ a {
     text-transform: initial;
     font-family: 'Times New Roman', Times, serif}
 
+/* css de balise nav */
+
+    nav {
+    border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
 
 
         </style>
@@ -400,6 +424,7 @@ a {
             <li><a href="#pre"><strong>pre</strong></a></li>
             <li><a href="#figure"><strong>figure</strong></a></li>
             <li><a href="#adress"><strong>adress</strong></a></li>
+            <li><a href="#nav"><strong>nav</strong></a></li>
             <li><a href="#Déclarationuniverselledesdroitsdel'homme"><strong>Déclaration universelle des droits de l'homme</strong></a></li>
     </ol>     
        
@@ -558,8 +583,25 @@ a {
 
         <hr>
       
+        
+        <p id="nav"><strong>balise &lt; nav &gt;</strong></p>
+        <a>L'élément HTML balise &lt; nav &gt; représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page.</a>
+        <nav class="crumbs">
+            <ol>
+                <li class="crumb"><a href="https://www.commencal-store.com/2020-bikes-c102x3717769">Bikes</a></li>
+                <li class="crumb"><a href="https://www.bmxavenue.com/bmx-freestyle/">BMX</a></li>
+                <li class="crumb">Jump Bike 3000</li>
+            </ol>
+        </nav>
+
         <br>
+        
+        <h1>Jump Bike 3000</h1>
+        <p>This BMX bike is a solid step into the pro world. It looks as legit as it rides and is built to polish your skills (Ce vélo BMX est une étape solide dans le monde professionnel. Il a l'air aussi légitime qu'il roule et est conçu pour perfectionner vos compétences).</p>
+        
         <br>
+
+        <hr>
 
     <main>
 
