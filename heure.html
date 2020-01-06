@@ -5,7 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../Creationsite/css/jazz.css">
+    <link rel="stylesheet" href="../Creationsite/css/creationsite.css">
+
+
+
+
+    <script>
+   
+     var aujourdhui = new Date(); 
+     var annee = aujourdhui.getFullYear(); // retourne le millésime
+     var mois =aujourdhui.getMonth()+1; // date.getMonth retourne un entier entre 0 et 11 donc il faut ajouter 1
+     var jour = aujourdhui.getDate(); // retourne le jour (1 à 31)
+     var joursemaine = aujourdhui.getDay() ; // retourne un entier compris entre 0 et 6 (0 pour dimanche)
+     var tab_jour=new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
+     document.write('Nous sommes le : ' +  tab_jour[joursemaine] + ' ' + jour + '/' + mois + '/' + annee) ; 
+   
+   
+   
+   </script>
+
+
     <script>
       window.addEventListener('load',horloge);
       function horloge(){
@@ -27,11 +46,12 @@
           }
         }
       });
-    </script>
+        </script>
+
   </head>
 
   <body>
-    <h1>Titre principal</h1>
+    <h1>Date et heure</h1>
     <p id='tog'>Il est actuellement <span id='heure'></span></p>
     <button id='bouton'>Cacher / Afficher l'heure</button>
   </body>
