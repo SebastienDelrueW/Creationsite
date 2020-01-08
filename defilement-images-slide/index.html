@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Script jQuery Gallerie d'images dans le corps de page : Outils-web.com</title>
+<meta name="description" content="Script jQuery, Le d�filement des images peut �tre fait par glissement ou � l'aide des fl�ches qui apparaissent au survol" />
+<style>
+.btn, .tt {font-family: Verdana,Arial,sans-serif;  color: #FFFFFF; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+.btn {background: #9fbd13;padding: 10px; text-decoration: none; border: 1px solid #899f11; text-shadow: 1px 1px 1px #000000; font-size: 1.2em; }
+.tt {background: #899f11;padding: 5px; text-align:center;}
+</style>
+<!-- chargement des feuilles de style -->
+<link href='css/swipe.css' rel='stylesheet' type='text/css'>
+<link href='css/style.css' rel='stylesheet' type='text/css'>
+<!-- chargement des scripts -->	
+<script type="text/javascript" src="scr/jquery.js"></script>
+<script type="text/javascript" src="scr/swipe.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<main>
+	<section>
+	<div class="swipecontainer" style="width:100%; height:500px; margin:0 -5px; position:relative; border-left:5px solid #000; border-right:5px solid #000; background:#000;border-radius:5px">
+		<div class="swipeme" data-arrows="true" data-buttons="true">
+			<div class="slides" id="lady">
+				<img data-caption="la femme en robe noire #1" data-link="index.html" src="img/les_deux_canards.jpg" alt="">
+				<img data-caption="la femme en robe noire #2" src="img/sddl.jpg" alt="">
+				<img data-caption="la femme en robe noire #3" data-link="index.html" src="img/pluie.jpg" alt="">
+				<img data-caption="la femme en robe noire #4" data-link="index.html" src="img/triangle.png" alt="">
+				<img data-caption="la femme en robe noire #5" src="img/g5.jpg" alt="">
+				<img data-caption="la femme en robe noire #6" data-link="index.html" src="img/g6.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	</section>
+</main>
+</body>
+</html>

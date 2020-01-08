@@ -1,0 +1,25 @@
+/*
+ * Swipe Me Inline - v2.0
+ * (c) 2014 CSSplay - Stu Nicholls
+ *
+ * http://www.cssplay.co.uk/
+ *
+ */
+ 
+html, body {padding:0; margin:0; background-color:#fff;}
+main {background:#fff;}
+section {display:block; padding:20px; width:80%px; max-width:700px; min-width:210px; margin:0 auto; text-align:center;}
+section h4 {padding:0; margin:0; font: 25px/30px arial, sans-serif; color:#000; text-align:left;}
+section h3 {padding:0; margin:0; font: 18px/30px arial, sans-serif; color:#000; text-align:left;}
+section article {width:200px; padding:12px; margin:2px; display:inline-block; vertical-align:top;}
+section article {*display:inline;}
+section article.panel {border:1px solid #ccc;}
+section article img {display:block; cursor:pointer;}
+section article p {padding:0; margin:0; font: 13px/20px arial, sans-serif; color:#444; text-align:justify;}
+section article.panel p {padding:0; margin:0; font: 10px/16px arial, sans-serif; color:#888;}
+footer {display:block; background:#202020; height:200px;}
+footer article {padding:30px; width:80%px; max-width:700px; min-width:250px; margin:0 auto;}
+footer article p {padding:0; margin:0; font: 12px/25px arial, sans-serif; color:#888;}
+footer article p span {float:right;}
+footer article p a {color:#eee;}
+footer article p a:hover {color:#8b3;}

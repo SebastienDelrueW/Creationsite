@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Script jQuery Menu � arri�re plan glissant : Outils-web.com</title>
+<meta name="description" content="Script jQuery Les diff�rentes sections du menu changent d'arri�re-plan au survol et le sous-menu apparait" />
+<meta name="Robots" content="all"/>
+<meta name="author" content="Codrops" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/sbimenu.css" />
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=News+Cycle&v1' rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.bgImageMenu.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#sbi_container').bgImageMenu({
+			defaultBg	: 'images/default.jpg',
+			type		: {
+				mode		: 'seqVerticalSlideAlt',
+				speed		: 250,
+				easing		: 'jswing',
+				seqfactor	: 100
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<!-- Param�tres:
+defaultBg: image par defaut au d�marrage
+pos: si defaultbg non d�fini, pos indique quel panneau doit �tre affich� ou non
+width: largeur des images
+height: hauteur des images
+border: largeur du bord de chaque panneau
+menuSpeed: vitesse de l'effet (ms)
+
+mode: type d'animation | fade | seqFade | horizontalSlide | seqHorizontalSlide | verticalSlide | seqVerticalSlide | verticalSlideAlt | seqVerticalSlideAlt
+speed: vitesse de l'animation du panneau
+easing: effet du panneau
+seqfactor: d�lai entre les animations des panneaux pour seqFade | seqHorizontalSlide | seqVerticalSlide | seqVerticalSlideAlt  -->
+<a href="http://www.outils-web.com"><img src="../../img/ow.png" border="0" width="400" height="100" alt=""></a>
+<br /><p class="tt" >M</p><br /><br />
+<p><a href="exemple1.html" class="btn">Exemple 1</a><a href="exemple2.html" class="btn">Exemple 2</a><a href="exemple3.html" class="btn">Exemple 3</a><br /><br /></p>
+		<div class="container">
+			<div class="content">
+				<div id="sbi_container" class="sbi_container">
+					<div class="sbi_panel" data-bg="images/3.jpg">
+						<a href="#" class="sbi_label">Légumes</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Du Jardin</a></li>
+								<li><a href="#">Oldies</a></li>
+								<li><a href="#">Du futur</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="sbi_panel" data-bg="images/4.jpg">
+						<a href="#" class="sbi_label">P�tes</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Couleurs</a></li>
+								<li><a href="#">De la mer</a></li>
+								<li><a href="#">Azote</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="sbi_panel" data-bg="images/5.jpg">
+						<a href="#" class="sbi_label">Produits de la mer</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Crustac�es</a></li>
+								<li><a href="#">Poissons</a></li>
+								<li><a href="#">Algues</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="sbi_panel" data-bg="images/6.jpg">
+						<a href="#" class="sbi_label">Salades</a>
+						<div class="sbi_content">
+							<ul>
+								<li><a href="#">Chaudes</a></li>
+								<li><a href="#">Ti�des</a></li>
+								<li><a href="#">Froides</a></li>
+							</ul>
+						</div>						
+					</div>
+				</div>
+			</div>
+<br/><br/><br/>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tableau et Boucle for</title>
+</head>
+<body>
+
+<script>
+    alert ("Bonjour et bienvenue");
+</script>
+
+<script> 
+    var prenom; // déclarer la variable prenom
+    
+    // Saisie via prompt
+    // ----------------
+    
+    prenom=prompt("Veuillez encoder votre prénom svp","");
+    
+    alert("Bonjour "+prenom); // + signifie concaténation : assembler des éléments
+    </script> 
+
+<script>
+// Déclarer les variables = informer l'interpréteur Javascript
+// -----------------------------------------------------
+var jours = new Array; // new Array déclare un tableau
+var indice;
+
+// Initialiser le tableau
+// ------------------
+jours[0]="lundi";
+jours[1]="Mardi";
+jours[2]="Mercredi";
+jours[3]="Jeudi";
+jours[4]="Vendredi";
+jours[5]="Samedi";
+jours[6]="Dimanche";
+
+// Effectuer le Traitement : parcourir le tableau avec une boucle
+// -----------------------------------------------------------
+
+for (indice=0;indice<=6;indice++) {
+          alert (jours[indice]);
+}
+</script>
+
+
+<script> 
+    // Déclarer les variables (avec var) = informer l'interpréteur Javascript
+    // ----------------------------------------------------------------
+    var prix;
+    var quantite;
+    var apayer
+    
+    // Initialiser les variables = affecter une valeur initiale
+    // ------------------------------------------------
+    // Le signe = identifie une affectation (--> donner une valeur à)
+    prix = 150;
+    quantite = 5;
+    
+    // Effectuer le Traitement (ici, une simple multiplication)
+    // ---------------------------------------------------
+    
+    apayer = prix*quantite;
+    
+    // Afficher le résultat dans une boîte de dialogue
+    // --------------------------------------------
+    // Le message est construit grâce à la concaténation (signe +)
+    alert ("Prix à payer : "+apayer);
+    </script>
+
+
+
+
+<script> 
+    // Déclarer les variables
+    // --------------------
+    var temperature;
+    var total;
+    var cpt;
+    
+    // Initialiser les variables
+    // --------------------
+    total=0;
+    max=5 ;
+    
+    // Effectuer le Traitement : cumuler 5 valeurs
+    // -----------------------------------------
+    
+    // cpt=1 : initialiser le compteur à 1
+    // cpt<=max : condition évaluée. "Tant que cpt<=max est true, on boucle"
+    // cpt++ : ajouter 1 à cpt et modifier cpt avec le résultat (= incrémenter) 
+    
+    for  (cpt=1;cpt<=max;cpt++) { 
+    
+              // parseFloat : convertir une chaîne en nombre décimal
+              temperature = parseFloat(prompt("Température ?",""));
+    
+              // Cumuler les températures
+              total=total+temperature;
+    } 
+    
+    // Afficher les résultats
+    // --------------------
+    
+    alert("Température moyenne : "+total/max);
+    </script>
+</body>
+</html>
