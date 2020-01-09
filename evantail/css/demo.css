@@ -10,7 +10,6 @@
 	margin: 0;
 }
 
-/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -25,7 +24,8 @@
     *zoom: 1;
 }
 
-body{font-family: 'Open Sans Condensed','Arial Narrow', serif;
+body{
+	font-family: 'Open Sans Condensed','Arial Narrow', serif;
 	background: #FFFFFF;
 	font-weight: 400;
 	font-size: 15px;
