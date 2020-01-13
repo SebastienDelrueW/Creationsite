@@ -252,109 +252,134 @@
 
 
         *{
-    font-family: 'Times New Roman', Times, serif;
-}
-   
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
 
 
-body {
-    background-color: burlywood;
-    /* largeur de la page 50% de la taille de l'écran du navigateur */
-    width: 50%;
-    /* la marge exterieur de l'élément, avec une gestion automatique des marges pour que le contenu de body soit centré dans la fenêtre */
-    margin: auto;
-}
+        body {
+            background-color: burlywood;
+            /* largeur de la page 50% de la taille de l'écran du navigateur */
+            width: 50%;
+            /* la marge exterieur de l'élément, avec une gestion automatique des marges pour que le contenu de body soit centré dans la fenêtre */
+            margin: auto;
+        }
 
-  
-table {
-    background-color: burlywood;
-    table-layout: fixed;
-    width: 92%;
-    border-collapse: collapse;
-    border: 1px solid rgb(0, 94, 128);
-    border-bottom: 15px;
-  }
+        
+        table {
+            background-color: burlywood;
+            table-layout: fixed;
+            width: 92%;
+            border-collapse: collapse;
+            border: 1px solid rgb(0, 94, 128);
+            border-bottom: 15px;
+        }
 
-/* les styles pour le tableau */
+        /* les styles pour le tableau */
 
-/* Border 3 valeurs : épaisseur, type de filet, couleur */
-.table2 {
+        /* Border 3 valeurs : épaisseur, type de filet, couleur */
+        .table2 {
 
-     /* la bordure du tableau
-    /* Boreder 3 valeurs : épaisseur, type de filet, couleur */
-    border: 5px solid #565545;
+            /* la bordure du tableau
+            /* Boreder 3 valeurs : épaisseur, type de filet, couleur */
+            border: 5px solid #565545;
 
-    /* par défaut la bordure contient 2 traits, pour que le trait soit unique on utilise la propriété "collapse" */
-    border-collapse: collapse;
-    /* la largeur du tableau par rapport à son contenant donc ici BODY // le tableau hérite des propriétés de son contenant sauf changement ici de la couleur de fond*/
-    width: 90%
-}   
-caption {
-background-color: #E6E6FA;
-    /* border: 3px solid #483D8B; */
-    padding: 10px;
-    /* border-collapse: collapse; */
-    font-weight: bold;
-    text-transform: uppercase;
-}
-/* il est possible de déclarer plusieurs éléments et de leur affecter les mêmes propriétés        les éléments sont séparés par une virgules */
-thead, tfoot {
-    background-color: rgb(154, 194, 196);
-    border: 4px solid rgb(129, 0, 0)
-}
+            /* par défaut la bordure contient 2 traits, pour que le trait soit unique on utilise la propriété "collapse" */
+            border-collapse: collapse;
+            /* la largeur du tableau par rapport à son contenant donc ici BODY // le tableau hérite des propriétés de son contenant sauf changement ici de la couleur de fond*/
+            width: 90%
+        }   
+        caption {
+        background-color: #E6E6FA;
+            /* border: 3px solid #483D8B; */
+            padding: 10px;
+            /* border-collapse: collapse; */
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        /* il est possible de déclarer plusieurs éléments et de leur affecter les mêmes propriétés        les éléments sont séparés par une virgules */
+        thead, tfoot {
+            background-color: rgb(154, 194, 196);
+            border: 4px solid rgb(129, 0, 0)
+        }
 
-tbody {
-    /* border: 8px solid black; */
-    border: 2px solid #0c99ebc4;;
-}
+        tbody {
+            /* border: 8px solid black; */
+            border: 2px solid #0c99ebc4;;
+        }
 
-th {
-    /* dotter =pointillé */
-    border: 2px dotted #565545;
-    /* la marge intérieur de l'élément : padding */
-    padding: 15px;
-    width: 25%;
-}
-td {
-    border: 2px dotted #565545;
-    text-align: center;
-    padding: 5px;
-}
-/* td:first-child le 1er td pour aligner à gauche le texte dans la première cellule de chaque rangée */
-td:first-child {
-    text-align: left;
-    background-color: rgb(144, 192, 192);
-}
-   
-a {
-    color: rgb(89, 80, 80);
-    text-transform: initial;
-    font-family: 'Times New Roman', Times, serif}
+        th {
+            /* dotter =pointillé */
+            border: 2px dotted #565545;
+            /* la marge intérieur de l'élément : padding */
+            padding: 15px;
+            width: 25%;
+        }
+        td {
+            border: 2px dotted #565545;
+            text-align: center;
+            padding: 5px;
+        }
+        /* td:first-child le 1er td pour aligner à gauche le texte dans la première cellule de chaque rangée */
+        td:first-child {
+            text-align: left;
+            background-color: rgb(144, 192, 192);
+        }
+        
+        a {
+            color: rgb(89, 80, 80);
+            text-transform: initial;
+            font-family: 'Times New Roman', Times, serif}
 
-/* css de balise nav */
+        /* css de balise nav */
 
-    nav {
-    border-bottom: 1px solid black;
-}
+            nav {
+            border-bottom: 1px solid black;
+        }
 
-.crumbs ol {
-    list-style-type: none;
-    padding-left: 0;
-}
+        .crumbs ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-.crumb {
-    display: inline-block;
-}
+        .crumb {
+            display: inline-block;
+        }
 
-.crumb a::after {
-    display: inline-block;
-    color: #000;
-    content: '>';
-    font-size: 80%;
-    font-weight: bold;
-    padding: 0 3px;
-}
+        .crumb a::after {
+            display: inline-block;
+            color: #000;
+            content: '>';
+            font-size: 80%;
+            font-weight: bold;
+            padding: 0 3px;
+        }
+        img[src="img/Affiche_LA_DARONNE.jpg"]{
+            width: 150px;
+            margin: auto;
+            display: block;
+            -moz-border-radius-topleft: 90px;
+            -webkit-border-top-left-radius: 90px;
+            border-top-left-radius: 90px;
+            -moz-border-radius-topright: 90px;
+            -webkit-border-top-right-radius: 90px;
+            border-top-right-radius: 90px;
+            -moz-border-radius-bottomleft: 90px;
+            -webkit-border-bottom-left-radius: 90px;
+            border-bottom-left-radius: 90px;
+        }
 
+
+        img[src="../Creationsite/img/sddl.jpg"]{
+            width: 100%;
+            -moz-border-radius-topright: 41px;
+            -webkit-border-top-right-radius: 41px;
+            border-top-right-radius: 41px;
+            -moz-border-radius-bottomleft: 90px;
+            -webkit-border-bottom-left-radius: 90px;
+            border-bottom-left-radius: 90px;
+
+        }
 
         </style>
             
@@ -875,6 +900,12 @@ a {
             </tfoot>
         </table>
 
+        <br>
+        <br>
+        <br>
+   
+
+        <img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche" width="" height="" title="Affiche">
         
     <footer>
         <p><i class="fas fa-shoe-prints"></i></p>
