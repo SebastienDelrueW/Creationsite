@@ -7,27 +7,27 @@
 /* c'est l'ensemble de la page */
 body {
     background-image: url(../img/concrete-texture.png);
-    background-color: grey;
+    background-color: rgb(177, 175, 175);
+    font-size: 1em;
     text-align: center;
 }
 /* c'est ce qui délimite les éléments de la page */
 #conteneur {
-    width: 50%; 
+    width: 75%; 
     /* width: 1000px; */
     margin: 0 auto;
     /* border: 1px #fff solid; */
     border: 1px solid black;
     margin-top: 20px;
+    box-shadow: 10px 10px 12px rgb(131, 128, 128);
 }
 /* c'est l'en-tête de la page */
 header {
     background-color: #464159;
     /* width: 1000px; */
     /* width: 50%; */
-    height: 270px;
+    height: 300px;
     min-height: 270px;
-    
-   
 }
 /* c'est le menu navigation de la page */
 nav {
@@ -67,40 +67,83 @@ nav li a:active {
 }
 /* le lien visité */
 nav li a:visited {
-    background-color:rgb(231, 233, 238);
+    background-color: rgb(231, 233, 238);
 }
 /* c'est le milieu ou le centre du document */
-/* .milieu {
+/* .main {
     background: #8ac6d1;
-    min-height: 500px;
     width: 100%;
     padding: 10px 10px 10px 10px;
 } */
 
 h1 {
-
+    font-size: 1em;
+    text-align: center;
 }
 
 h2 {
-
+    font-size: 1em;
+    text-align: left;
 }
 
 h3 {
+    font-size: 1em;
+    text-align: center;
     padding-top: 30px;
 }
 
 h4 {
-
+    font-size: 1em;
+    text-align: right;
 }
 
 h5 {
-
+    font-size: 1em;
+    text-align: center;
 }
 
 h6 {
-
+    font-size: 1em;
+    text-align: center;
 }
 
+.class1 {
+    background-color: #d00740;
+    height: 50px;
+    width: 250px;
+}
+
+.class2 {
+
+    background-color: aqua;
+    height: 50px;
+    width: 500px;
+}
+
+.class3 {
+    background: url(../img/icon-facebook.png) no-repeat;
+    background-color: darkgrey;
+    height: 50px;
+    width: 250px;
+}
+
+.class4 {
+    background-color: #5b07d0;
+    height: 50px;
+    width: 250px;
+}
+
+.class5 {
+    background-color: rgb(87, 86, 109);
+    height: 50px;
+    width: 500px;
+}
+
+.class6 {
+    background-color: rgb(97, 37, 37);
+    height: 50px;
+    width: 250px;
+}
 
 .sous_section1, .sous_section2, .sous_section3, .sous_section4, .sous_section5, .sous_section6 .sous_section7, .sous_section8  {
     min-height: 400px;
@@ -117,6 +160,7 @@ h6 {
 }
 
 .sous_section2 {
+    background: url(../img/gant-boxe-2.png)no-repeat;
     background-color: rgb(111, 75, 75);
     float: left;
     width: 50%;
@@ -128,17 +172,22 @@ h6 {
 }
 
 .sous_section3 {
-    background-color: rgb(6, 15, 94);
+    background: url(../img/header-page-catalogue.png)no-repeat;
+    background-color: rgb(60, 70, 162);
     float: left;
+    color: rgb(230, 226, 226);
+    font-size: 20px;
+    font-family: fantasy;
 }
 
 .sous_section4 {
-    background: url(../img/resto_01.jpg) no-repeat;
+    background: url(../img/gant-boxe-2.png) no-repeat;
     background-color: rgb(176, 181, 86);
     float: left;
 }
 
 .sous_section5 {
+    
     background-color: rgb(72, 33, 111);
     float: left;
 }
@@ -164,57 +213,59 @@ h6 {
 }
 
 /* ce sont les différentes zones */
-.GZ1, .GZ2, .GZ3, .GZ4 {
+.GZone1, .GZone2, .GZone3, .GZone4 .GZone5, .GZone6 {
     min-height: 150px;
     width: 50%;
     float: left; 
     border: solid 2px gray; 
 }
-.GZ1, .GZ4 {
-    background-color: #eb8242;
+.GZone1, .GZone4 {
+    background-color: #426aeb;
 }
 
-.GZ2, .GZ3 {
-    background-color: #c9753d;
+.GZone2, .GZone3 {
+    background-color: #612a05;
 }
 
-.z1 {
+.GZone5, .GZone6 {
+    background-color: #3db4c9;
+}
+
+.zone1 {
     background: url(../img/dolomites-italie.jpg) no-repeat;
     background-size: cover;      
 } 
 
-
-.z2{
+.zone2{
     background: url(../img/alincoln.jpg) no-repeat;
     background-size: cover;
 } 
 
-.z12 {
+.zone12 {
     background: url(../img/image.jpg) no-repeat;
     background-size: cover;
 }  
 
-.z1, .z2, .z3, .z4, .z5, .z6, .z7, .z8, .z9, .z10, .z11, .z12, .z13, .z14, .z15, .z16 {
+.zone1, .zone2, .zone3, .zone4, .zone5, .zone6, .zone7, .zone8, .zone9, .zone10, .zone11, .zone12, .zone13, .zone14, .zone15, .zone16 {
     width: 50%;
     min-height: 75px ;
     border: solid 1px #fff;
-    float: left;
-    
+    float: left;  
 }
 
-.z1, .z2, .z3, .z4 {
+.zone1, .zone2, .zone3, .zone4 {
     background-color: #594a4e;
 }
 
-.z5, .z6, .z7, .z8 {
+.zone5, .zone6, .zone7, .zone8 {
     background-color: #e6a157;
 }
 
-.z9, .z10, .z11, .z12 {
+.zone9, .zone10, .zone11, .zone12 {
     background-color: darkmagenta;
 }
 
-.z13, .z14, .z15, .z16  {
+.zone13, .zone14, .zone15, .zone16  {
     background-color: #6c7b95;
 }
 
@@ -222,8 +273,12 @@ h6 {
     padding: 20px;
 }
 
+a {
+    background-color: darkorange;
+}
+
 p {
-    padding-top: 140px;
+    padding-top: 190px;
     /* overflow: hidden; */
 }
 
@@ -238,6 +293,93 @@ p {
 footer {
     background-color: #e9bc79;
     min-height: 270px;
+}
+
+
+.class7 {
+    background-color: #d00740;
+    height: 50px;
+    width: 250px;
+}
+
+.class8 {
+    background-color: aqua;
+    height: 50px;
+    width: 500px;
+}
+
+.class9 {
+    background-color: darkgrey;
+    height: 50px;
+    width: 250px;
+}
+
+.class10 {
+    background-color: #5b07d0;
+    height: 50px;
+    width: 250px;
+}
+
+.class11 {
+    background-color: rgb(87, 86, 109);
+    height: 50px;
+    width: 500px;
+}
+
+.class12 {
+    background-color: rgb(97, 37, 37);
+    height: 50px;
+    width: 250px;
+}
+
+.bas {
+    /* texte en italique */
+    font-style: italic;
+    display : flex;
+    justify-content: space-around;
+}
+    
+.rectangle{
+	width:400px;
+	height:200px;
+	background:#069;
+}
+
+.rond{
+	width:200px;
+	height:200px;
+	background:#069;
+	-webkit-border-radius:100px;
+	-moz-border-radius:100px;
+	-o-border-radius:100px;
+	border-radius:100px;
+}
+    
+.ovale {
+	width: 300px;
+	height: 200px;
+	background: #069;
+	border-top-left-radius: 150px 100px;
+	border-top-right-radius: 150px 100px;
+	border-bottom-right-radius: 150px 100px;
+	border-bottom-left-radius: 150px 100px;
+}
+    
+.carre{
+	width:200px;
+	height:200px;
+	background:#069;
+}
+            
+.etoile{
+	background:#000;
+	margin:100px auto;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #069;
+	position: relative;
 }
 
 /* évite les flottements à gauche et à droite. */

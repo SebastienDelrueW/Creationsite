@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+    a{
+  color:white;
+  background-color: blue;
+  transition: background-color 1s;
+}
+a:hover{
+  color:white;
+  background-color: darkblue;
+}
+
+	
+
+a{
+  color:white;
+  background-color: blue;
+}
+a:hover{
+  color:white;
+  background-color: darkblue;
+  transition: background-color 1s;
+}
+
+	
+
+a{
+  color:white;
+  background-color: blue;
+}
+a:hover{
+  color:white;
+  background-color: darkblue;
+  transition-duration: 1s;
+}
+
+	
+
+a{
+  color:white;
+  background-color: blue;
+}
+a:hover{
+  color:white;
+  background-color: darkblue;
+  animation-name: background-color;
+  animation-duration: 1s;
+}
+
+.rectangle{
+	width:400px;
+	height:200px;
+	background:#069;
+}
+    
+
+
+.rectangle{
+	width:400px;
+	height:200px;
+	background:#069;
+}
+
+
+.rond{
+	width:200px;
+	height:200px;
+	background:#069;
+	-webkit-border-radius:100px;
+	-moz-border-radius:100px;
+	-o-border-radius:100px;
+	border-radius:100px;
+}
+    
+
+.ovale {
+	width: 300px;
+	height: 200px;
+	background: #069;
+	border-top-left-radius: 150px 100px;
+	border-top-right-radius: 150px 100px;
+	border-bottom-right-radius: 150px 100px;
+	border-bottom-left-radius: 150px 100px;
+}
+    
+
+.carre{
+	width:200px;
+	height:200px;
+	background:#069;
+}
+            
+
+.etoile{
+	background:rgb(255, 255, 255);
+	margin:100px auto;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #069;
+	position: relative;
+}
+.etoile:after{
+	content:'';
+	/* border: 1px solid #069; */
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid #069;
+	width:0;
+	height:0;
+	position: absolute;
+	top:30px;
+	left:-50px;
+}
+	
+
+    
+    </style>
+</head>
+<body>
+    
+
+    <main>
+
+       <div class="rectangle"></div>  
+
+       <div class="rond"></div>  
+
+       <div class="ovale"></div>  
+
+       <div class="carre"></div>  
+
+       <div class="etoile"></div>  
+
+
+
+
+
+    </main>
+</body>
+</html>
