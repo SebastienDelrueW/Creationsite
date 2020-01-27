@@ -164,37 +164,37 @@ h6 {
 }
 
 /* ce sont les différentes zones */
-.GZ1, .GZ2, .GZ3, .GZ4 {
+.GZone1, .GZone2, .GZone3, .GZone4 {
     min-height: 150px;
     width: 50%;
     float: left; 
     border: solid 2px gray; 
 }
-.GZ1, .GZ4 {
+.GZone1, .GZone4 {
     background-color: #eb8242;
 }
 
-.GZ2, .GZ3 {
+.GZone2, .GZone3 {
     background-color: #c9753d;
 }
 
-.z1 {
+.zone1 {
     background: url(../img/dolomites-italie.jpg) no-repeat;
     background-size: cover;      
 } 
 
 
-.z2{
+.zone2{
     background: url(../img/alincoln.jpg) no-repeat;
     background-size: cover;
 } 
 
-.z12 {
+.zone12 {
     background: url(../img/image.jpg) no-repeat;
     background-size: cover;
 }  
 
-.z1, .z2, .z3, .z4, .z5, .z6, .z7, .z8, .z9, .z10, .z11, .z12, .z13, .z14, .z15, .z16 {
+.zone1, .zone2, .zone3, .zone4, .zone5, .zone6, .zone7, .zone8, .zone9, .zone10, .zone11, .zone12, .zone13, .zone14, .zone15, .zone16 {
     width: 50%;
     min-height: 75px ;
     border: solid 1px #fff;
@@ -202,19 +202,19 @@ h6 {
     
 }
 
-.z1, .z2, .z3, .z4 {
+.zone1, .zone2, .zone3, .zone4 {
     background-color: #594a4e;
 }
 
-.z5, .z6, .z7, .z8 {
+.zone5, .zone6, .zone7, .zone8 {
     background-color: #e6a157;
 }
 
-.z9, .z10, .z11, .z12 {
+.zone9, .zone10, .zone11, .zone12 {
     background-color: darkmagenta;
 }
 
-.z13, .z14, .z15, .z16  {
+.zone13, .zone14, .zone15, .zone16  {
     background-color: #6c7b95;
 }
 
