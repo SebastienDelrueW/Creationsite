@@ -899,12 +899,40 @@
                     monImage.setAttribute("src", "imgs/" + img + ".jpg");
                     if (img == 9) {
                         // clearInterval permet de stopper un setInterval
-                        clearInterval(timer)
+                        clearInterval(timer);
                     }
                 }
                 // setinterval permet de lancer une fonction tous les X millième de seconde
                 var timer = window.setInterval('f()', 3000);
             </script>
+
+
+
+            <div id="horloge">...</div>
+            <script type="text/javascript">
+                function Timer() {
+                    var dt = new Date()
+                    document.getElementById("horloge").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                    setTimeout("Timer()", 1900);
+                    console.log("Exécution de Timer()");
+                }
+                Timer();
+            </script>
+
+
+            
+            <div id="monEvent">...</div>
+            <script type="text/javascript">
+                function Timer2() {
+                    var monEvent = document.getElementById("monEvent");
+                    monEvent.innerHTML = "Lancement réalisé";
+                    monEvent.parentNode.style.backgroundColor = "lightgrey";
+                    monEvent.parentNode.style.borderColor = "#f00";
+                }
+                setTimeout("Timer2()", 10000);
+            </script>
+
+
     <footer>
             <p><i class="fas fa-shoe-prints"></i></p>
     </footer>
