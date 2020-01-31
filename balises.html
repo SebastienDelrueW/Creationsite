@@ -376,6 +376,69 @@
             box-shadow: 8px 12px 2px 1px rgba(87, 84, 76, 0.2);
             max-width: 300px;
         }
+
+        /* téléphones, mobiles ex. : iPhone5  */
+                
+        @media (max-width: 320px){
+            body {
+                background: #fff;
+            }
+            .conteneur {
+                width: 100%;
+                background: #fff;
+                margin-left: auto;
+                margin-bottom: auto;
+                border: none;
+            }
+            h1 {
+                font-size: 120%;
+                text-align: left;
+                padding-left: 5px;
+            }
+        }
+
+        /* petites tablettes */
+
+        @media (min-width: 321px) and (max-width: 767px) {
+            body {
+                background: #b18578;
+            }
+            .conteneur {
+                width: 100%;
+                background: rgb(246, 247, 235);
+                margin-left: auto;
+                margin-bottom: auto;
+                border: none;
+            }
+        }
+
+        /* tablettes et ordinateurs portables, desktop */
+
+        @media (min-width: 768px) and (max-width: 1096px) {
+            body {
+                background: #1c2d3d;
+            }
+            .conteneur {
+                width: 100%;
+                background: rgb(246, 247, 235);
+                margin-left: auto;
+                margin-bottom: auto;
+            }
+        }
+
+        /* écrans ordinateurs de bureau */
+
+        @media (min-width: 1097px)  {
+            body {
+                background: #684b5d;
+            }
+            .conteneur {
+                width: 90%;
+                background: rgb(246, 247, 235);
+                margin: auto;
+            }
+        }
+
         </style>
         
 
