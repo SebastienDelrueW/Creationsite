@@ -246,9 +246,7 @@
         * {
             font-family: 'Times New Roman', Times, serif;
             color: rgb(5, 20, 36);
-
         }
-
 
         body {
             background-color: burlywood;
@@ -384,37 +382,41 @@
     </head>
     <body>
 
-    <script>
-        window.addEventListener('load',horloge);
-        function horloge(){
-        let d = new Date();
-        document.getElementById('heure').innerHTML = d.toLocaleTimeString();
-        setTimeout(horloge, 1000);
-    }
-  
-        document.addEventListener('DOMContentLoaded', function(){
-        let cache = document.getElementById('bouton');
-        cache.addEventListener('click',cacheHorloge);
-        document.getElementById('tog').style.display = 'block';
-        function cacheHorloge(){
-            let para = document.getElementById('tog');
-            if(para.style.display == 'block'){
-            para.style.display = 'none';
-            }else{
-            para.style.display = 'block';
-            }
+
+        <script>
+            window.addEventListener('load',horloge);
+            function horloge(){
+            let d = new Date();
+            document.getElementById('heure').innerHTML = d.toLocaleTimeString();
+            setTimeout(horloge, 1000);
+        }
+        
+            document.addEventListener('DOMContentLoaded', function(){
+            let cache = document.getElementById('bouton');
+            cache.addEventListener('click',cacheHorloge);
+            document.getElementById('tog').style.display = 'block';
+            function cacheHorloge(){
+                let para = document.getElementById('tog');
+                if(para.style.display == 'block'){
+                para.style.display = 'none';
+                }else{
+                para.style.display = 'block';
+                }
         }
         });
-    </script>
-    
+        </script>
+
         <h1></h1>
         <p id='tog'><strong><em><small>Il est actuellement &nbsp; </small></em></strong> <span id='heure'></span></p>
         <button id='bouton'>Cacher / Afficher l'heure</button>
         </body>
+
         <br><br><br>
+
         <hr>
 
         <h1><strong>B</strong>alises et non valises</h1>
+
 
         <nav>
             <ol>
@@ -431,7 +433,9 @@
                     <li><a href="#nav"><strong>nav</strong></a></li>
                     <li><a href="#Déclarationuniverselledesdroitsdel'homme"><strong>Déclaration universelle des droits de l'homme</strong></a></li>
             </ol>     
-       
+
+
+
         <ul>
             <li><a href="#Préambule"><strong>Préambule</strong></a></li>
             <li><a href="#Article10"><strong>Article 10</strong></a></li>
