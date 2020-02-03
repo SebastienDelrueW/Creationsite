@@ -1,57 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grille colonnes</title>
-    <link rel="stylesheet" href="css/grille.css">
-</head>
-
-<body>
-    <div class="conteneur">
-        <!-- <div class="row"> -->
-        <header class="row">
-            <!-- <div class="col-12 rouge"></div>  -->
-            <div class="col-2 marge rouge">A</div>
-
-            <div class="col-3 marge-2 jaune">B</div>
-            <div class="col-2 marge-2 tarte">C</div>
-            <div class="col-5 marge-5 truc"><span>Ici c'est le truc qui fait mal aux yeux</span><a>TRUC</a>D</div>
-
-        </header>
-
-        <main class="row-reverse">
-            <div class="col-6 bleu">E</div>
-            <div class="col-9 rouge">F</div>
-            <div class="col-12 jaune">G</div>
-            <div class="col-3 rouge">H</div>
-            <div class="row">
-                <div class="col-6 rouge">I</div>
-
-                <div class="col-6 jaune">J</div>
-            </div>
-        </main>
-
-
-        <footer class="row-reverse">
-            <div class="footer">
-                <div class="col-4 rouge">Rouge</div>
-                <div class="col-8 bleu">
-                    <div class="row">
-                        <div class="col-2 tarte">K</div>
-                        <div class="col-2">1</div>
-                        <div class="col-2">2</div>
-                        <div class="col-2 truc">L</div>
-
-
-                    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Grille responsive</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <!-- feuille de style avec des media queries pour le responsive -->
+       
+        <link rel="stylesheet" href="css/decoupage.css">
+        <style>
+            #txt {
+                margin: 0 auto;
+                border: 2px solid grey;
+                border-radius: 8%;
+                width: 67px;
+                margin-bottom: 2px;
+                padding-left: 5px;
+                padding-top: px;
+                box-shadow: 4px 6px 2px 1px rgba(87, 84, 76, 0.2);
+                background-color: rgb(254, 254, 254);
+                color: rgb(43, 6, 70);
+            }
+           
+        </style>
+        </head>
+        <body onload="startTime()">
+                <div id="txt"></div>
+            <script>
+                function startTime() {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();
+                    // add a zero in front of numbers<10
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+                    var t = setTimeout(function () { startTime() }, 500);
+                }
+                function checkTime(i) {
+                    if (i < 10) {
+                        i = "0" + i;
+                    }
+                    return i;
+                }
+            </script>
+        </head>
+        <body>
+        <div class="conteneur">
+            <header class="row">
+                <div class="marge-xsm col-xsm-12 col-10 marge-1 rouge">
+                    <div class="bleu"><h2>Premier texte</h2><h4>Le haut de la page</h4>
+                    <img src="img/egyptehieroglyphes.jpg" alt="hierog" width="320">
+                    <img src="img/affiche.jpg" alt="affiche" width="90">
                 </div>
-            </div>
+                <div class="rouge"><h6>Lincoln</h6><h5>Les deux canards</h5>
+                    <img src="img/abrahamlincoln.jpg" alt="lincoln" width="320">
+                    <img src="img/sddl.jpg" alt="statue" width="320">
+                    <img src="img/les_deux_canards.jpg" alt="theatre" width="320">
+                </div>
+                    <h1>Site responsive - media queries</h1>
+                    <h4>Ma première page responsive</h4>
+                </div>
+            </header>
+            <section class="row">
+                <!-- div.col-4*3 -->
+                <div class="col-xsm-12 col-sm-6 col-4 ">
+                    <h2>1/Titre de niveau 2</h2>
+                    <p>1/ Lorem ipsum dolor sit amet, consectetur adipisicing elit. In molestiae consectetur inventore natus
+                        veritatis quidem quos quae corrupti ipsa a deserunt quod, et porro, iure veniam. Accusantium
+                        reprehenderit debitis labore.</p>
+                </div>
+                <div class="col-xsm-12 col-sm-6 col-4 ">
+                    <h2>2/Titre de niveau 2</h2>
+                    <p>2/ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus illo, nemo, nisi animi harum
+                        ullam totam, dolorum autem magni natus delectus sint nihil molestiae tempora commodi quo perferendis
+                        atque dolorem!</p>
+                </div>
+                <div class="col-xsm-12 col-sm-12 col-4 bleu">
+                    <h2>3/Titre de niveau 2</h2>
+                    <p>3/ Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eum delectus magnam a, quo fuga, esse
+                        aliquam inventore quos sit repudiandae similique, odio aspernatur! Delectus fugiat voluptas illo
+                        quaerat omnis.</p>
+                    <p>4/ Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eum delectus magnam a, quo fuga, esse
+                        aliquam
+                        inventore quos sit repudiandae similique, odio aspernatur! Delectus fugiat voluptas illo quaerat
+                        omnis.</p>
+                </div>
+            </section>
+            <footer class="row jaune">
+                <!-- div.col-6*2 -->
+                <div class="col-xsm-12 col-6 ">
+                    <h3>1/Footer gauche</h3>
+                    <address>
+                        James Bond<br>
+                        18, Avenue de Londres<br>
+                        93500 Pantin
+                    </address>
+                </div>
+                <div class="col-xsm-12 col-6 ">
+                    <h3>1/Footer droite</h3>
+                </div>
+        </div>
         </footer>
-
-    </div>
-</body>
-
+        <!-- fermeture conteneur -->
+        </div>
+        <!-- changement de couleur au bout de 10 secondes -->
+            </script>
+            <div id="monEvent"></div>
+            <script type="text/javascript">
+                function Timer2() {
+                    var monEvent = document.getElementById("monEvent");
+                    monEvent.innerHTML = "";
+                    monEvent.parentNode.style.backgroundColor = "#e9ebfb";
+                    monEvent.parentNode.style.borderColor = "#f00";
+                }
+                setTimeout("Timer2()", 10000);
+            </script>
+    </body>
 </html>

@@ -5,19 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Révisions</title>
-    
-
         <style>
-
-        
         /* css de span */
-        
         .ingredient {
             color: rgb(75, 25, 25);
         }
-        
         /* css de div */
-        
         .warning {
             border: 10px ridge #f00;
             background-color: #ff0;
@@ -25,22 +18,17 @@
             display: flex;
             flex-direction: column;
         }
-        
         .warning img {
             width: 50%;
         }
-        
         .warning p {
             font: small-caps bold 1.2rem sans-serif;
             text-align: center;
         }
-        
         /* css de id */
-        
         .output {
             font: 1rem 'Fira Sans', sans-serif;
         }
-        
         #exciting {
             background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
             border: 1px solid #696969;
@@ -48,90 +36,68 @@
             border-radius: 10px;
             box-shadow: 2px 2px 1px black;
         }
-        
         #exciting:before {
             content: "ℹ️";
             margin-right: 5px;
         }
-        
-        
         /* css de class */
-        
         .output {
             font: 1rem 'Fira Sans', sans-serif;
         }
-        
         .note {
             font-style: italic;
             font-weight: bold;
         }
-        
         .editorial {
             background: rgb(255, 0, 0, .25);
             padding: 10px;
         }
-        
         .editorial:before {
             content: 'Editor: ';
         }
-        
-        
         /* css de article */
-        
         .forecast {
             margin: 0;
             padding: .3rem;
             background-color: #eee;
             font: 1rem 'Fira Sans', sans-serif;
         }
-        
         .forecast > h1,
         .day-forecast {
             margin: .5rem;
             padding: .3rem;
             font-size: 1.2rem;
         }
-        
         .day-forecast {
             background: right/contain content-box border-box no-repeat
             url('img/pluie.jpg') white;
         }
-        
         .day-forecast > h2,
         .day-forecast > p {
             margin: .2rem;
             font-size: 1rem;
         }
-        
         /* css de blockquote */
-        
         blockquote {
             margin: 0;
         }
-        
         blockquote p {
             padding: 15px;
             background: #eee;
             border-radius: 5px;
         }
-        
         blockquote p::before {
             content: '\201C';
         }
-        
         blockquote p::after {
             content: '\201D';
         }
-        
         /* css de pre */
-        
         pre {
             font-size: .7rem;
             margin: 0;
         }
-        
         /* css de figure */
-        
         figure {
             border: thin #c0c0c0 solid;
             display: flex;
@@ -140,7 +106,6 @@
             max-width: 220px;
             margin: auto;
         }
-        
         img {
             max-width: 240px;
             max-height: 150px;
@@ -149,7 +114,6 @@
             max-width: 260px;
             max-height: 150px;
         }
-        
         figcaption {
             background-color: #222;
             color: #fff;
@@ -157,20 +121,14 @@
             padding: 3px;
             text-align: center;
         }
-        
         /* css de adress */
-        
         a[href^="mailto"]::before {
             content: "📧 ";
         }
-        
         a[href^="tel"]::before {
             content: "📞 ";
         }
-        
         /* css de section main */
-
-       
         main {
             background-image: url();
             color: rgb(21, 51, 75);
@@ -179,7 +137,6 @@
             /*border: 2mm ridge rgb(106, 8, 37);*/
             padding: 4px;
         } 
-        
         h4 {
             color: rgb(11, 78, 179);
             /*border: 1px dotted rgb(46, 2, 2); */
@@ -188,14 +145,11 @@
         a {
             color: rgb(91, 104, 118);
         }
-        
         b {
             font-variant: small-caps;
             color: rgb(152, 3, 3);
         }
-
         /* css de aside */
-        
         aside {
             /*max-width: 200px;*/
             max-width: 290px;
@@ -220,8 +174,6 @@
             padding-bottom: 1px;
             padding-top: 5px;
         }
-
-
         img {
             margin: 2px;
             margin-top: 2px;
@@ -229,25 +181,20 @@
             margin-bottom: 1px;
             margin-top: 1px;
         }
-        
-        
         aside > p {
             margin: 1px;
             margin-left: 4px;
             margin-top: 1px;
         }
-
         /*p {
             color: rgb(9, 9, 51);
             border: 2px solid rgb(58, 54, 47);
             padding: 5px;
         }*/
-
         * {
             font-family: 'Times New Roman', Times, serif;
             color: rgb(5, 20, 36);
         }
-
         body {
             background-color: burlywood;
             /* largeur de la page 50% de la taille de l'écran du navigateur */
@@ -255,8 +202,6 @@
             /* la marge exterieur de l'élément, avec une gestion automatique des marges pour que le contenu de body soit centré dans la fenêtre */
             margin: auto;
         }
-
-        
         table {
             background-color: burlywood;
             table-layout: fixed;
@@ -266,7 +211,6 @@
             border-bottom: 15px;
             margin: auto;
         }
-
         /* les styles pour le tableau */
 
         /* Border 3 valeurs : épaisseur, type de filet, couleur */
@@ -294,12 +238,10 @@
             background-color: rgb(154, 194, 196);
             border: 4px solid rgb(129, 0, 0)
         }
-
         tbody {
             /* border: 8px solid black; */
             border: 2px solid #0c99ebc4;;
         }
-
         th {
             /* dotter =pointillé */
             border: 2px dotted #565545;
@@ -317,27 +259,21 @@
             text-align: left;
             background-color: rgb(144, 192, 192);
         }
-        
         a {
             color: rgb(89, 80, 80);
             text-transform: initial;
             font-family: 'Times New Roman', Times, serif}
-
         /* css de balise nav */
-
             nav {
             border-bottom: 1px solid black;
         }
-
         .crumbs ol {
             list-style-type: none;
             padding-left: 0;
         }
-
         .crumb {
             display: inline-block;
         }
-
         .crumb a::after {
             display: inline-block;
             color: #000;
@@ -360,8 +296,7 @@
             -webkit-border-bottom-left-radius: 90px;
             border-bottom-left-radius: 90px;
         }
-
-        img[src="../Creationsite/img/sddl.jpg"]{
+        img[src="img/sddl.jpg"]{
             width: 100%;
             -moz-border-radius-topright: 41px;
             -webkit-border-top-right-radius: 41px;
@@ -370,13 +305,11 @@
             -webkit-border-bottom-left-radius: 90px;
             border-bottom-left-radius: 90px;
         }
-
         #monImage {
             border: 1px solid rgb(55, 52, 52);
             box-shadow: 8px 12px 2px 1px rgba(87, 84, 76, 0.2);
             max-width: 300px;
         }
-
         /* téléphones, mobiles ex. : iPhone5  */
                 
         @media (max-width: 320px){
@@ -396,7 +329,6 @@
                 padding-left: 5px;
             }
         }
-
         /* petites tablettes */
 
         @media (min-width: 321px) and (max-width: 767px) {
@@ -416,7 +348,7 @@
 
         @media (min-width: 768px) and (max-width: 1096px) {
             body {
-                background: #1c2d3d;
+                background: #72b1ed;
             }
             .conteneur {
                 width: 100%;
@@ -440,12 +372,8 @@
         }
 
         </style>
-        
-
     </head>
     <body>
-
-
         <script>
             window.addEventListener('load',horloge);
             function horloge(){
@@ -453,7 +381,6 @@
             document.getElementById('heure').innerHTML = d.toLocaleTimeString();
             setTimeout(horloge, 1000);
         }
-        
             document.addEventListener('DOMContentLoaded', function(){
             let cache = document.getElementById('bouton');
             cache.addEventListener('click',cacheHorloge);
@@ -468,19 +395,14 @@
         }
         });
         </script>
-
-        <h1></h1>
         <p id='tog'><strong><em><small>Il est actuellement &nbsp; </small></em></strong> <span id='heure'></span></p>
         <button id='bouton'>Cacher / Afficher l'heure</button>
         </body>
-
-        <br><br><br>
-
+        <br>
+        <br>
+        <br>
         <hr>
-
         <h1><strong>B</strong>alises et non valises</h1>
-
-
         <nav>
             <ol>
                     <!--Une liste ordonnée : OL ordered list-->
@@ -496,21 +418,14 @@
                     <li><a href="#nav"><strong>nav</strong></a></li>
                     <li><a href="#Déclarationuniverselledesdroitsdel'homme"><strong>Déclaration universelle des droits de l'homme</strong></a></li>
             </ol>     
-
-
-
-        <ul>
-            <li><a href="#Préambule"><strong>Préambule</strong></a></li>
-            <li><a href="#Article10"><strong>Article 10</strong></a></li>
-            <li><a href="#Article23"><strong>Article 23</strong></a></li>
-        </ul>  
-        
+            <ul>
+                <li><a href="#Préambule"><strong>Préambule</strong></a></li>
+                <li><a href="#Article10"><strong>Article 10</strong></a></li>
+                <li><a href="#Article23"><strong>Article 23</strong></a></li>
+            </ul>  
         <br>
         <hr>
-        
         </nav>
-
-
         <p id="span"><strong>balise &lt; span &gt;</strong></p>
         <a>L'élément HTML &lt; span &gt; est un conteneur générique en ligne (inline) pour les contenus phrasés.</a>
 
@@ -843,7 +758,7 @@
                 <h4>Aucune disposition de la présente Déclaration ne peut être interprétée comme impliquant pour un État, un groupement ou un individu un droit quelconque de se livrer à une activité ou d'accomplir un acte visant à la <mark>destruction des droits et libertés</mark>  qui y sont énoncés.</h4>
             
             <figure>
-                <img src="../Creationsite/img/sddl.jpg"
+                <img src="img/sddl.jpg"
                      alt="Statue">
                 <figcaption>Femme statue</figcaption>
             </figure>
@@ -952,7 +867,8 @@
             </tfoot>
         </table>
             <br><br>
-            <img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche" width="" height="" title="Affiche">
+               
+            <img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche">
             <br> <br>
             <img src="imgs/1.jpg" alt="Texte alt" id="monImage">
             <script>
@@ -969,10 +885,8 @@
                 var timer = window.setInterval('f()', 3000);
             </script>
 
-
-
             <div id="horloge">...</div>
-            <script type="text/javascript">
+            <script>
                 function Timer() {
                     var dt = new Date()
                     document.getElementById("horloge").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
@@ -983,7 +897,7 @@
             </script>
 
             <div id="monEvent">...</div>
-            <script type="text/javascript">
+             <script>
                 function Timer2() {
                     var monEvent = document.getElementById("monEvent");
                     monEvent.innerHTML = "Lancement réalisé";
