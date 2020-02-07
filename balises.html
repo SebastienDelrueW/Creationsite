@@ -872,7 +872,7 @@
             <br> <br>
             <img src="imgs/1.jpg" alt="Texte alt" id="monImage">
             <script>
-                var img = 0;
+                let img = 0;
                 function f() {
                     img += 1;
                     monImage.setAttribute("src", "imgs/" + img + ".jpg");
@@ -882,13 +882,13 @@
                     }
                 }
                 // setinterval permet de lancer une fonction tous les X millième de seconde
-                var timer = window.setInterval('f()', 3000);
+                let timer = window.setInterval('f()', 3000);
             </script>
 
             <div id="horloge">...</div>
             <script>
                 function Timer() {
-                    var dt = new Date()
+                    let dt = new Date()
                     document.getElementById("horloge").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
                     setTimeout("Timer()", 1900);
                     console.log("Exécution de Timer()");
@@ -899,7 +899,7 @@
             <div id="monEvent">...</div>
              <script>
                 function Timer2() {
-                    var monEvent = document.getElementById("monEvent");
+                   let monEvent = document.getElementById("monEvent");
                     monEvent.innerHTML = "Lancement réalisé";
                     monEvent.parentNode.style.backgroundColor = "lightgrey";
                     monEvent.parentNode.style.borderColor = "#f00";

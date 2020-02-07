@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grille colonnes</title>
+    <link rel="stylesheet" href="css/gri3p.css">
+    <style>
+        #txt {
+            margin: 0 auto;
+            border: 2px solid grey;
+            border-radius: 8%;
+            width: 75px;
+            margin-bottom: 2px;
+            padding-left: 5px;
+            padding-top: 2px;
+            box-shadow: 4px 6px 2px 1px rgba(87, 84, 76, 0.2);
+            background-color: rgb(254, 254, 254);
+            color: rgb(43, 6, 70);
+        }
+    </style>
+</head>
+
+<body onload="startTime()">
+    <div id="txt"></div>
+    <script>
+        function startTime() {
+            let today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+            let t = setTimeout(function() {
+                startTime()
+            }, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+    </head>
+
+    <body>
+        <div class="conteneur">
+            <!-- <div class="row"> -->
+            <header class="row">
+                <!-- <div class="col-12 rouge"></div>  -->
+                <div class="col-12 marge-1 papier">A</div>
+                <div class="col-1 marge chaise">B</div>
+                <div class="col-1 marge-1 tarte">C</div>
+                <div class="col-1 marge table">D</div>
+                <div class="col-1 marge-1 jaune">E</div>
+                <div class="col-1 marge-1 vert">F</div>
+                <div class="col-2 marge rouge">1/ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis magni quo cupiditate excepturi animi hic reprehenderit eos aliquid magnam vitae, pariatur a officia voluptates earum nisi voluptas accusantium obcaecati itaque!</div>
+                <div class="col-2 marge chaise">2</div>
+                <div class="col-2 marge tarte">3</div>
+                <div class="col-1 marge blanc">4/ Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+
+                <nav>
+                    <ol>
+                        <!--Une liste ordonnée : OL ordered list-->
+                        <li><a href="#span"><strong>span</strong></a></li>
+                        <li><a href="#div"><strong>div</strong></a></li>
+                        <li><a href="#id"><strong>id</strong></a></li>
+                        <li><a href="#class"><strong>class</strong></a></li>
+                        <li><a href="#article"><strong>article</strong></a></li>
+                        <li><a href="#blockquote"><strong>blockquote</strong></a></li>
+                        <li><a href="#pre"><strong>pre</strong></a></li>
+                        <li><a href="#figure"><strong>figure</strong></a></li>
+                        <li><a href="#adress"><strong>adress</strong></a></li>
+                        <li><a href="#nav"><strong>nav</strong></a></li>
+                        <li><a href="#Déclarationuniverselledesdroitsdel'homme"><strong>Déclaration universelle des droits
+                                de
+                                l'homme</strong></a></li>
+                    </ol>
+                    <ul>
+                        <li><a href="#Préambule"><strong>Préambule</strong></a></li>
+                        <li><a href="#Article10"><strong>Article 10</strong></a></li>
+                        <li><a href="#Article23"><strong>Article 23</strong></a></li>
+                    </ul>
+                    <br>
+                    <hr>
+                </nav>
+                <div class="col-1 marge jaune">5</div>
+                <div class="col-1 marge vert">6</div>
+                <div class="col-1 marge blanc">4/ Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </header>
+
+            <main class="row-reverse">
+                <div class="col-4 rouge border1">Rouge</div>
+                <div class="col-8 bleu border2">bleu</div>
+                <div class="col-1 bleu">G</div>
+                <div class="col-1 rouge">H</div>
+                <div class="col-1 jaune">I</div>
+                <div class="col-1 rouge">J</div>
+                <div class="col-1 bleu">K</div>
+                <div class="col-1 rouge">L</div>
+                <div class="col-1 jaune">M</div>
+                <div class="col-1 rouge">N</div>
+                <!-- <div class="row"> -->
+                <div class="col-1 marge-1 bleu">O</div>
+
+                <div class="col-1 jaune">P</div>
+        </div>
+        </main>
+
+
+        <footer class="row-reverse">
+            <div class="footer">
+                <div class="col-10 marge-1 rouge ">Rouge</div>
+                <div class="col-10 marge 1 bleu ">bleu</div>
+                <div class="row">
+                    <div class="col-1 tarte">Q</div>
+                    <div class="col-1 truc ">R</div>
+                    <div class="col-1 bleu">S</div>
+                    <div class="col-1 truc">T</div>
+                    <div class="col-1 tarte">U</div>
+                    <div class="col-1 rouge">V</div>
+                    <div class="col-1 jaune">W</div>
+                    <div class="col-1 truc">X</div>
+                    <div class="col-2 bleu">W</div>
+                    <div class="col-2 rouge">X</div>
+
+
+                </div>
+            </div>
+            </div>
+        </footer>
+
+        </div>
+    </body>
+
+</html>

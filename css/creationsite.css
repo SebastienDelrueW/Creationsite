@@ -1,20 +1,19 @@
 body {
-    background-color: rgb(122, 145, 159);
+    background: rgb(122, 145, 159);
 }
 
-.triangle {
-    width: 0;
-    height: 0;
-    border: 0 solid 
-transparent;
-    border-right-width: 0px;
-    border-bottom-color: transparent;
-    border-bottom-style: solid;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-border-right-width: 200px;
-border-left-width: 200px;
-border-bottom: 400px solid
-rgb(159, 6, 6);
+p {
+    width: 16%;
+    border: 2px solid gray;
+    margin-left: 5px;
+    text-align: center;
+    padding: 5px;
 }
 
+.tog {
+    width: 16%;
+    border: 2px solid gray;
+    margin-left: 5px;
+    text-align: center;
+    padding: 5px;
+}
