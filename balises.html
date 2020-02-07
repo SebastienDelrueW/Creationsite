@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Révisions</title>
-        <style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Révisions</title>
+    <style>
         /* css de span */
+        
         .ingredient {
             color: rgb(75, 25, 25);
         }
         /* css de div */
+        
         .warning {
             border: 10px ridge #f00;
             background-color: #ff0;
@@ -18,17 +21,21 @@
             display: flex;
             flex-direction: column;
         }
+        
         .warning img {
             width: 50%;
         }
+        
         .warning p {
             font: small-caps bold 1.2rem sans-serif;
             text-align: center;
         }
         /* css de id */
+        
         .output {
             font: 1rem 'Fira Sans', sans-serif;
         }
+        
         #exciting {
             background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
             border: 1px solid #696969;
@@ -36,68 +43,82 @@
             border-radius: 10px;
             box-shadow: 2px 2px 1px black;
         }
+        
         #exciting:before {
             content: "ℹ️";
             margin-right: 5px;
         }
         /* css de class */
+        
         .output {
             font: 1rem 'Fira Sans', sans-serif;
         }
+        
         .note {
             font-style: italic;
             font-weight: bold;
         }
+        
         .editorial {
             background: rgb(255, 0, 0, .25);
             padding: 10px;
         }
+        
         .editorial:before {
             content: 'Editor: ';
         }
         /* css de article */
+        
         .forecast {
             margin: 0;
             padding: .3rem;
             background-color: #eee;
             font: 1rem 'Fira Sans', sans-serif;
         }
-        .forecast > h1,
+        
+        .forecast>h1,
         .day-forecast {
             margin: .5rem;
             padding: .3rem;
             font-size: 1.2rem;
         }
+        
         .day-forecast {
-            background: right/contain content-box border-box no-repeat
-            url('img/pluie.jpg') white;
+            background: right/contain content-box border-box no-repeat url('img/pluie.jpg') white;
         }
-        .day-forecast > h2,
-        .day-forecast > p {
+        
+        .day-forecast>h2,
+        .day-forecast>p {
             margin: .2rem;
             font-size: 1rem;
         }
         /* css de blockquote */
+        
         blockquote {
             margin: 0;
         }
+        
         blockquote p {
             padding: 15px;
             background: #eee;
             border-radius: 5px;
         }
+        
         blockquote p::before {
             content: '\201C';
         }
+        
         blockquote p::after {
             content: '\201D';
         }
         /* css de pre */
+        
         pre {
             font-size: .7rem;
             margin: 0;
         }
         /* css de figure */
+        
         figure {
             border: thin #c0c0c0 solid;
             display: flex;
@@ -106,14 +127,17 @@
             max-width: 220px;
             margin: auto;
         }
+        
         img {
             max-width: 240px;
             max-height: 150px;
         }
+        
         .img2 {
             max-width: 260px;
             max-height: 150px;
         }
+        
         figcaption {
             background-color: #222;
             color: #fff;
@@ -122,34 +146,41 @@
             text-align: center;
         }
         /* css de adress */
+        
         a[href^="mailto"]::before {
             content: "📧 ";
         }
+        
         a[href^="tel"]::before {
             content: "📞 ";
         }
         /* css de section main */
+        
         main {
             background-image: url();
             color: rgb(21, 51, 75);
             max-width: 250px;
-            border: 1px solid rgb(11, 1, 1); 
+            border: 1px solid rgb(11, 1, 1);
             /*border: 2mm ridge rgb(106, 8, 37);*/
             padding: 4px;
-        } 
+        }
+        
         h4 {
             color: rgb(11, 78, 179);
             /*border: 1px dotted rgb(46, 2, 2); */
-            /*border: 2mm ridge rgb(106, 8, 37);*/ 
-        } 
+            /*border: 2mm ridge rgb(106, 8, 37);*/
+        }
+        
         a {
             color: rgb(91, 104, 118);
         }
+        
         b {
             font-variant: small-caps;
             color: rgb(152, 3, 3);
         }
         /* css de aside */
+        
         aside {
             /*max-width: 200px;*/
             max-width: 290px;
@@ -174,6 +205,7 @@
             padding-bottom: 1px;
             padding-top: 5px;
         }
+        
         img {
             margin: 2px;
             margin-top: 2px;
@@ -181,7 +213,8 @@
             margin-bottom: 1px;
             margin-top: 1px;
         }
-        aside > p {
+        
+        aside>p {
             margin: 1px;
             margin-left: 4px;
             margin-top: 1px;
@@ -191,10 +224,12 @@
             border: 2px solid rgb(58, 54, 47);
             padding: 5px;
         }*/
+        
         * {
             font-family: 'Times New Roman', Times, serif;
             color: rgb(5, 20, 36);
         }
+        
         body {
             background-color: burlywood;
             /* largeur de la page 50% de la taille de l'écran du navigateur */
@@ -202,6 +237,7 @@
             /* la marge exterieur de l'élément, avec une gestion automatique des marges pour que le contenu de body soit centré dans la fenêtre */
             margin: auto;
         }
+        
         table {
             background-color: burlywood;
             table-layout: fixed;
@@ -212,21 +248,20 @@
             margin: auto;
         }
         /* les styles pour le tableau */
-
         /* Border 3 valeurs : épaisseur, type de filet, couleur */
+        
         .table2 {
-
             /* la bordure du tableau
             /* Boreder 3 valeurs : épaisseur, type de filet, couleur */
             border: 5px solid #565545;
-
             /* par défaut la bordure contient 2 traits, pour que le trait soit unique on utilise la propriété "collapse" */
             border-collapse: collapse;
             /* la largeur du tableau par rapport à son contenant donc ici BODY // le tableau hérite des propriétés de son contenant sauf changement ici de la couleur de fond*/
             width: 90%
-        }   
+        }
+        
         caption {
-        background-color: #E6E6FA;
+            background-color: #E6E6FA;
             /* border: 3px solid #483D8B; */
             padding: 10px;
             /* border-collapse: collapse; */
@@ -234,14 +269,19 @@
             text-transform: uppercase;
         }
         /* il est possible de déclarer plusieurs éléments et de leur affecter les mêmes propriétés        les éléments sont séparés par une virgules */
-        thead, tfoot {
+        
+        thead,
+        tfoot {
             background-color: rgb(154, 194, 196);
             border: 4px solid rgb(129, 0, 0)
         }
+        
         tbody {
             /* border: 8px solid black; */
-            border: 2px solid #0c99ebc4;;
+            border: 2px solid #0c99ebc4;
+            ;
         }
+        
         th {
             /* dotter =pointillé */
             border: 2px dotted #565545;
@@ -249,31 +289,39 @@
             padding: 15px;
             width: 25%;
         }
+        
         td {
             border: 2px dotted #565545;
             text-align: center;
             padding: 5px;
         }
         /* td:first-child le 1er td pour aligner à gauche le texte dans la première cellule de chaque rangée */
+        
         td:first-child {
             text-align: left;
             background-color: rgb(144, 192, 192);
         }
+        
         a {
             color: rgb(89, 80, 80);
             text-transform: initial;
-            font-family: 'Times New Roman', Times, serif}
+            font-family: 'Times New Roman', Times, serif
+        }
         /* css de balise nav */
-            nav {
+        
+        nav {
             border-bottom: 1px solid black;
         }
+        
         .crumbs ol {
             list-style-type: none;
             padding-left: 0;
         }
+        
         .crumb {
             display: inline-block;
         }
+        
         .crumb a::after {
             display: inline-block;
             color: #000;
@@ -282,7 +330,8 @@
             font-weight: bold;
             padding: 0 3px;
         }
-        img[src="img/Affiche_LA_DARONNE.jpg"]{
+        
+        img[src="img/Affiche_LA_DARONNE.jpg"] {
             width: 150px;
             margin: auto;
             display: block;
@@ -296,7 +345,8 @@
             -webkit-border-bottom-left-radius: 90px;
             border-bottom-left-radius: 90px;
         }
-        img[src="img/sddl.jpg"]{
+        
+        img[src="img/sddl.jpg"] {
             width: 100%;
             -moz-border-radius-topright: 41px;
             -webkit-border-top-right-radius: 41px;
@@ -305,14 +355,15 @@
             -webkit-border-bottom-left-radius: 90px;
             border-bottom-left-radius: 90px;
         }
+        
         #monImage {
             border: 1px solid rgb(55, 52, 52);
             box-shadow: 8px 12px 2px 1px rgba(87, 84, 76, 0.2);
             max-width: 300px;
         }
         /* téléphones, mobiles ex. : iPhone5  */
-                
-        @media (max-width: 320px){
+        
+        @media (max-width: 320px) {
             body {
                 background: #fff;
             }
@@ -330,7 +381,7 @@
             }
         }
         /* petites tablettes */
-
+        
         @media (min-width: 321px) and (max-width: 767px) {
             body {
                 background: #ce9a8a;
@@ -343,9 +394,8 @@
                 border: none;
             }
         }
-
         /* tablettes et ordinateurs portables, desktop */
-
+        
         @media (min-width: 768px) and (max-width: 1096px) {
             body {
                 background: #72b1ed;
@@ -357,10 +407,9 @@
                 margin-bottom: auto;
             }
         }
-
         /* écrans ordinateurs de bureau */
-
-        @media (min-width: 1097px)  {
+        
+        @media (min-width: 1097px) {
             body {
                 background: #dcad7c;
             }
@@ -370,152 +419,152 @@
                 margin: auto;
             }
         }
+    </style>
+</head>
 
-        </style>
-    </head>
-    <body>
-        <script>
-            window.addEventListener('load',horloge);
-            function horloge(){
+<body>
+    <script>
+        window.addEventListener('load', horloge);
+
+        function horloge() {
             let d = new Date();
             document.getElementById('heure').innerHTML = d.toLocaleTimeString();
             setTimeout(horloge, 1000);
         }
-            document.addEventListener('DOMContentLoaded', function(){
+        document.addEventListener('DOMContentLoaded', function() {
             let cache = document.getElementById('bouton');
-            cache.addEventListener('click',cacheHorloge);
+            cache.addEventListener('click', cacheHorloge);
             document.getElementById('tog').style.display = 'block';
-            function cacheHorloge(){
+
+            function cacheHorloge() {
                 let para = document.getElementById('tog');
-                if(para.style.display == 'block'){
-                para.style.display = 'none';
-                }else{
-                para.style.display = 'block';
+                if (para.style.display == 'block') {
+                    para.style.display = 'none';
+                } else {
+                    para.style.display = 'block';
                 }
-        }
+            }
         });
-        </script>
-        <p id='tog'><strong><em><small>Il est actuellement &nbsp; </small></em></strong> <span id='heure'></span></p>
-        <button id='bouton'>Cacher / Afficher l'heure</button>
-        </body>
-        <br>
-        <br>
-        <br>
-        <hr>
-        <h1><strong>B</strong>alises et non valises</h1>
-        <nav>
-            <ol>
-                    <!--Une liste ordonnée : OL ordered list-->
-                    <li><a href="#span"><strong>span</strong></a></li>
-                    <li><a href="#div"><strong>div</strong></a></li>
-                    <li><a href="#id"><strong>id</strong></a></li>
-                    <li><a href="#class"><strong>class</strong></a></li>
-                    <li><a href="#article"><strong>article</strong></a></li>
-                    <li><a href="#blockquote"><strong>blockquote</strong></a></li>
-                    <li><a href="#pre"><strong>pre</strong></a></li>
-                    <li><a href="#figure"><strong>figure</strong></a></li>
-                    <li><a href="#adress"><strong>adress</strong></a></li>
-                    <li><a href="#nav"><strong>nav</strong></a></li>
-                    <li><a href="#Déclarationuniverselledesdroitsdel'homme"><strong>Déclaration universelle des droits de l'homme</strong></a></li>
-            </ol>     
-            <ul>
-                <li><a href="#Préambule"><strong>Préambule</strong></a></li>
-                <li><a href="#Article10"><strong>Article 10</strong></a></li>
-                <li><a href="#Article23"><strong>Article 23</strong></a></li>
-            </ul>  
-        <br>
-        <hr>
-        </nav>
-        <p id="span"><strong>balise &lt; span &gt;</strong></p>
-        <a>L'élément HTML &lt; span &gt; est un conteneur générique en ligne (inline) pour les contenus phrasés.</a>
+    </script>
+    <p id='tog'><strong><em><small>Il est actuellement &nbsp; </small></em></strong> <span id='heure'></span></p>
+    <button id='bouton'>Cacher / Afficher l'heure</button>
+</body>
+<br>
+<br>
+<br>
+<hr>
+<h1><strong>B</strong>alises et non valises</h1>
+<nav>
+    <ol>
+        <!--Une liste ordonnée : OL ordered list-->
+        <li><a href="#span"><strong>span</strong></a></li>
+        <li><a href="#div"><strong>div</strong></a></li>
+        <li><a href="#id"><strong>id</strong></a></li>
+        <li><a href="#class"><strong>class</strong></a></li>
+        <li><a href="#article"><strong>article</strong></a></li>
+        <li><a href="#blockquote"><strong>blockquote</strong></a></li>
+        <li><a href="#pre"><strong>pre</strong></a></li>
+        <li><a href="#figure"><strong>figure</strong></a></li>
+        <li><a href="#adress"><strong>adress</strong></a></li>
+        <li><a href="#nav"><strong>nav</strong></a></li>
+        <li><a href="#Déclarationuniverselledesdroitsdel'homme"><strong>Déclaration universelle des droits de l'homme</strong></a></li>
+    </ol>
+    <ul>
+        <li><a href="#Préambule"><strong>Préambule</strong></a></li>
+        <li><a href="#Article10"><strong>Article 10</strong></a></li>
+        <li><a href="#Article23"><strong>Article 23</strong></a></li>
+    </ul>
+    <br>
+    <hr>
+</nav>
+<p id="span"><strong>balise &lt; span &gt;</strong></p>
+<a>L'élément HTML &lt; span &gt; est un conteneur générique en ligne (inline) pour les contenus phrasés.</a>
 
-        <p><strong>A</strong>dditionner <span class="ingredient">oeufs</span>, <span class="ingredient">farine</span> et <span class="ingredient">huile</span> et mélanger avec une spatule.</p>
+<p><strong>A</strong>dditionner <span class="ingredient">oeufs</span>, <span class="ingredient">farine</span> et <span class="ingredient">huile</span> et mélanger avec une spatule.</p>
 
-        <p>Faire chauffer <span class="ingredient">le beurre</span>, mettre du poivre et du sel.</p>
+<p>Faire chauffer <span class="ingredient">le beurre</span>, mettre du poivre et du sel.</p>
 
-        <hr>
+<hr>
 
-        <p id="div"><strong>balise &lt; div &gt;</strong></p>
-        <a>L'élément HTML &lt; div &gt; (qui signifie division du document) est un conteneur générique qui permet d'organiser le contenu.</a>
+<p id="div"><strong>balise &lt; div &gt;</strong></p>
+<a>L'élément HTML &lt; div &gt; (qui signifie division du document) est un conteneur générique qui permet d'organiser le contenu.</a>
 
-        <br>
-        <br>
+<br>
+<br>
 
-        <div class="warning">
-            <img src="../Creationsite/img/sddl.jpg"
-                alt="La Statue change de couleur">
-            <p>Femme en colère</p>
-        </div>
+<div class="warning">
+    <img src="../Creationsite/img/sddl.jpg" alt="La Statue change de couleur">
+    <p>Femme en colère</p>
+</div>
 
-        <hr>
+<hr>
 
-        <p id="id"><strong>balise &lt; id &gt;</strong></p>
-        <a>L'attribut universel &lt; id &gt; définit un identifiant qui doit être unique pour l'ensemble du document.</a>
+<p id="id"><strong>balise &lt; id &gt;</strong></p>
+<a>L'attribut universel &lt; id &gt; définit un identifiant qui doit être unique pour l'ensemble du document.</a>
 
-        <p>A normal, boring paragraph. Try not to fall asleep (
-            Un paragraphe normal et ennuyeux. Essayez de ne pas vous endormir).</p>
+<p>A normal, boring paragraph. Try not to fall asleep ( Un paragraphe normal et ennuyeux. Essayez de ne pas vous endormir).</p>
 
-        <p id="exciting">The most exciting paragraph on the page. One of a kind (Le paragraphe le plus excitant de la page. Unique en son genre)!</p>
+<p id="exciting">The most exciting paragraph on the page. One of a kind (Le paragraphe le plus excitant de la page. Unique en son genre)!</p>
 
-        <hr>
+<hr>
 
 
-        <p id="class"><strong>balise &lt; class &gt;</strong></p>
-        <a>L'attribut universel class indique une liste de classes associées à l'élément courant.</a>
+<p id="class"><strong>balise &lt; class &gt;</strong></p>
+<a>L'attribut universel class indique une liste de classes associées à l'élément courant.</a>
 
-        <p> Narrateur: c'est le début de la pièce. </p>
+<p> Narrateur: c'est le début de la pièce. </p>
 
-        <p class = "note editorial"> Le point ci-dessus semble un peu évident. Supprimer / réécrire? </p>
+<p class="note editorial"> Le point ci-dessus semble un peu évident. Supprimer / réécrire? </p>
 
-        <p> Narrateur: Je dois vous avertir maintenant que ce début est très excitant. </p>
+<p> Narrateur: Je dois vous avertir maintenant que ce début est très excitant. </p>
 
-        <p class = "note"> [Les lumières s’allument et le vent souffle; Caspian entre en scène à cour] </p>
+<p class="note"> [Les lumières s’allument et le vent souffle; Caspian entre en scène à cour] </p>
 
-        <hr>
+<hr>
 
-        <p id="article"><strong>balise &lt; article &gt;</strong></p>
-        <a>L'élément HTML balise &lt; article &gt; représente du contenu autonome dans un document, une page, une application, ou un site.</a>
-        <br><br>
+<p id="article"><strong>balise &lt; article &gt;</strong></p>
+<a>L'élément HTML balise &lt; article &gt; représente du contenu autonome dans un document, une page, une application, ou un site.</a>
+<br><br>
 
-        <article class="forecast">
-            <h2>Prévisions météorologiques de Pantin</h2>
-            <article class="day-forecast">
-                <h3>05 Mars 2019</h3>
-                <p>Pluie.</p>
-            </article>
-            <article class="day-forecast">
-                <h3>06 Mars 2019</h3>
-                <p>Pluie intermittente.</p>
-            </article>
-            <article class="day-forecast">
-                <h3>07 Mars 2019</h3>
-                <p>Fortes pluies.</p>
-            </article>
-        </article>
-        <br>
+<article class="forecast">
+    <h2>Prévisions météorologiques de Pantin</h2>
+    <article class="day-forecast">
+        <h3>05 Mars 2019</h3>
+        <p>Pluie.</p>
+    </article>
+    <article class="day-forecast">
+        <h3>06 Mars 2019</h3>
+        <p>Pluie intermittente.</p>
+    </article>
+    <article class="day-forecast">
+        <h3>07 Mars 2019</h3>
+        <p>Fortes pluies.</p>
+    </article>
+</article>
+<br>
 
-        <hr>
+<hr>
 
-        <p id="blockquote"><strong>balise &lt; blockquote &gt;</strong></p>
-        <a>L'élément HTML &lt; blockquote &gt; (qui signifie bloc de citation) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation.
+<p id="blockquote"><strong>balise &lt; blockquote &gt;</strong></p>
+<a>L'élément HTML &lt; blockquote &gt; (qui signifie bloc de citation) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation.
         </a>
-        <br><br>
+<br><br>
 
-        <blockquote cite="https://www.huxley.net/bnw/four.html">
-            <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced (Les mots peuvent être comme des rayons X, si vous les utilisez correctement, ils passeront par n'importe quoi. Vous lisez et vous êtes transpercé).</p>
-            <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
-        </blockquote>
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced (Les mots peuvent être comme des rayons X, si vous les utilisez correctement, ils passeront par n'importe quoi. Vous lisez et vous êtes transpercé).</p>
+    <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+</blockquote>
 
 
-        <br>
+<br>
 
-        <hr>
+<hr>
 
-        <p id="pre"><strong>balise &lt; pre &gt;</strong></p>
-        <a>L'élément HTML &lt; pre &gt; représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.</a>
-        <br><br>
+<p id="pre"><strong>balise &lt; pre &gt;</strong></p>
+<a>L'élément HTML &lt; pre &gt; représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.</a>
+<br><br>
 
-        <pre>
+<pre>
                 L          TE
                 A       A
                     C    V
@@ -533,384 +582,396 @@
                 SI      RESPI
                         RER       - Apollinaire
         </pre>
-        
 
-            <br>
 
-            <hr>
-            
-            <p id="figure"><strong>balise &lt; figure &gt;</strong></p>
-            <a>L'élément HTML &lt; figure &gt; représente une figure (un schéma), qui peut être accompagné d'une légende grâce à l'élément &lt; figcaption &gt;. Il est normalement référencé de manière unique.</a>
-            <br><br>
+<br>
 
-        <figure>
-                <img src="../Creationsite/img/pluie.jpg"
-                    alt="Nuage">
-                <figcaption>Temps humide et grosse grisaille</figcaption>
-        </figure>
-                
-            <br>
+<hr>
 
-            <hr>
+<p id="figure"><strong>balise &lt; figure &gt;</strong></p>
+<a>L'élément HTML &lt; figure &gt; représente une figure (un schéma), qui peut être accompagné d'une légende grâce à l'élément &lt; figcaption &gt;. Il est normalement référencé de manière unique.</a>
+<br><br>
 
-            <p id="adress"><strong>balise &lt; adress &gt;</strong></p>
-            <a>L'élément HTML &lt; adress &gt; indique des informations de contact pour une personne, un groupe de personnes ou une organisation.</a>
-            <br><br>
+<figure>
+    <img src="../Creationsite/img/pluie.jpg" alt="Nuage">
+    <figcaption>Temps humide et grosse grisaille</figcaption>
+</figure>
 
-            <p>
-                Contactez l'auteur de cette page:</p>
+<br>
 
-            <address>
+<hr>
+
+<p id="adress"><strong>balise &lt; adress &gt;</strong></p>
+<a>L'élément HTML &lt; adress &gt; indique des informations de contact pour une personne, un groupe de personnes ou une organisation.</a>
+<br><br>
+
+<p>
+    Contactez l'auteur de cette page:</p>
+
+<address>
             <a href="mailto:jim@rock.com">jim@rock.com</a><br>
             <a href="tel:+13115552368">(311) 555-2368</a>
             </address>
 
-            <br>
+<br>
 
-            <hr>
-        
-            
-            <p id="nav"><strong>balise &lt; nav &gt;</strong></p>
-            <a>L'élément HTML balise &lt; nav &gt; représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page.</a>
-            <nav class="crumbs">
-                <ol>
-                    <li class="crumb"><a href="https://www.commencal-store.com/2020-bikes-c102x3717769">Bikes</a></li>
-                    <li class="crumb"><a href="https://www.bmxavenue.com/bmx-freestyle/">BMX</a></li>
-                    <li class="crumb">Jump Bike 3000</li>
-                </ol>
-            </nav>
+<hr>
 
-            <br>
-            
-            <h1>Jump Bike 3000</h1>
-            <p>This BMX bike is a solid step into the pro world. It looks as legit as it rides and is built to polish your skills (Ce vélo BMX est une étape solide dans le monde professionnel. Il a l'air aussi légitime qu'il roule et est conçu pour perfectionner vos compétences).</p>
-            
-            <br>
 
-            <hr>
+<p id="nav"><strong>balise &lt; nav &gt;</strong></p>
+<a>L'élément HTML balise &lt; nav &gt; représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page.</a>
+<nav class="crumbs">
+    <ol>
+        <li class="crumb"><a href="https://www.commencal-store.com/2020-bikes-c102x3717769">Bikes</a></li>
+        <li class="crumb"><a href="https://www.bmxavenue.com/bmx-freestyle/">BMX</a></li>
+        <li class="crumb">Jump Bike 3000</li>
+    </ol>
+</nav>
 
-    <main>
+<br>
 
-            <p id="Préambule"><strong>Préambule</strong></p>
-            <p><br>Considérant que la reconnaissance de la dignité inhérente à tous les membres de la famille humaine et de leurs droits égaux et inaliénables constitue le fondement de la liberté, de la justice et de la paix dans le monde.<br>
-            
-            <br>Considérant que la méconnaissance et le mépris des droits de l'homme ont conduit à des actes de barbarie qui révoltent la conscience de l'humanité et que l'avènement d'un monde où les êtres humains seront libres de parler et de croire, libérés de la terreur et de la misère, a été proclamé comme la plus haute aspiration de l'homme.<br>
-            
-            <br>Considérant qu'il est essentiel que les droits de l'homme soient protégés par un régime de droit pour que l'homme ne soit pas contraint, en suprême recours, à la révolte contre la tyrannie et l'oppression.<br>
-            
-            <br>Considérant qu'il est essentiel d'encourager le développement de relations amicales entre nations.<br>
-            
-            <br>Considérant que dans la Charte les peuples des Nations Unies ont proclamé à nouveau leur foi dans les droits fondamentaux de l'homme, dans la dignité et la valeur de la personne humaine, dans l'égalité des droits des hommes et des femmes, et qu'ils se sont déclarés résolus à favoriser le progrès social et à instaurer de meilleures conditions de vie dans une liberté plus grande.<br>
-            
-            <br>Considérant que les Etats Membres se sont engagés à assurer, en coopération avec l'Organisation des Nations Unies, le respect universel et effectif des droits de l'homme et des libertés fondamentales.<br>
-            
-            <br>Considérant qu'une conception commune de ces droits et libertés est de la plus haute importance pour remplir pleinement cet engagement.<br>
-            
-            <br>L'Assemblée générale proclame la présente Déclaration universelle des droits de l'homme comme l'idéal commun à atteindre par tous les peuples et toutes les nations afin que tous les individus et tous les organes de la société, ayant cette Déclaration constamment à l'esprit, s'efforcent, par l'enseignement et l'éducation, de développer le respect de ces droits et libertés et d'en assurer, par des mesures progressives d'ordre national et international, la reconnaissance et l'application universelles et effectives, tant parmi les populations des Etats Membres eux-mêmes que parmi celles des territoires placés sous leur juridiction.<br>
-            
-            <br><strong>Article premier</strong><br>
-            
-            <br>Tous les êtres humains naissent libres et égaux en dignité et en droits. Ils sont doués de raison et de conscience et doivent agir les uns envers les autres dans un esprit de fraternité.<br>
-            
-            <br><strong>Article 2</strong><br>
-            
-            <br>1. Chacun peut se prévaloir de tous les droits et de toutes les libertés proclamés dans la présente Déclaration, sans distinction aucune, notamment de race, de couleur, de sexe, de langue, de religion, d'opinion politique ou de toute autre opinion, d'origine nationale ou sociale, de fortune, de naissance ou de toute autre situation.<br>
-            <br>2. De plus, il ne sera fait aucune distinction fondée sur le statut politique, juridique ou international du pays ou du territoire dont une personne est ressortissante, que ce pays ou territoire soit indépendant, sous tutelle, non autonome ou soumis à une limitation quelconque de souveraineté.<br>
-            
-            <br><strong>Article 3</strong><br>
-            
-            <br>Tout individu a droit à la vie, à la liberté et à la sûreté de sa personne.<br>
-            
-            <br><strong>Article 4</strong><br>
-            
-            <br>Nul ne sera tenu en esclavage ni en servitude; l'esclavage et la traite des esclaves sont interdits sous toutes leurs formes.<br>
-            
-            <br><strong>Article 5</strong><br>
-            
-            Nul ne sera soumis à la torture, ni à des peines ou traitements cruels, inhumains ou dégradants.<br>
-            
-            <br><strong>Article 6</strong><br>
-            
-            Chacun a le droit à la reconnaissance en tous lieux de sa personnalité juridique.<br>
-            
-            <br><strong>Article 7</strong><br>
-            
-            Tous sont égaux devant la loi et ont droit sans distinction à une égale protection de la loi. Tous ont droit à une protection égale contre toute discrimination qui violerait la présente Déclaration et contre toute provocation à une telle discrimination.<br>
-            
-            <br><strong>Article 8</strong><br>
-            
-            Toute personne a droit à un recours effectif devant les juridictions nationales compétentes contre les actes violant les droits fondamentaux qui lui sont reconnus par la constitution ou par la loi.<br>
-            
-            <br><strong>Article 9</strong><br>
-            
-            <br>Nul ne peut être arbitrairement arrêté, détenu ou exilé.<br>
-            
-            <p id="Article10"><strong>Article 10</strong></p>
-            
-            Toute personne a droit, en pleine égalité, à ce que sa cause soit entendue équitablement et publiquement par un tribunal indépendant et impartial, qui décidera, soit de ses droits et obligations, soit du bien-fondé de toute accusation en matière pénale dirigée contre elle.<br>
-            
-            <br><strong>Article 11</strong><br>
-            
-            <br>1. Toute personne accusée d'un acte délictueux est présumée innocente jusqu'à ce que sa culpabilité ait été légalement établie au cours d'un procès public où toutes les garanties nécessaires à sa défense lui auront été assurées.<br> 
-            <br>2. Nul ne sera condamné pour des actions ou omissions qui, au moment où elles ont été commises, ne constituaient pas un acte délictueux d'après le droit national ou international. De même, il ne sera infligé aucune peine plus forte que celle qui était applicable au moment où l'acte délictueux a été commis.<br>
-            
-            <br><strong>Article 12</strong><br>
-            
-            <br>Nul ne sera l'objet d'immixtions arbitraires dans sa vie privée, sa famille, son domicile ou sa correspondance, ni d'atteintes à son honneur et à sa réputation. Toute personne a droit à la protection de la loi contre de telles immixtions ou de telles atteintes.<br>
-            
-            <br><strong>Article 13</strong><br>
-            
-            <br>1. Toute personne a le droit de circuler librement et de choisir sa résidence à l'intérieur d'un Etat. 
-            <br>2. Toute personne a le droit de quitter tout pays, y compris le sien, et de revenir dans son pays.<br>
-            
-            <br><strong>Article 14</strong><br>
-            
-            <br>1. Devant la persécution, toute personne a le droit de chercher asile et de bénéficier de l'asile en d'autres pays. 
-            <br>2. Ce droit ne peut être invoqué dans le cas de poursuites réellement fondées sur un crime de droit commun ou sur des agissements contraires aux buts et aux principes des Nations Unies.<br>
-            
-            <br><strong>Article 15</strong><br>
-            
-            <br>1. Tout individu a droit à une nationalité. 
-            <br>2. Nul ne peut être arbitrairement privé de sa nationalité, ni du droit de changer de nationalité.<br>
-            
-            <br><strong>Article 16</strong><br>
-            
-            <br>1. A partir de l'âge nubile, l'homme et la femme, sans aucune restriction quant à la race, la nationalité ou la religion, ont le droit de se marier et de fonder une famille. Ils ont des droits égaux au regard du mariage, durant le mariage et lors de sa dissolution. 
-            <br>2. Le mariage ne peut être conclu qu'avec le libre et plein consentement des futurs époux. 
-            <br>3. La famille est l'élément naturel et fondamental de la société et a droit à la protection de la société et de l'Etat.<br>
-            
-            <br><strong>Article 17</strong><br>
-            
-            <br>1. Toute personne, aussi bien seule qu'en collectivité, a droit à la propriété.
-            <br>2. Nul ne peut être arbitrairement privé de sa propriété.<br>
-            
-            <br><strong>Article 18</strong><br>
-            
-            <br>Toute personne a droit à la liberté de pensée, de conscience et de religion ; ce droit implique la liberté de changer de religion ou de conviction ainsi que la liberté de manifester sa religion ou sa conviction seule ou en commun, tant en public qu'en privé, par l'enseignement, les pratiques, le culte et l'accomplissement des rites.<br>
-            
-            <br><strong>Article 19</strong><br>
-            
-            <br>Tout individu a droit à la liberté d'opinion et d'expression, ce qui implique le droit de ne pas être inquiété pour ses opinions et celui de chercher, de recevoir et de répandre, sans considérations de frontières, les informations et les idées par quelque moyen d'expression que ce soit.<br>
-            
-            <br><strong>Article 20</strong><br>
-            
-            <br>1. Toute personne a droit à la liberté de réunion et d'association pacifiques. 
-            <br>2. Nul ne peut être obligé de faire partie d'une association.<br>
-            
-            <br><strong>Article 21</strong><br>
-            
-            <br>1. Toute personne a le droit de prendre part à la direction des affaires publiques de son pays, soit directement, soit par l'intermédiaire de représentants librement choisis.<br> 
-            <br>2. Toute personne a droit à accéder, dans des conditions d'égalité, aux fonctions publiques de son pays.
-            <br>3. La volonté du peuple est le fondement de l'autorité des pouvoirs publics ; cette volonté doit s'exprimer par des élections honnêtes qui doivent avoir lieu périodiquement, au suffrage universel égal et au vote secret ou suivant une procédure équivalente assurant la liberté du vote.<br>
-            
-            <br><strong>Article 22</strong><br>
-            
-            <br>Toute personne, en tant que membre de la société, a droit à la sécurité sociale ; elle est fondée à obtenir la satisfaction des droits économiques, sociaux et culturels indispensables à sa dignité et au libre développement de sa personnalité, grâce à l'effort national et à la coopération internationale, compte tenu de l'organisation et des ressources de chaque pays.<br>
-            
-            <p id="Article23"><strong>Article 23</strong></p>
-            
-            1. Toute personne a droit au travail, au libre choix de son travail, à des conditions équitables et satisfaisantes de travail et à la protection contre le chômage. 
-            <br>2. Tous ont droit, sans aucune discrimination, à un salaire égal pour un travail égal. 
-            <br>3. Quiconque travaille a droit à une rémunération équitable et satisfaisante lui assurant ainsi qu'à sa famille une existence conforme à la dignité humaine et complétée, s'il y a lieu, par tous autres moyens de protection sociale. 
-            <br>4. Toute personne a le droit de fonder avec d'autres des syndicats et de s'affilier à des syndicats pour la défense de ses intérêts.<br>
+<h1>Jump Bike 3000</h1>
+<p>This BMX bike is a solid step into the pro world. It looks as legit as it rides and is built to polish your skills (Ce vélo BMX est une étape solide dans le monde professionnel. Il a l'air aussi légitime qu'il roule et est conçu pour perfectionner vos
+    compétences).
+</p>
+
+<br>
+
+<hr>
+
+<main>
+
+    <p id="Préambule"><strong>Préambule</strong></p>
+    <p><br>Considérant que la reconnaissance de la dignité inhérente à tous les membres de la famille humaine et de leurs droits égaux et inaliénables constitue le fondement de la liberté, de la justice et de la paix dans le monde.<br>
+
+        <br>Considérant que la méconnaissance et le mépris des droits de l'homme ont conduit à des actes de barbarie qui révoltent la conscience de l'humanité et que l'avènement d'un monde où les êtres humains seront libres de parler et de croire, libérés
+        de la terreur et de la misère, a été proclamé comme la plus haute aspiration de l'homme.<br>
+
+        <br>Considérant qu'il est essentiel que les droits de l'homme soient protégés par un régime de droit pour que l'homme ne soit pas contraint, en suprême recours, à la révolte contre la tyrannie et l'oppression.<br>
+
+        <br>Considérant qu'il est essentiel d'encourager le développement de relations amicales entre nations.<br>
+
+        <br>Considérant que dans la Charte les peuples des Nations Unies ont proclamé à nouveau leur foi dans les droits fondamentaux de l'homme, dans la dignité et la valeur de la personne humaine, dans l'égalité des droits des hommes et des femmes,
+        et qu'ils se sont déclarés résolus à favoriser le progrès social et à instaurer de meilleures conditions de vie dans une liberté plus grande.<br>
+
+        <br>Considérant que les Etats Membres se sont engagés à assurer, en coopération avec l'Organisation des Nations Unies, le respect universel et effectif des droits de l'homme et des libertés fondamentales.<br>
+
+        <br>Considérant qu'une conception commune de ces droits et libertés est de la plus haute importance pour remplir pleinement cet engagement.<br>
+
+        <br>L'Assemblée générale proclame la présente Déclaration universelle des droits de l'homme comme l'idéal commun à atteindre par tous les peuples et toutes les nations afin que tous les individus et tous les organes de la société, ayant cette
+        Déclaration constamment à l'esprit, s'efforcent, par l'enseignement et l'éducation, de développer le respect de ces droits et libertés et d'en assurer, par des mesures progressives d'ordre national et international, la reconnaissance et l'application
+        universelles et effectives, tant parmi les populations des Etats Membres eux-mêmes que parmi celles des territoires placés sous leur juridiction.<br>
+
+        <br><strong>Article premier</strong><br>
+
+        <br>Tous les êtres humains naissent libres et égaux en dignité et en droits. Ils sont doués de raison et de conscience et doivent agir les uns envers les autres dans un esprit de fraternité.<br>
+
+        <br><strong>Article 2</strong><br>
+
+        <br>1. Chacun peut se prévaloir de tous les droits et de toutes les libertés proclamés dans la présente Déclaration, sans distinction aucune, notamment de race, de couleur, de sexe, de langue, de religion, d'opinion politique ou de toute autre
+        opinion, d'origine nationale ou sociale, de fortune, de naissance ou de toute autre situation.<br>
+        <br>2. De plus, il ne sera fait aucune distinction fondée sur le statut politique, juridique ou international du pays ou du territoire dont une personne est ressortissante, que ce pays ou territoire soit indépendant, sous tutelle, non autonome
+        ou soumis à une limitation quelconque de souveraineté.<br>
+
+        <br><strong>Article 3</strong><br>
+
+        <br>Tout individu a droit à la vie, à la liberté et à la sûreté de sa personne.<br>
+
+        <br><strong>Article 4</strong><br>
+
+        <br>Nul ne sera tenu en esclavage ni en servitude; l'esclavage et la traite des esclaves sont interdits sous toutes leurs formes.<br>
+
+        <br><strong>Article 5</strong><br> Nul ne sera soumis à la torture, ni à des peines ou traitements cruels, inhumains ou dégradants.<br>
+
+        <br><strong>Article 6</strong><br> Chacun a le droit à la reconnaissance en tous lieux de sa personnalité juridique.<br>
+
+        <br><strong>Article 7</strong><br> Tous sont égaux devant la loi et ont droit sans distinction à une égale protection de la loi. Tous ont droit à une protection égale contre toute discrimination qui violerait la présente Déclaration et contre
+        toute provocation à une telle discrimination.<br>
+
+        <br><strong>Article 8</strong><br> Toute personne a droit à un recours effectif devant les juridictions nationales compétentes contre les actes violant les droits fondamentaux qui lui sont reconnus par la constitution ou par la loi.<br>
+
+        <br><strong>Article 9</strong><br>
+
+        <br>Nul ne peut être arbitrairement arrêté, détenu ou exilé.<br>
+
+        <p id="Article10"><strong>Article 10</strong></p>
+
+        Toute personne a droit, en pleine égalité, à ce que sa cause soit entendue équitablement et publiquement par un tribunal indépendant et impartial, qui décidera, soit de ses droits et obligations, soit du bien-fondé de toute accusation en matière pénale
+        dirigée contre elle.<br>
+
+        <br><strong>Article 11</strong><br>
+
+        <br>1. Toute personne accusée d'un acte délictueux est présumée innocente jusqu'à ce que sa culpabilité ait été légalement établie au cours d'un procès public où toutes les garanties nécessaires à sa défense lui auront été assurées.<br>
+        <br>2. Nul ne sera condamné pour des actions ou omissions qui, au moment où elles ont été commises, ne constituaient pas un acte délictueux d'après le droit national ou international. De même, il ne sera infligé aucune peine plus forte que celle
+        qui était applicable au moment où l'acte délictueux a été commis.<br>
+
+        <br><strong>Article 12</strong><br>
+
+        <br>Nul ne sera l'objet d'immixtions arbitraires dans sa vie privée, sa famille, son domicile ou sa correspondance, ni d'atteintes à son honneur et à sa réputation. Toute personne a droit à la protection de la loi contre de telles immixtions ou
+        de telles atteintes.<br>
+
+        <br><strong>Article 13</strong><br>
+
+        <br>1. Toute personne a le droit de circuler librement et de choisir sa résidence à l'intérieur d'un Etat.
+        <br>2. Toute personne a le droit de quitter tout pays, y compris le sien, et de revenir dans son pays.<br>
+
+        <br><strong>Article 14</strong><br>
+
+        <br>1. Devant la persécution, toute personne a le droit de chercher asile et de bénéficier de l'asile en d'autres pays.
+        <br>2. Ce droit ne peut être invoqué dans le cas de poursuites réellement fondées sur un crime de droit commun ou sur des agissements contraires aux buts et aux principes des Nations Unies.<br>
+
+        <br><strong>Article 15</strong><br>
+
+        <br>1. Tout individu a droit à une nationalité.
+        <br>2. Nul ne peut être arbitrairement privé de sa nationalité, ni du droit de changer de nationalité.<br>
+
+        <br><strong>Article 16</strong><br>
+
+        <br>1. A partir de l'âge nubile, l'homme et la femme, sans aucune restriction quant à la race, la nationalité ou la religion, ont le droit de se marier et de fonder une famille. Ils ont des droits égaux au regard du mariage, durant le mariage
+        et lors de sa dissolution.
+        <br>2. Le mariage ne peut être conclu qu'avec le libre et plein consentement des futurs époux.
+        <br>3. La famille est l'élément naturel et fondamental de la société et a droit à la protection de la société et de l'Etat.<br>
+
+        <br><strong>Article 17</strong><br>
+
+        <br>1. Toute personne, aussi bien seule qu'en collectivité, a droit à la propriété.
+        <br>2. Nul ne peut être arbitrairement privé de sa propriété.<br>
+
+        <br><strong>Article 18</strong><br>
+
+        <br>Toute personne a droit à la liberté de pensée, de conscience et de religion ; ce droit implique la liberté de changer de religion ou de conviction ainsi que la liberté de manifester sa religion ou sa conviction seule ou en commun, tant en
+        public qu'en privé, par l'enseignement, les pratiques, le culte et l'accomplissement des rites.<br>
+
+        <br><strong>Article 19</strong><br>
+
+        <br>Tout individu a droit à la liberté d'opinion et d'expression, ce qui implique le droit de ne pas être inquiété pour ses opinions et celui de chercher, de recevoir et de répandre, sans considérations de frontières, les informations et les idées
+        par quelque moyen d'expression que ce soit.<br>
+
+        <br><strong>Article 20</strong><br>
+
+        <br>1. Toute personne a droit à la liberté de réunion et d'association pacifiques.
+        <br>2. Nul ne peut être obligé de faire partie d'une association.<br>
+
+        <br><strong>Article 21</strong><br>
+
+        <br>1. Toute personne a le droit de prendre part à la direction des affaires publiques de son pays, soit directement, soit par l'intermédiaire de représentants librement choisis.<br>
+        <br>2. Toute personne a droit à accéder, dans des conditions d'égalité, aux fonctions publiques de son pays.
+        <br>3. La volonté du peuple est le fondement de l'autorité des pouvoirs publics ; cette volonté doit s'exprimer par des élections honnêtes qui doivent avoir lieu périodiquement, au suffrage universel égal et au vote secret ou suivant une procédure
+        équivalente assurant la liberté du vote.<br>
+
+        <br><strong>Article 22</strong><br>
+
+        <br>Toute personne, en tant que membre de la société, a droit à la sécurité sociale ; elle est fondée à obtenir la satisfaction des droits économiques, sociaux et culturels indispensables à sa dignité et au libre développement de sa personnalité,
+        grâce à l'effort national et à la coopération internationale, compte tenu de l'organisation et des ressources de chaque pays.<br>
+
+        <p id="Article23"><strong>Article 23</strong></p>
+
+        1. Toute personne a droit au travail, au libre choix de son travail, à des conditions équitables et satisfaisantes de travail et à la protection contre le chômage.
+        <br>2. Tous ont droit, sans aucune discrimination, à un salaire égal pour un travail égal.
+        <br>3. Quiconque travaille a droit à une rémunération équitable et satisfaisante lui assurant ainsi qu'à sa famille une existence conforme à la dignité humaine et complétée, s'il y a lieu, par tous autres moyens de protection sociale.
+        <br>4. Toute personne a le droit de fonder avec d'autres des syndicats et de s'affilier à des syndicats pour la défense de ses intérêts.<br>
 
         <aside>
-                <p><img src="../Creationsite/img/les_deux_canards.jpg"
-                alt="Statue"></p>
+            <p><img src="../Creationsite/img/les_deux_canards.jpg" alt="Statue"></p>
         </aside>
-            
-            
-            <br><strong>Article 24</strong><br>
-            
-            <br>Toute personne a droit au repos et aux loisirs et notamment à une limitation raisonnable de la durée du travail et à des congés payés périodiques.<br>
-            
-            <br><strong>Article 25</strong><br>
-            
-            <br>1. Toute personne a droit à un niveau de vie suffisant pour assurer sa santé, son bien-être et ceux de sa famille, notamment pour l'alimentation, l'habillement, le logement, les soins médicaux ainsi que pour les services sociaux nécessaires ; elle a droit à la sécurité en cas de chômage, de maladie, d'invalidité, de veuvage, de vieillesse ou dans les autres cas de perte de ses moyens de subsistance par suite de circonstances indépendantes de sa volonté. 
-            <br>2. La maternité et l'enfance ont droit à une aide et à une assistance spéciales. Tous les enfants, qu'ils soient nés dans le mariage ou hors mariage, jouissent de la même protection sociale.<br>
-            
-            <br><strong>Article 26</strong><br>
-            
-            <br>1. Toute personne a droit à l'éducation. L'éducation doit être gratuite, au moins en ce qui concerne l'enseignement élémentaire et fondamental. L'enseignement élémentaire est obligatoire. L'enseignement technique et professionnel doit être généralisé ; l'accès aux études supérieures doit être ouvert en pleine égalité à tous en fonction de leur mérite. 
-            <br>2. L'éducation doit viser au plein épanouissement de la personnalité humaine et au renforcement du respect des droits de l'homme et des libertés fondamentales. Elle doit favoriser la compréhension, la tolérance et l'amitié entre toutes les nations et tous les groupes raciaux ou religieux, ainsi que le développement des activités des Nations Unies pour le maintien de la paix. 
-            <br>3. Les parents ont, par priorité, le droit de choisir le genre d'éducation à donner à leurs enfants.<br>
-            
-            <br><strong>Article 27</strong><br>
-            
-            <br>1. Toute personne a le droit de prendre part librement à la vie culturelle de la communauté, de jouir des arts et de participer au progrès scientifique et aux bienfaits qui en résultent. 
-            <br>2. Chacun a droit à la protection des intérêts moraux et matériels découlant de toute production scientifique, littéraire ou artistique dont il est l'auteur.<br>
-            
-            <br><strong>Article 28</strong><br>
-            
-            <br>Toute personne a droit à ce que règne, sur le plan social et sur le plan international, un ordre tel que les droits et libertés énoncés dans la présente Déclaration puissent y trouver plein effet.<br>
-            
-            <br><strong>Article 29</strong><br>
-            
-            <br>1. L'individu a des devoirs envers la communauté dans laquelle seule le libre et plein développement de sa personnalité est possible. 
-            <br>2. Dans l'exercice de ses droits et dans la jouissance de ses libertés, chacun n'est soumis qu'aux limitations établies par la loi exclusivement en vue d'assurer la reconnaissance et le respect des droits et libertés d'autrui et afin de satisfaire aux justes exigences de la morale, de l'ordre public et du bien-être général dans une société démocratique. 
-            <br>3. Ces droits et libertés ne pourront, en aucun cas, s'exercer contrairement aux buts et aux principes des Nations Unies.<br>
-
-                
-                <br>
-            
-                <br><strong><b>Article 30</b></strong><br>
-                    
-                <h4>Aucune disposition de la présente Déclaration ne peut être interprétée comme impliquant pour un État, un groupement ou un individu un droit quelconque de se livrer à une activité ou d'accomplir un acte visant à la <mark>destruction des droits et libertés</mark>  qui y sont énoncés.</h4>
-            
-            <figure>
-                <img src="img/sddl.jpg"
-                     alt="Statue">
-                <figcaption>Femme statue</figcaption>
-            </figure>
-            
-    </main>
-            <br>
-            <br>
-            <hr>
 
 
-            <h1>Listes avec start</h1>
+        <br><strong>Article 24</strong><br>
 
-            <p><mark>Liste n°1</mark> :</p>
-            <ol start="3">
-            <li><strong>O</strong>n naît</li>
-            <li><strong>O</strong>n grandit</li>
-            <li><strong>O</strong>n meurt</li>
-            </ol>
-                    
-            <p>Liste <mark>n°2 </mark>:</p>
-            <ol type="A" start="5">
-            <li><strong>I</strong>ntroduction</li>
-            <li><strong>P</strong>artie I</li>
-            <li><strong>P</strong>artie II</li>
-            <li><strong>C</strong>onclusion</li>
-            </ol>
+        <br>Toute personne a droit au repos et aux loisirs et notamment à une limitation raisonnable de la durée du travail et à des congés payés périodiques.<br>
+
+        <br><strong>Article 25</strong><br>
+
+        <br>1. Toute personne a droit à un niveau de vie suffisant pour assurer sa santé, son bien-être et ceux de sa famille, notamment pour l'alimentation, l'habillement, le logement, les soins médicaux ainsi que pour les services sociaux nécessaires
+        ; elle a droit à la sécurité en cas de chômage, de maladie, d'invalidité, de veuvage, de vieillesse ou dans les autres cas de perte de ses moyens de subsistance par suite de circonstances indépendantes de sa volonté.
+        <br>2. La maternité et l'enfance ont droit à une aide et à une assistance spéciales. Tous les enfants, qu'ils soient nés dans le mariage ou hors mariage, jouissent de la même protection sociale.<br>
+
+        <br><strong>Article 26</strong><br>
+
+        <br>1. Toute personne a droit à l'éducation. L'éducation doit être gratuite, au moins en ce qui concerne l'enseignement élémentaire et fondamental. L'enseignement élémentaire est obligatoire. L'enseignement technique et professionnel doit être
+        généralisé ; l'accès aux études supérieures doit être ouvert en pleine égalité à tous en fonction de leur mérite.
+        <br>2. L'éducation doit viser au plein épanouissement de la personnalité humaine et au renforcement du respect des droits de l'homme et des libertés fondamentales. Elle doit favoriser la compréhension, la tolérance et l'amitié entre toutes les
+        nations et tous les groupes raciaux ou religieux, ainsi que le développement des activités des Nations Unies pour le maintien de la paix.
+        <br>3. Les parents ont, par priorité, le droit de choisir le genre d'éducation à donner à leurs enfants.<br>
+
+        <br><strong>Article 27</strong><br>
+
+        <br>1. Toute personne a le droit de prendre part librement à la vie culturelle de la communauté, de jouir des arts et de participer au progrès scientifique et aux bienfaits qui en résultent.
+        <br>2. Chacun a droit à la protection des intérêts moraux et matériels découlant de toute production scientifique, littéraire ou artistique dont il est l'auteur.<br>
+
+        <br><strong>Article 28</strong><br>
+
+        <br>Toute personne a droit à ce que règne, sur le plan social et sur le plan international, un ordre tel que les droits et libertés énoncés dans la présente Déclaration puissent y trouver plein effet.<br>
+
+        <br><strong>Article 29</strong><br>
+
+        <br>1. L'individu a des devoirs envers la communauté dans laquelle seule le libre et plein développement de sa personnalité est possible.
+        <br>2. Dans l'exercice de ses droits et dans la jouissance de ses libertés, chacun n'est soumis qu'aux limitations établies par la loi exclusivement en vue d'assurer la reconnaissance et le respect des droits et libertés d'autrui et afin de satisfaire
+        aux justes exigences de la morale, de l'ordre public et du bien-être général dans une société démocratique.
+        <br>3. Ces droits et libertés ne pourront, en aucun cas, s'exercer contrairement aux buts et aux principes des Nations Unies.<br>
 
 
-        <p>Liste n°3</p>
-        <ol type="I" start="5">
-            <li><strong>R</strong>ome</li>
-            <li><strong>T</strong>urin</li>
-            <li><strong>F</strong>lorence</li>
-            <li><strong>V</strong>enise</li>
-            <li><strong>M</strong>ilan</li>
-            <li><mark><strong>B</strong>ologne</mark></li>
-        </ol>
+        <br>
 
-            <br>
-            <hr>
-            <br>
+        <br><strong><b>Article 30</b></strong><br>
 
-        <table>
-            <!--titre du tableau : CAPTION 'les cellules sont fusionnées) -->
-            <caption>Ventes de la semaine</caption>
-            <!--en tête de colonnes du tableau-->
-            <thead>
-            <tr>
+        <h4>Aucune disposition de la présente Déclaration ne peut être interprétée comme impliquant pour un État, un groupement ou un individu un droit quelconque de se livrer à une activité ou d'accomplir un acte visant à la <mark>destruction des droits et libertés</mark>            qui y sont énoncés.</h4>
+
+        <figure>
+            <img src="img/sddl.jpg" alt="Statue">
+            <figcaption>Femme statue</figcaption>
+        </figure>
+
+</main>
+<br>
+<br>
+<hr>
+
+
+<h1>Listes avec start</h1>
+
+<p><mark>Liste n°1</mark> :</p>
+<ol start="3">
+    <li><strong>O</strong>n naît</li>
+    <li><strong>O</strong>n grandit</li>
+    <li><strong>O</strong>n meurt</li>
+</ol>
+
+<p>Liste <mark>n°2 </mark>:</p>
+<ol type="A" start="5">
+    <li><strong>I</strong>ntroduction</li>
+    <li><strong>P</strong>artie I</li>
+    <li><strong>P</strong>artie II</li>
+    <li><strong>C</strong>onclusion</li>
+</ol>
+
+
+<p>Liste n°3</p>
+<ol type="I" start="5">
+    <li><strong>R</strong>ome</li>
+    <li><strong>T</strong>urin</li>
+    <li><strong>F</strong>lorence</li>
+    <li><strong>V</strong>enise</li>
+    <li><strong>M</strong>ilan</li>
+    <li><mark><strong>B</strong>ologne</mark></li>
+</ol>
+
+<br>
+<hr>
+<br>
+
+<table>
+    <!--titre du tableau : CAPTION 'les cellules sont fusionnées) -->
+    <caption>Ventes de la semaine</caption>
+    <!--en tête de colonnes du tableau-->
+    <thead>
+        <tr>
             <!-- cellules d'en tête : TH table head-->
-                <th>Jour</th>
-                <th>Smartphones</th>
-                <th>Tablettes</th>
-                <th>Ordinateurs portables</th>
-            </tr>
-            </thead>
-             <!-- le corps du tableau : TBODY-->
-             <tbody>
-            <!--tr*5>td*4 : pour faire notre tableau de 5 rangées et 4 colonnes-->
-            <!--rangée de tableau : TR, table row -->
-            <tr>
+            <th>Jour</th>
+            <th>Smartphones</th>
+            <th>Tablettes</th>
+            <th>Ordinateurs portables</th>
+        </tr>
+    </thead>
+    <!-- le corps du tableau : TBODY-->
+    <tbody>
+        <!--tr*5>td*4 : pour faire notre tableau de 5 rangées et 4 colonnes-->
+        <!--rangée de tableau : TR, table row -->
+        <tr>
             <!-- cellules de tableau : TD, table data-->
-                <td>Lundi</td>
-                <td>20</td>
-                <td>3</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Mardi</td>
-                <td>5</td>
-                <td>4</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>Mercredi</td>
-                <td>6</td>
-                <td>3</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Jeudi</td>
-                <td>2</td>
-                <td>4</td>
-                <td>9</td>
-            </tr>
-            <tr>
-                <td>Vendredi</td>
-                <td>2</td>
-                <td>8</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Samedi</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-            </tr>
-             </tbody>
-            <!-- le bas ou la fin du tableau : TFOOT les normes du WC3 mettent la balise tfoot avant la balise tbody-->
-            <tfoot>
-                <tr>      
-                <td>Total</td>
-                <td>35</td>
-                <td>22</td>
-                <td>28</td>
-                </tr>
-            </tfoot>
-        </table>
-            <br><br>
-               
-            <img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche">
-            <br> <br>
-            <img src="imgs/1.jpg" alt="Texte alt" id="monImage">
-            <script>
-                var img = 0;
-                function f() {
-                    img += 1;
-                    monImage.setAttribute("src", "imgs/" + img + ".jpg");
-                    if (img == 9) {
-                        // clearInterval permet de stopper un setInterval
-                        clearInterval(timer);
-                    }
-                }
-                // setinterval permet de lancer une fonction tous les X millième de seconde
-                var timer = window.setInterval('f()', 3000);
-            </script>
+            <td>Lundi</td>
+            <td>20</td>
+            <td>3</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Mardi</td>
+            <td>5</td>
+            <td>4</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Mercredi</td>
+            <td>6</td>
+            <td>3</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Jeudi</td>
+            <td>2</td>
+            <td>4</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Vendredi</td>
+            <td>2</td>
+            <td>8</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Samedi</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+        </tr>
+    </tbody>
+    <!-- le bas ou la fin du tableau : TFOOT les normes du WC3 mettent la balise tfoot avant la balise tbody-->
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>35</td>
+            <td>22</td>
+            <td>28</td>
+        </tr>
+    </tfoot>
+</table>
+<br><br>
 
-            <div id="horloge">...</div>
-            <script>
-                function Timer() {
-                    var dt = new Date()
-                    document.getElementById("horloge").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                    setTimeout("Timer()", 1900);
-                    console.log("Exécution de Timer()");
-                }
-                Timer();
-            </script>
+<img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche">
+<br> <br>
+<img src="imgs/1.jpg" alt="Texte alt" id="monImage">
+<script>
+    var img = 0;
 
-            <div id="monEvent">...</div>
-             <script>
-                function Timer2() {
-                    var monEvent = document.getElementById("monEvent");
-                    monEvent.innerHTML = "Lancement réalisé";
-                    monEvent.parentNode.style.backgroundColor = "lightgrey";
-                    monEvent.parentNode.style.borderColor = "#f00";
-                }
-                setTimeout("Timer2()", 10000);
-            </script>
+    function f() {
+        img += 1;
+        monImage.setAttribute("src", "imgs/" + img + ".jpg");
+        if (img == 9) {
+            // clearInterval permet de stopper un setInterval
+            clearInterval(timer);
+        }
+    }
+    // setinterval permet de lancer une fonction tous les X millième de seconde
+    var timer = window.setInterval('f()', 3000);
+</script>
+
+<div id="horloge">...</div>
+<script>
+    function Timer() {
+        var dt = new Date()
+        document.getElementById("horloge").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+        setTimeout("Timer()", 1900);
+        console.log("Exécution de Timer()");
+    }
+    Timer();
+</script>
+
+<div id="monEvent">...</div>
+<script>
+    function Timer2() {
+        var monEvent = document.getElementById("monEvent");
+        monEvent.innerHTML = "Lancement réalisé";
+        monEvent.parentNode.style.backgroundColor = "lightgrey";
+        monEvent.parentNode.style.borderColor = "#f00";
+    }
+    setTimeout("Timer2()", 10000);
+</script>
 
 
-    <footer>
-            <p><i class="fas fa-shoe-prints"></i></p>
-    </footer>
-        <br><br>&copy; Sébastien Delrue 2020
-    </body>
+<footer>
+    <p><i class="fas fa-shoe-prints"></i></p>
+</footer>
+<br><br>&copy; Sébastien Delrue 2020
+</body>
+
 </html>
