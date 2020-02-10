@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider avec flèches</title>
+    <link rel="stylesheet" href="css/sliderfleche.css">
+</head>
+
+<body>
+
+    <!-- Les fleches de navigations -->
+
+    <img src="imgs/4.jpg" id="fleche_gauche" class="fleche" onClick="prevImage()" width="1200">
+
+
+    <img src="imgs/9.jpg" id="fleche_droite" class="fleche" onClick="nextImage()" width="1200">
+
+    <script>
+        document.addEventListener("keydown", function(e) {
+            if (e.keyCode === 37) {
+                prevImage();
+            } else if (e.keyCode === 39) {
+                nextImage();
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
