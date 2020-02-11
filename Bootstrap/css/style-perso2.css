@@ -1,0 +1,23 @@
+body {
+    background: rgb(221, 220, 220);
+}
+
+.contour {
+    border: 2px solid rgb(153, 39, 39);
+}
+
+.bleu {
+    background: rgb(0, 162, 255);
+}
+
+.vert {
+    background: rgb(105, 163, 105);
+}
+
+.jaune {
+    background: gold;
+}
+
+.violet {
+    background: purple;
+}
