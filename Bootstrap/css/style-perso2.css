@@ -1,23 +1,68 @@
-body {
-    background: rgb(221, 220, 220);
-}
-
-.contour {
-    border: 2px solid rgb(153, 39, 39);
-}
-
-.bleu {
-    background: rgb(0, 162, 255);
-}
-
-.vert {
-    background: rgb(105, 163, 105);
-}
-
-.jaune {
-    background: gold;
-}
-
-.violet {
-    background: purple;
-}
+    body {
+        background: rgb(221, 220, 220);
+    }
+    
+    .contour {
+        border: 5px solid rgb(71, 66, 66);
+    }
+    
+    .bleu {
+        background: rgb(0, 162, 255);
+    }
+    
+    .vert {
+        background: rgb(105, 163, 105);
+    }
+    
+    .jaune {
+        background: gold;
+    }
+    
+    .violet {
+        background: purple;
+    }
+    
+    header {
+        border: 5px solid grey;
+    }
+    
+    main {
+        border: 5px solid rgb(44, 28, 145);
+    }
+    
+    footer {
+        border: 5px solid rgb(145, 28, 85);
+    }
+    
+    h5 {
+        background-color: black;
+        color: blanchedalmond;
+        width: 35px;
+        margin: 0 auto;
+    }
+    
+    img[src="../imgs/.jpg"] {
+        width: 200px;
+        margin: auto;
+        display: block;
+        -moz-border-radius-topleft: 90px;
+        -webkit-border-top-left-radius: 90px;
+        border-top-left-radius: 90px;
+        -moz-border-radius-topright: 90px;
+        -webkit-border-top-right-radius: 90px;
+        border-top-right-radius: 90px;
+        -moz-border-radius-bottomleft: 90px;
+        -webkit-border-bottom-left-radius: 90px;
+        border-bottom-left-radius: 90px;
+    }
+    
+    img[src="../imgs/1.jpg"] {
+        width: 200px;
+        margin: auto;
+    }
+    
+    #monImage {
+        border: 1px solid rgb(55, 52, 52);
+        box-shadow: 8px 12px 2px 1px rgba(87, 84, 76, 0.2);
+        max-width: 300px;
+    }
