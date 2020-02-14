@@ -1,5 +1,6 @@
     body {
         background: rgb(221, 220, 220);
+        border: 5px solid gray;
     }
     
     .contour {
@@ -41,6 +42,18 @@
         margin: 0 auto;
     }
     
+    h6 {
+        background-color: black;
+        color: blanchedalmond;
+        width: 55px;
+        text-align: center;
+        position: relative;
+        margin-top: 3px;
+        margin-left: 125px;
+        height: 23px;
+        box-shadow: 4px 6px 2px 1px rgba(87, 84, 76, 0.2);
+    }
+    
     img[src="../imgs/.jpg"] {
         width: 200px;
         margin: auto;
@@ -65,4 +78,51 @@
         border: 1px solid rgb(55, 52, 52);
         box-shadow: 8px 12px 2px 1px rgba(87, 84, 76, 0.2);
         max-width: 300px;
+    }
+    /* c'est le menu navigation de la page */
+    
+    nav {
+        background-color: #d00740;
+        height: 50px;
+        width: 100%;
+        color: dimgray;
+        text-align: center;
+    }
+    
+    nav ul {
+        /* pour être certain de ne pas avoir de puces dans cette ul  */
+        list-style-type: none;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    /* pour pointer les li qui sont dans la balise nav */
+    
+    nav,
+    li {
+        display: inline;
+    }
+    
+    nav li a {
+        color: rgb(118, 110, 110);
+        background-color: rgb(216, 212, 212);
+        text-align: center;
+        padding: 6px;
+        margin: 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    /* le lien au survol de la souris */
+    
+    nav li a:hover {
+        color: rgb(70, 33, 33);
+        background-color: rgba(222, 197, 197, 0.618);
+    }
+    /* le lien clic de la souris, séléctionné */
+    
+    nav li a:active {
+        background-color: rgb(84, 42, 34);
+    }
+    /* le lien visité */
+    
+    nav li a:visited {
+        background-color: rgb(231, 233, 238);
     }
