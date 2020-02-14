@@ -7,33 +7,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- style perso est chargé en second pour venir modifier le style de bootstrap.css apreès le chargement de celui ci -->
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/c746aa2dc1.js" crossorigin="anonymous"></script>
+    <!-- style perso est chargé en second pour venir modifier le style de bootstrap.css après le chargement de celui ci -->
     <link rel="stylesheet" href="css/style-perso2.css">
+    <style>
+        #txt {
+            margin: 0 auto;
+            border: 2px solid grey;
+            border-radius: 8%;
+            width: 71px;
+            margin-bottom: 2px;
+            padding-left: 7px;
+            padding-top: 2px;
+            box-shadow: 4px 6px 2px 1px rgba(87, 84, 76, 0.2);
+            background-color: rgb(254, 254, 254);
+            color: rgb(43, 6, 70);
+        }
+    </style>
 </head>
 
-<body>
-    <!-- deux types de conteneurs adaptatifs (.container) ou fluide (.container fluide) -->
-    <div class="contour container">
-        <div class="row">
-            <div class="col bleu">1</div>
-            <div class="col vert">2</div>
-            <div class="col bleu">3</div>
-            <div class="col vert">4</div>
-            <div class="col bleu">5</div>
-        </div>
-        <div class="row">
-            <div class="col-lg bleu">1</div>
-            <div class="col-lg vert">2</div>
-        </div>
-        <div class="row">
-            <div class="col-sm-8 col-lg 6 jaune">1</div>
-            <div class="col-sm-4 col-lg 6 violet">2</div>
-        </div>
-    </div>
+<body onload="startTime()">
+    <div id="txt"></div>
+    <script>
+        function startTime() {
+            let today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+            let t = setTimeout(function() {
+                startTime()
+            }, 500);
+        }
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+
+    <body>
+        <!-- deux types de conteneurs adaptatifs (.container) ou fluide (.container fluide) -->
+        <div class="contour container">
+            <header>
+                <div class="row">
+                    <div class="col bleu">1
+                    </div>
+                    <div class="col vert">2
+
+                        <figure>
+                            <img src="../imgs/1.jpg" alt="photos" id="monImage" style="width: 400px">
+                            <figcaption>
+                                <h6>Egypte</h6>
+                            </figcaption>
+                        </figure>
+                        <script>
+                            let img = 0;
+
+                            function f() {
+                                img += 1;
+                                monImage.setAttribute("src", "../imgs/" + img + ".jpg");
+                                if (img == 9) {
+                                    // clearInterval permet de stopper un setInterval
+                                    clearInterval(timer);
+                                }
+                            }
+                            // setinterval permet de lancer une fonction tous les X millième de seconde
+                            let timer = window.setInterval('f()', 3000);
+                        </script>
+                    </div>
+                    <div class="col white">3
+                        <p>Paragraphe</p>
+                    </div>
+                    <div class="col vert">4
+                        <figure>
+                            <img src="../imgs/6.jpg" alt="egypte mur" style="width: 400px">
+                            <figcaption>Egypte</figcaption>
+                        </figure>
+                        <nav>
+                            <ul>
+                                <!-- nav en haut de la page -->
+                                <li><a href="#">contactez-nous</a></li>
+                                <li><a href="#">parrainage</a></li>
+                                <li><a href="#">Deconnexion</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col bleu">5</div>
+                </div>
+            </header>
+            <main>
+                <div class="row">
+                    <div class="col-lg bleu">1
+                        <h5>prix</h5>
+                        <h2>cool <img src="../imgs/1.jpg" alt="" width="100"></h2>
+
+                    </div>
+                    <div class="col-lg rouge">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse quam iusto aspernatur? Facere, asperiores nisi corporis pariatur tenetur aperiam a eligendi maiores maxime voluptas! A quaerat molestiae mollitia accusamus?</div>
+                    <img src="../imgs/1.jpg" alt="" width="200">
+                </div>
+
+                <div class="row">
+                    <div class="col-lg bleu">1
+                        <h5>prix</h5>
+                        <h2>cool <img src="../imgs/1.jpg" alt="" width="100"></h2>
+
+                    </div>
+                    <div class="col-lg jaune">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse quam iusto aspernatur? Facere, asperiores nisi corporis pariatur tenetur aperiam a eligendi maiores maxime voluptas! A quaerat molestiae mollitia accusamus?</div>
+                    <img src="../imgs/1.jpg" alt="" width="200">
+                </div>
+            </main>
+            <footer>
+
+                <div class="row">
+                    <div class="col-sm-8 col-lg 6 jaune">1
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x">&nbsp;</i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f fa-2x">&nbsp;</i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+
+                    </div>
+                    <img src="../imgs/1.jpg" alt="" width="200">
+                    <div class="col-sm-4 col-lg 6 violet">2
+                        <i class="fab fa-instagram fa-2x">&nbsp;</i>
+                    </div>
+                </div>
+
+            </footer>
+
+            <!-- fin du conteneur -->
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
 
 </html>

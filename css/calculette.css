@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: fantasy
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid rgb(233, 75, 12);
+}
+
+.row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    border: 1px solid rgb(54, 54, 207);
+}
+
+.col-1 {
+    width: 8.333333%;
+}
+
+.col-2 {
+    width: 16.666666%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.333333%;
+}
+
+.col-5 {
+    width: 41.666666%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.333333%;
+}
+
+.col-8 {
+    width: 66.666666%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.333333%;
+}
+
+.col-11 {
+    width: 91.666666%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.marge-1 {
+    margin-left: 8.333333%;
+}
+
+.marge-2 {
+    margin-left: 16.666666%;
+}
+
+.marge-3 {
+    margin-left: 25%;
+}
+
+.marge-4 {
+    margin-left: 33.333333%;
+}
+
+.marge-5 {
+    margin-left: 41.666666%;
+}
+
+.marge-6 {
+    margin-left: 50%;
+}
+
+.marge-7 {
+    margin-left: 58.333333%;
+}
+
+.marge-8 {
+    margin-left: 66.666666%;
+}
+
+.marge-9 {
+    margin-left: 75%;
+}
+
+.marge-10 {
+    margin-left: 83.333333%;
+}
+
+.marge-11 {
+    margin-left: 91.666666%;
+}
+
+.marge-12 {
+    margin-left: 100%;
+}
+
+
+/* media queries pour les écrans */
+
+@media (max-width: 320px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: #fff;
+    }
+    .conteneur {
+        width: 100%;
+        margin-left: auto;
+        margin-bottom: auto;
+        border: none;
+        background: #fff;
+    }
+    h1 {
+        font-size: 120%;
+        text-align: left;
+        padding-left: 5px;
+        color: lightcyan;
+    }
+    header p {
+        color: rgb(255, 254, 254);
+        text-align: left;
+        padding-left: 5px;
+    }
+    .row {
+        border: none;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; */
+    }
+    .col-xsm-12 {
+        width: 100%;
+    }
+    .marge-xsm {
+        margin-left: 0;
+    }
+}
+
+
+/* petites tablettes */
+
+@media (min-width: 321px) and (max-width: 767px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: #fff;
+    }
+    .conteneur {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        background: #fff;
+    }
+    .row {
+        border: none;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+}
+
+
+/* tablettes et ordinateurs portables, desktop */
+
+@media (min-width: 768px) and (max-width: 1096px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: #fff;
+    }
+    .conteneur {
+        width: 100%;
+        background: rgb(246, 247, 235);
+        margin-left: auto;
+        margin-bottom: auto;
+    }
+}
+
+
+/* écrans ordinateurs de bureau */
+
+@media (min-width: 1097px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: #fff;
+    }
+    .conteneur {
+        width: 1200px;
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid white;
+    }
+}
