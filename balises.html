@@ -361,6 +361,12 @@
             box-shadow: 8px 12px 2px 1px rgba(87, 84, 76, 0.2);
             max-width: 300px;
         }
+        
+        ​ .maClasse {
+            background-color: #0b3d3d;
+            color: #fff;
+            border: 1px solid grey;
+        }
         /* téléphones, mobiles ex. : iPhone5  */
         
         @media (max-width: 320px) {
@@ -820,41 +826,88 @@
                 <img src="img/sddl.jpg" alt="Statue">
                 <figcaption>Femme statue</figcaption>
             </figure>
+            <br>
+            <br>
+            <hr>
+
+
+            <h1>Listes avec start</h1>
+
+            <p><mark>Liste n°1</mark> :</p>
+            <ol start="3">
+                <li><strong>O</strong>n naît</li>
+                <li><strong>O</strong>n grandit</li>
+                <li><strong>O</strong>n meurt</li>
+            </ol>
+
+            <p>Liste <mark>n°2 </mark>:</p>
+            <ol type="A" start="5">
+                <li><strong>I</strong>ntroduction</li>
+                <li><strong>P</strong>artie I</li>
+                <li><strong>P</strong>artie II</li>
+                <li><strong>C</strong>onclusion</li>
+            </ol>
+
+
+            <p>Liste n°3</p>
+            <ol type="I" start="5">
+                <li><strong>R</strong>ome</li>
+                <li><strong>T</strong>urin</li>
+                <li><strong>F</strong>lorence</li>
+                <li><strong>V</strong>enise</li>
+                <li><strong>M</strong>ilan</li>
+                <li><mark><strong>B</strong>ologne</mark></li>
+            </ol>
+
+            <br>
+            <hr>
+            <br>
+
+
+            <br><br>
+
+            <img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche">
+            <br> <br>
+            <img src="imgs/1.jpg" alt="Texte alt" id="monImage">
+            <script>
+                let img = 0;
+
+                function f() {
+                    img += 1;
+                    monImage.setAttribute("src", "imgs/" + img + ".jpg");
+                    if (img == 9) {
+                        // clearInterval permet de stopper un setInterval
+                        clearInterval(timer);
+                    }
+                }
+                // setinterval permet de lancer une fonction tous les X millième de seconde
+                let timer = window.setInterval('f()', 3000);
+            </script>
+
+            <div id="horloge">...</div>
+            <script>
+                function Timer() {
+                    let dt = new Date()
+                    document.getElementById("horloge").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                    setTimeout("Timer()", 1900);
+                    console.log("Exécution de Timer()");
+                }
+                Timer();
+            </script>
+
+            <div id="monEvent">...</div>
+            <script>
+                function Timer2() {
+                    let monEvent = document.getElementById("monEvent");
+                    monEvent.innerHTML = "Lancement réalisé";
+                    monEvent.parentNode.style.backgroundColor = "lightgrey";
+                    monEvent.parentNode.style.borderColor = "#f00";
+                }
+                setTimeout("Timer2()", 10000);
+            </script>
+
 
     </main>
-    <br>
-    <br>
-    <hr>
-
-
-    <h1>Listes avec start</h1>
-
-    <p><mark>Liste n°1</mark> :</p>
-    <ol start="3">
-        <li><strong>O</strong>n naît</li>
-        <li><strong>O</strong>n grandit</li>
-        <li><strong>O</strong>n meurt</li>
-    </ol>
-
-    <p>Liste <mark>n°2 </mark>:</p>
-    <ol type="A" start="5">
-        <li><strong>I</strong>ntroduction</li>
-        <li><strong>P</strong>artie I</li>
-        <li><strong>P</strong>artie II</li>
-        <li><strong>C</strong>onclusion</li>
-    </ol>
-
-
-    <p>Liste n°3</p>
-    <ol type="I" start="5">
-        <li><strong>R</strong>ome</li>
-        <li><strong>T</strong>urin</li>
-        <li><strong>F</strong>lorence</li>
-        <li><strong>V</strong>enise</li>
-        <li><strong>M</strong>ilan</li>
-        <li><mark><strong>B</strong>ologne</mark></li>
-    </ol>
-
     <br>
     <hr>
     <br>
@@ -928,200 +981,7 @@
 
     <img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche">
     <br> <br>
-    <img src="imgs/1.jpg" alt="Texte alt" id="monImage">
-    <script>
-        let img = 0;
-
-        function f() {
-            img += 1;
-            monImage.setAttribute("src", "imgs/" + img + ".jpg");
-            if (img == 9) {
-                // clearInterval permet de stopper un setInterval
-                clearInterval(timer);
-            }
-        }
-        // setinterval permet de lancer une fonction tous les X millième de seconde
-        let timer = window.setInterval('f()', 3000);
-    </script>
-
-    <div id="horloge">...</div>
-    <script>
-        function Timer() {
-            let dt = new Date()
-            document.getElementById("horloge").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-            setTimeout("Timer()", 1900);
-            console.log("Exécution de Timer()");
-        }
-        Timer();
-    </script>
-
-    <div id="monEvent">...</div>
-    <script>
-        function Timer2() {
-            let monEvent = document.getElementById("monEvent");
-            monEvent.innerHTML = "Lancement réalisé";
-            monEvent.parentNode.style.backgroundColor = "lightgrey";
-            monEvent.parentNode.style.borderColor = "#f00";
-        }
-        setTimeout("Timer2()", 10000);
-    </script>
-
-
-
-    <br><strong>Article 24</strong><br>
-
-    <br>Toute personne a droit au repos et aux loisirs et notamment à une limitation raisonnable de la durée du travail et à des congés payés périodiques.<br>
-
-    <br><strong>Article 25</strong><br>
-
-    <br>1. Toute personne a droit à un niveau de vie suffisant pour assurer sa santé, son bien-être et ceux de sa famille, notamment pour l'alimentation, l'habillement, le logement, les soins médicaux ainsi que pour les services sociaux nécessaires ;
-    elle a droit à la sécurité en cas de chômage, de maladie, d'invalidité, de veuvage, de vieillesse ou dans les autres cas de perte de ses moyens de subsistance par suite de circonstances indépendantes de sa volonté.
-    <br>2. La maternité et l'enfance ont droit à une aide et à une assistance spéciales. Tous les enfants, qu'ils soient nés dans le mariage ou hors mariage, jouissent de la même protection sociale.<br>
-
-    <br><strong>Article 26</strong><br>
-
-    <br>1. Toute personne a droit à l'éducation. L'éducation doit être gratuite, au moins en ce qui concerne l'enseignement élémentaire et fondamental. L'enseignement élémentaire est obligatoire. L'enseignement technique et professionnel doit être généralisé
-    ; l'accès aux études supérieures doit être ouvert en pleine égalité à tous en fonction de leur mérite.
-    <br>2. L'éducation doit viser au plein épanouissement de la personnalité humaine et au renforcement du respect des droits de l'homme et des libertés fondamentales. Elle doit favoriser la compréhension, la tolérance et l'amitié entre toutes les nations
-    et tous les groupes raciaux ou religieux, ainsi que le développement des activités des Nations Unies pour le maintien de la paix.
-    <br>3. Les parents ont, par priorité, le droit de choisir le genre d'éducation à donner à leurs enfants.<br>
-
-    <br><strong>Article 27</strong><br>
-
-    <br>1. Toute personne a le droit de prendre part librement à la vie culturelle de la communauté, de jouir des arts et de participer au progrès scientifique et aux bienfaits qui en résultent.
-    <br>2. Chacun a droit à la protection des intérêts moraux et matériels découlant de toute production scientifique, littéraire ou artistique dont il est l'auteur.<br>
-
-    <br><strong>Article 28</strong><br>
-
-    <br>Toute personne a droit à ce que règne, sur le plan social et sur le plan international, un ordre tel que les droits et libertés énoncés dans la présente Déclaration puissent y trouver plein effet.<br>
-
-    <br><strong>Article 29</strong><br>
-
-    <br>1. L'individu a des devoirs envers la communauté dans laquelle seule le libre et plein développement de sa personnalité est possible.
-    <br>2. Dans l'exercice de ses droits et dans la jouissance de ses libertés, chacun n'est soumis qu'aux limitations établies par la loi exclusivement en vue d'assurer la reconnaissance et le respect des droits et libertés d'autrui et afin de satisfaire
-    aux justes exigences de la morale, de l'ordre public et du bien-être général dans une société démocratique.
-    <br>3. Ces droits et libertés ne pourront, en aucun cas, s'exercer contrairement aux buts et aux principes des Nations Unies.<br>
-
-
-    <br>
-
-    <br><strong><b>Article 30</b></strong><br>
-
-    <h4>Aucune disposition de la présente Déclaration ne peut être interprétée comme impliquant pour un État, un groupement ou un individu un droit quelconque de se livrer à une activité ou d'accomplir un acte visant à la <mark>destruction des droits et libertés</mark>        qui y sont énoncés.</h4>
-
-    <figure>
-        <img src="img/sddl.jpg" alt="Statue">
-        <figcaption>Femme statue</figcaption>
-    </figure>
-
-    </main>
-    <br>
-    <br>
-    <hr>
-
-
-    <h1>Listes avec start</h1>
-
-    <p><mark>Liste n°1</mark> :</p>
-    <ol start="3">
-        <li><strong>O</strong>n naît</li>
-        <li><strong>O</strong>n grandit</li>
-        <li><strong>O</strong>n meurt</li>
-    </ol>
-
-    <p>Liste <mark>n°2 </mark>:</p>
-    <ol type="A" start="5">
-        <li><strong>I</strong>ntroduction</li>
-        <li><strong>P</strong>artie I</li>
-        <li><strong>P</strong>artie II</li>
-        <li><strong>C</strong>onclusion</li>
-    </ol>
-
-
-    <p>Liste n°3</p>
-    <ol type="I" start="5">
-        <li><strong>R</strong>ome</li>
-        <li><strong>T</strong>urin</li>
-        <li><strong>F</strong>lorence</li>
-        <li><strong>V</strong>enise</li>
-        <li><strong>M</strong>ilan</li>
-        <li><mark><strong>B</strong>ologne</mark></li>
-    </ol>
-
-    <br>
-    <hr>
-    <br>
-
-    <table>
-        <!--titre du tableau : CAPTION 'les cellules sont fusionnées) -->
-        <caption>Ventes de la semaine</caption>
-        <!--en tête de colonnes du tableau-->
-        <thead>
-            <tr>
-                <!-- cellules d'en tête : TH table head-->
-                <th>Jour</th>
-                <th>Smartphones</th>
-                <th>Tablettes</th>
-                <th>Ordinateurs portables</th>
-            </tr>
-        </thead>
-        <!-- le corps du tableau : TBODY-->
-        <tbody>
-            <!--tr*5>td*4 : pour faire notre tableau de 5 rangées et 4 colonnes-->
-            <!--rangée de tableau : TR, table row -->
-            <tr>
-                <!-- cellules de tableau : TD, table data-->
-                <td>Lundi</td>
-                <td>20</td>
-                <td>3</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Mardi</td>
-                <td>5</td>
-                <td>4</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>Mercredi</td>
-                <td>6</td>
-                <td>3</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Jeudi</td>
-                <td>2</td>
-                <td>4</td>
-                <td>9</td>
-            </tr>
-            <tr>
-                <td>Vendredi</td>
-                <td>2</td>
-                <td>8</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Samedi</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-            </tr>
-        </tbody>
-        <!-- le bas ou la fin du tableau : TFOOT les normes du WC3 mettent la balise tfoot avant la balise tbody-->
-        <tfoot>
-            <tr>
-                <td>Total</td>
-                <td>35</td>
-                <td>22</td>
-                <td>28</td>
-            </tr>
-        </tfoot>
-    </table>
-    <br><br>
-
-    <img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche">
-    <br> <br>
-    <img src="imgs/1.jpg" alt="Texte alt" id="monImage">
+    <img src="imgs/1.jpg" alt="Texte alt" id="monImage" width="" height="">
     <script>
         var img = 0;
 
@@ -1137,7 +997,7 @@
         var timer = window.setInterval('f()', 3000);
     </script>
 
-    <div id="horloge">...</div>
+    <div id="horloge"></div>
     <script>
         function Timer() {
             var dt = new Date()
@@ -1148,7 +1008,7 @@
         Timer();
     </script>
 
-    <div id="monEvent">...</div>
+    <div id="monEvent"></div>
     <script>
         function Timer2() {
             var monEvent = document.getElementById("monEvent");
@@ -1159,7 +1019,84 @@
         setTimeout("Timer2()", 10000);
     </script>
 
+    <h6>Evènements</h6>
+    ​
+    <article>
+        <p>Mon paragraphe</p>
+    </article>
 
+
+    <button id="button1">Click</button>
+    <button id="button2">Bouton 2</button>
+    <button id="button3">Bouton 3</button>
+    <button id="button4">Bouton 4</button>
+    <script src="../Creationsite/sources/jquery-3.4.1.js"></script>
+    ​
+    <script>
+        $(function() {
+            $('h6').append(' Javascript');
+
+
+            $('#button1').click(function() {
+                // alert('cliqué');
+                // faire qu'au clic le texte h1 se souligne
+                $('h6').css("text-decoration", "underline");
+            });
+
+            // un double click sur le bouton 2 engendre un changement de couleur du body (.dblclick())
+            $('#button2').dblclick(function() {
+                $('body').css({
+                    "background-color": "#c3bdcc",
+                    "font-family": "sans-serif"
+                });
+                // le mot clef "this" se réfère à la sélection active "$('#button2')"
+                $(this).css("display", "none");
+            });
+
+            // $('#button3').mouseenter(function(){
+            //     $('main').addClass('maClasse');
+            // });
+
+            // $('#button3').mouseleave(function(){
+            //     $('main').removeClass('maClasse');
+            // });
+
+            // la méthode .hover() joue le rôle cumulé de mouseenter() et mouseleave() à travers deux fonctions, la première s'exécute au survol, la seconde à la sortie de l'élément visé
+            $('#button3').hover(
+                function() {
+                    $('main').addClass('maClasse');
+                },
+                function() {
+                    $('main').removeClass('maClasse');
+                }
+            );
+
+            $('#button5').click(function() {
+                $('h6').toggleClass('maClasse');
+            });
+
+            $('#button4').click(function() {
+                $('p').toggle(2000);
+            });
+
+            // méthode .on()
+            $('p').on("click", function() {
+                $(this).append(' clic');
+            });
+            //  $('p').on("click", function () {
+            //     $(this).append(' clic');
+            // }).on("mouseenter", function() {
+            //     $(this).prepend('clic ');
+            // });
+
+            // contrainte : sélectionner article, puis vous allez donner un contour à main
+            $('article').parent().css("border", "1px solid blue");
+
+            // retirer les marges du paragraphe à partie de la sélection de son parent : article
+            $('article').find('p').css("margin", "0");
+        });
+    </script>
+    ​
     <footer>
         <p><i class="fas fa-shoe-prints"></i></p>
     </footer>
