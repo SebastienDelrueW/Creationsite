@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Révisions</title>
+    <link rel="stylesheet" href="sources/jquery-ui.css">
+
     <style>
         /* css de span */
         
@@ -165,10 +167,38 @@
             padding: 4px;
         }
         
+        .effets {
+            height: 150px;
+            width: 100px;
+            /* background: rgb(0, 187, 255); */
+            background: url(imgs/9.jpg);
+            background-size: contain;
+            text-align: center;
+            line-height: 150px;
+        }
+        
+        .effectTypes {
+            height: 250px;
+            width: 200px;
+            /* background: rgb(0, 187, 255); */
+            background: url(imgs/1.jpg);
+            background-size: contain;
+            text-align: center;
+            line-height: 150px;
+        }
+        
         h4 {
             color: rgb(11, 78, 179);
             /*border: 1px dotted rgb(46, 2, 2); */
             /*border: 2mm ridge rgb(106, 8, 37);*/
+        }
+        
+        h5 {
+            height: 153px;
+            width: 112px;
+            background: rgb(203, 202, 202);
+            text-align: center;
+            padding-right: 2px;
         }
         
         a {
@@ -220,10 +250,10 @@
             margin-top: 1px;
         }
         /*p {
-            color: rgb(9, 9, 51);
-            border: 2px solid rgb(58, 54, 47);
-            padding: 5px;
-        }*/
+color: rgb(9, 9, 51);
+border: 2px solid rgb(58, 54, 47);
+padding: 5px;
+}*/
         
         * {
             font-family: 'Times New Roman', Times, serif;
@@ -252,7 +282,7 @@
         
         .table2 {
             /* la bordure du tableau
-            /* Boreder 3 valeurs : épaisseur, type de filet, couleur */
+/* Boreder 3 valeurs : épaisseur, type de filet, couleur */
             border: 5px solid #565545;
             /* par défaut la bordure contient 2 traits, pour que le trait soit unique on utilise la propriété "collapse" */
             border-collapse: collapse;
@@ -365,7 +395,12 @@
         ​ .maClasse {
             background-color: #0b3d3d;
             color: #fff;
-            border: 1px solid grey;
+            border: 3px solid grey;
+        }
+        
+        img[src="imgs/4.jpg"] {
+            height: 350px;
+            text-align: center;
         }
         /* téléphones, mobiles ex. : iPhone5  */
         
@@ -498,7 +533,7 @@
     <br>
 
     <div class="warning">
-        <img src="../Creationsite/img/sddl.jpg" alt="La Statue change de couleur">
+        <img src="img/sddl.jpg" alt="La Statue change de couleur">
         <p>Femme en colère</p>
     </div>
 
@@ -552,7 +587,7 @@
 
     <p id="blockquote"><strong>balise &lt; blockquote &gt;</strong></p>
     <a>L'élément HTML &lt; blockquote &gt; (qui signifie bloc de citation) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation.
-        </a>
+</a>
     <br><br>
 
     <blockquote cite="https://www.huxley.net/bnw/four.html">
@@ -572,23 +607,23 @@
     <br><br>
 
     <pre>
-                L          TE
-                A       A
-                    C    V
-                    R A
-                    DOU
-                    LOU
-                    REUSE
-                    QUE TU
-                    PORTES
-                ET QUI T'
-                ORNE O CI
-                VILISÉ
-                OTE-  TU VEUX
-                LA    BIEN
-                SI      RESPI
-                        RER       - Apollinaire
-        </pre>
+L          TE
+A       A
+C    V
+R A
+DOU
+LOU
+REUSE
+QUE TU
+PORTES
+ET QUI T'
+ORNE O CI
+VILISÉ
+OTE-  TU VEUX
+LA    BIEN
+SI      RESPI
+RER       - Apollinaire
+</pre>
 
 
     <br>
@@ -600,7 +635,7 @@
     <br><br>
 
     <figure>
-        <img src="../Creationsite/img/pluie.jpg" alt="Nuage">
+        <img src="img/pluie.jpg" alt="Nuage">
         <figcaption>Temps humide et grosse grisaille</figcaption>
     </figure>
 
@@ -616,9 +651,9 @@
         Contactez l'auteur de cette page:</p>
 
     <address>
-            <a href="mailto:jim@rock.com">jim@rock.com</a><br>
-            <a href="tel:+13115552368">(311) 555-2368</a>
-            </address>
+<a href="mailto:jim@rock.com">jim@rock.com</a><br>
+<a href="tel:+13115552368">(311) 555-2368</a>
+</address>
 
     <br>
 
@@ -779,7 +814,7 @@
             <br>4. Toute personne a le droit de fonder avec d'autres des syndicats et de s'affilier à des syndicats pour la défense de ses intérêts.<br>
 
             <aside>
-                <p><img src="../Creationsite/img/les_deux_canards.jpg" alt="Statue"></p>
+                <p><img src="img/les_deux_canards.jpg" alt="Statue"></p>
             </aside>
             <br><strong>Article 24</strong><br>
 
@@ -830,7 +865,6 @@
             <br>
             <hr>
 
-
             <h1>Listes avec start</h1>
 
             <p><mark>Liste n°1</mark> :</p>
@@ -863,10 +897,9 @@
             <hr>
             <br>
 
-
             <br><br>
 
-            <img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche">
+            <img src="img/affiche.jpg" alt="Affiche">
             <br> <br>
             <img src="imgs/1.jpg" alt="Texte alt" id="monImage">
             <script>
@@ -877,13 +910,15 @@
                     monImage.setAttribute("src", "imgs/" + img + ".jpg");
                     if (img == 9) {
                         // clearInterval permet de stopper un setInterval
-                        clearInterval(timer);
+                        // clearInterval(timer);
+                        img = 0;
                     }
                 }
                 // setinterval permet de lancer une fonction tous les X millième de seconde
                 let timer = window.setInterval('f()', 3000);
             </script>
 
+            <!-- heure/minutes/secondes en js -->
             <div id="horloge">...</div>
             <script>
                 function Timer() {
@@ -895,6 +930,7 @@
                 Timer();
             </script>
 
+            <!-- changement de couleur du body en js -->
             <div id="monEvent">...</div>
             <script>
                 function Timer2() {
@@ -905,13 +941,10 @@
                 }
                 setTimeout("Timer2()", 10000);
             </script>
-
-
     </main>
     <br>
     <hr>
     <br>
-
     <table>
         <!--titre du tableau : CAPTION 'les cellules sont fusionnées) -->
         <caption>Ventes de la semaine</caption>
@@ -977,70 +1010,58 @@
             </tr>
         </tfoot>
     </table>
+    <hr>
     <br><br>
-
-    <img src="img/Affiche_LA_DARONNE.jpg" alt="Affiche">
-    <br> <br>
-    <img src="imgs/1.jpg" alt="Texte alt" id="monImage" width="" height="">
-    <script>
-        var img = 0;
-
-        function f() {
-            img += 1;
-            monImage.setAttribute("src", "imgs/" + img + ".jpg");
-            if (img == 9) {
-                // clearInterval permet de stopper un setInterval
-                clearInterval(timer);
-            }
-        }
-        // setinterval permet de lancer une fonction tous les X millième de seconde
-        var timer = window.setInterval('f()', 3000);
-    </script>
-
-    <div id="horloge"></div>
-    <script>
-        function Timer() {
-            var dt = new Date()
-            document.getElementById("horloge").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-            setTimeout("Timer()", 1900);
-            console.log("Exécution de Timer()");
-        }
-        Timer();
-    </script>
-
-    <div id="monEvent"></div>
-    <script>
-        function Timer2() {
-            var monEvent = document.getElementById("monEvent");
-            monEvent.innerHTML = "Lancement réalisé";
-            monEvent.parentNode.style.backgroundColor = "lightgrey";
-            monEvent.parentNode.style.borderColor = "#f00";
-        }
-        setTimeout("Timer2()", 10000);
-    </script>
+    <div class="effets"></div>
+    <button id="bout_effet">Click pour l'effet</button>
 
     <h6>Evènements</h6>
+    <h5><img src="imgs/4.jpg" alt="Affiche">
+
+    </h5>
     ​
     <article>
         <p>Mon paragraphe</p>
     </article>
 
-
+    <select name="effects" id="effectTypes">
     <button id="button1">Click</button>
     <button id="button2">Bouton 2</button>
-    <button id="button3">Bouton 3</button>
-    <button id="button4">Bouton 4</button>
-    <script src="../Creationsite/sources/jquery-3.4.1.js"></script>
+    <option value="blind">Blind</option>
+    <option value="bounce">Bounce</option>
+    <option value="clip">Clip</option>
+    <option value="drop">Drop</option>
+    <option value="explode">Explode</option>
+    <option value="fade">Fade</option>
+    <option value="fold">Fold</option>
+    <option value="highlight">Highlight</option>
+    <option value="puff">Puff</option>
+    <option value="pulsate">Pulsate</option>
+    <option value="scale">Scale</option>
+    <option value="shake">Shake</option>
+    <option value="size">Size</option>
+    <option value="slide">Slide</option>
+    <option value="transfer">Transfer</option>
+</select>
+    <div class="effets"></div>
+    <button id="button9" class="ui-state-default ui-corner-all">Run Effect</button>
+
+    <script src="sources/jquery-3.4.1.js"></script>
+
+
+    <script src="sources/jquery-ui.js"></script>
     ​
     <script>
         $(function() {
-            $('h6').append(' Javascript');
+            $('h6').append(' Javascript', ' javascript');
 
 
             $('#button1').click(function() {
                 // alert('cliqué');
                 // faire qu'au clic le texte h1 se souligne
                 $('h6').css("text-decoration", "underline");
+                $('p').css("background-color", "#c3bdcc");
+                $('h6').append('  coucou');
             });
 
             // un double click sur le bouton 2 engendre un changement de couleur du body (.dblclick())
@@ -1050,53 +1071,61 @@
                     "font-family": "sans-serif"
                 });
                 // le mot clef "this" se réfère à la sélection active "$('#button2')"
-                $(this).css("display", "none");
+                $('p').css("display", "none");
             });
 
-            // $('#button3').mouseenter(function(){
-            //     $('main').addClass('maClasse');
-            // });
-
-            // $('#button3').mouseleave(function(){
-            //     $('main').removeClass('maClasse');
-            // });
-
-            // la méthode .hover() joue le rôle cumulé de mouseenter() et mouseleave() à travers deux fonctions, la première s'exécute au survol, la seconde à la sortie de l'élément visé
-            $('#button3').hover(
-                function() {
-                    $('main').addClass('maClasse');
-                },
-                function() {
-                    $('main').removeClass('maClasse');
-                }
-            );
-
-            $('#button5').click(function() {
-                $('h6').toggleClass('maClasse');
-            });
-
-            $('#button4').click(function() {
-                $('p').toggle(2000);
-            });
-
-            // méthode .on()
-            $('p').on("click", function() {
-                $(this).append(' clic');
-            });
-            //  $('p').on("click", function () {
-            //     $(this).append(' clic');
-            // }).on("mouseenter", function() {
-            //     $(this).prepend('clic ');
-            // });
-
-            // contrainte : sélectionner article, puis vous allez donner un contour à main
-            $('article').parent().css("border", "1px solid blue");
-
-            // retirer les marges du paragraphe à partie de la sélection de son parent : article
-            $('article').find('p').css("margin", "0");
         });
     </script>
-    ​
+
+    <script>
+        $('h5').mouseenter(function() {
+            $(this).fadeOut(6000).css({
+                'background': 'white',
+                'cursor': 'pointer'
+            }, );
+
+
+            // méthode .on() 
+            $('p').on("click", function() {
+                $(this).append(' mesdames et messieurs');
+            }); // $('p').on("click", function () { // 
+            // $(this).append(' clic');
+            // 
+        });
+    </script>
+
+    <script>
+        $('#button1').mousedown(function() {
+            $(this).css('cursor', 'grabbing');
+        });
+
+        $('#button1').mouseup(function() {
+            $(this).css('cursor', 'grab');
+        });
+    </script>
+    <script>
+        $('#bout_effet').click(function() {
+            // effet() permet de placer un effet au moment d'un évènement 
+
+            $('.effets').toggle('explode') // effet jQuery ui // effet scale 
+            $(this).css({
+                'background': 'lightgrey'
+
+            });
+
+        });
+    </script>
+
+
+    <script>
+        $('#button9').click(function() {
+            $('.effectTypes').toggle('') // effet jQuery ui // effet scale 
+            $(this).css({
+                'background': 'orange'
+            });
+
+        });
+    </script>
     <footer>
         <p><i class="fas fa-shoe-prints"></i></p>
     </footer>
