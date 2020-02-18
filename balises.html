@@ -1024,27 +1024,6 @@ RER       - Apollinaire
         <p>Mon paragraphe</p>
     </article>
 
-    <select name="effects" id="effectTypes">
-    <button id="button1">Click</button>
-    <button id="button2">Bouton 2</button>
-    <option value="blind">Blind</option>
-    <option value="bounce">Bounce</option>
-    <option value="clip">Clip</option>
-    <option value="drop">Drop</option>
-    <option value="explode">Explode</option>
-    <option value="fade">Fade</option>
-    <option value="fold">Fold</option>
-    <option value="highlight">Highlight</option>
-    <option value="puff">Puff</option>
-    <option value="pulsate">Pulsate</option>
-    <option value="scale">Scale</option>
-    <option value="shake">Shake</option>
-    <option value="size">Size</option>
-    <option value="slide">Slide</option>
-    <option value="transfer">Transfer</option>
-</select>
-    <div class="effets"></div>
-    <button id="button9" class="ui-state-default ui-corner-all">Run Effect</button>
 
     <script src="sources/jquery-3.4.1.js"></script>
 
@@ -1116,16 +1095,6 @@ RER       - Apollinaire
         });
     </script>
 
-
-    <script>
-        $('#button9').click(function() {
-            $('.effectTypes').toggle('') // effet jQuery ui // effet scale 
-            $(this).css({
-                'background': 'orange'
-            });
-
-        });
-    </script>
     <footer>
         <p><i class="fas fa-shoe-prints"></i></p>
     </footer>
