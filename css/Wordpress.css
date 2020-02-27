@@ -1,0 +1,16 @@
+div#page.site {
+    background-color: lightgray
+}
+
+img.custom-logo {
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+h1.entry-title {
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+p.site-description {
+    padding-top: 10px;
+    font-size: 20px;
+}
