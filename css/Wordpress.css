@@ -15,9 +15,22 @@ p.site-description {
     font-size: 20px;
 }
 
+#navbar {
+    background-color: #cccccc;
+    border-bottom: #999;
+    border-left: #999;
+    border-width: 0 0 thin thin;
+    border-style: none none groove groove;
+    display: block;
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 0 10px 0 10px;
+    width: 150px;
+    line-height: 0.2rem;
+}
 
-/* 
-    <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+
+/*  <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
     <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
     <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
     <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
@@ -26,10 +39,10 @@ p.site-description {
     <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
     <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
     <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
-    <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>  */
+    <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>   */
 
 
-/* <span class="border border-primary"></span>
+/*  <span class="border border-primary"></span>
     <span class="border border-secondary"></span>
     <span class="border border-success"></span>
     <span class="border border-danger"></span>
@@ -40,7 +53,7 @@ p.site-description {
     <span class="border border-white"></span> */
 
 
-/* <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
+/*  <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
     <div class="shadow-sm p-3 mb-5 bg-white rounded">Small shadow</div>
     <div class="shadow p-3 mb-5 bg-white rounded">Regular shadow</div>
     <div class="shadow-lg p-3 mb-5 bg-white rounded">Larger shadow</div> */

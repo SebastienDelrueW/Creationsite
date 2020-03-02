@@ -420,6 +420,22 @@
             box-shadow: 2px 2px 3px #aaa;
             background: #dcad7c;
         }
+        
+        .nouvelleClasse {
+            font-size: 60px;
+            color: brown;
+            border: 1px solid grey;
+            width: 655px;
+        }
+        
+        .animation {
+            width: 500px;
+            height: 80px;
+            background: rgb(43, 102, 121);
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
         /* téléphones, mobiles ex. : iPhone5  */
         
         @media (max-width: 320px) {
@@ -1031,7 +1047,12 @@ RER       - Apollinaire
     <hr>
     <br><br>
 
+
+
+    <h4 id="ajoutClasse">Je grandis et change de couleur grâce à l'ajout de classe jQuery-ui</h4>
+
     <div class="animation">Voici le contenu de ma div à animer</div>
+
     <div class="effets"></div>
     <button id="bout_effet">Click pour l'effet</button>
 
@@ -1076,19 +1097,52 @@ RER       - Apollinaire
     </script>
 
     <script>
+        $('#ajoutClasse').click(function() {
+            $(this).addClass("nouvelleClasse", 2000).delay(5000);
+            $(this).removeClass("nouvelleClasse", 8000);
+            // $(this).toggleClass("nouvelleClasse", 2000);
+        });
+
+        $('.animation').click(function() {
+
+            var hauteur = '950px';
+
+            $(this).animate({
+                // width: '400px',
+                height: '150px',
+                width: hauteur,
+                color: 'black',
+                backgroundColor: 'gray',
+                lineHeight: '150px',
+
+
+            }, 2000);
+
+        })
+
+        // placer un toggle pour qu'un clic sur le bouton entraine apparition et disparition du carré, cette disparition doit avoir lieu avec un effet "bounce"
+
+        // $('#bout_effet').click(function() {
+        // effet() permet de placer un effet au moment d'un évènement 
+
+        // $('.effets').toggle('bounce');
+
+        // $('.effets').delay(3000).toggle('explode');
+
+        // toggle peut se voir préciser un effet qu'il appliquera lors des apparitions/disparitions
+        //})
+        // mise en place de tabs
+
+        // mettre en place tabs non pas en clic mais au survol des onglets
+        $("#tabs").tabs({
+            event: "mouseover"
+        });
+
         $('h5').mouseenter(function() {
             $(this).fadeOut(6000).css({
                 'background': 'white',
                 'cursor': 'pointer'
             }, );
-
-
-            // méthode .on() 
-            $('p').on("click", function() {
-                $(this).append(' mesdames et messieurs');
-            }); // $('p').on("click", function () { // 
-            // $(this).append(' clic');
-            // 
         });
     </script>
 
@@ -1121,9 +1175,9 @@ RER       - Apollinaire
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 
 </body>
 
